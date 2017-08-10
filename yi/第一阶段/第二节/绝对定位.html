@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+      html{
+          height:100%;
+          
+      } 
+      body{
+          height: 100%;
+      }
+      .box{
+          width:300px;
+          height:300px;
+          border:2px solid black;
+          margin: 100px auto;
+          /*给box添加一个相对定位是为了让他的子元素相对于它绝对定位,如果不给他添加定位,它的
+          子元素绝对定位的时候是相对于浏览器窗口,绝对定位的元素是相对于他定位的父元素,如果没有定位的父元素,他就是相对于浏览器窗口*/
+           position: relative;
+      } 
+      .box div{
+          /*绝对定位*/
+          position:absolute;
+          width: 30px;
+          height: 30px;
+          background: red;
+      }
+      .box div:nth-of-type(1){
+          top:30px;
+          /*在绝对定位时,top是相对于定位的父元素或浏览器窗口
+          top;left;right;bottom;z-index: 这五个属性只有在定位时才有用*/
+          left:30px;
+          z-index:-1;
+          /*在定位的时候调整元素的层次,默认值是0,可以是正值也可以是负值,值越大越在前面*/
+      }
+       .box div:nth-of-type(2){
+          top:30px;
+          right:30px;
+      }
+       .box div:nth-of-type(3){
+         bottom:30px;
+          left:30px;
+      }
+       .box div:nth-of-type(4){
+         right: 30px;
+         bottom: 30px;
+      }
+       .box div:nth-of-type(5){
+          top:calc(50% - 15px);
+          /*calc.计算,
+          设置top和botom属性时calc圆括号里第一个值是父元素的高度,第二个值是该元素的高度
+          设置left和right属性时calc圆括号里第一个值是父元素的宽度,第二个值是该元素的宽度
+          */
+          left:calc(50% - 15px);
+      }
+        
+    </style>
+</head>
+<body>
+   <div class="box">
+      <div>a</div>
+      <div>b</div>
+      <div>c</div>
+      <div>d</div>
+      <div>e</div>
+      
+       </div> 
+</body>
+</html>

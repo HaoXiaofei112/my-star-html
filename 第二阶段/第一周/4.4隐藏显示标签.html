@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>隐藏显示</title>
+    <style>
+        section 
+        {
+            width: 200px;
+
+            height: 200px;
+
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div data-toggle='false' onclick="myClick()">开关</div>
+    <section></section>
+    <script>
+
+        var section =document.querySelector('section');
+
+        var div =  document.querySelector('div');
+
+        var isShow = div.dataset.toggle;
+
+        // false  0   true  1 
+        // console.log(isShow);
+
+        // var isRight = true; 
+        // console.log(isRight);
+
+        function myClick()
+        {
+            if(isShow == 'true') 
+            {
+                console.log(1);
+                section.style.display = 'block';
+                isShow = 'false'
+
+            }
+            else 
+            {
+                console.log(2);
+                section.style.display = 'none';
+                isShow = 'true'
+            }
+            // ! 非  取反
+            // 让自己的值 取反
+            // true  false
+            // isShow = !isShow;  
+            // 判断是否相等
+            // isShow != isShow;
+        }
+    </script>
+</body>
+</html>

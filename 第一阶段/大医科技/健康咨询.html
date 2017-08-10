@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <title>大医股份</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/inside.css" />
+		<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="shortcut icon" href="images/favicon1.png"/>
+		<script src="js/modernizr.js"></script>
+		<script src="js/jquery-2.2.3.min.js"></script>
+		<script src="js/common.js"></script>
+    <style type="text/css">
+    	.menu span{
+    		position: relative;
+    		top: 0px;
+    	}
+    	#wei{
+    		padding-top: 160px;
+    	}
+    	#wei table{
+				width: 80%;
+				height: 6vh;
+				background-color: rgb(234,234,234);
+				margin: 0px auto;
+			}
+			#wei th{
+				width: 20%;
+				text-align: center;
+			}
+			#wei a:hover{
+				color:white;
+				background:rgb(85,142,235);
+				
+			}
+			#wei a.active{
+				color:white;
+				background:rgb(85,142,235);
+			}
+			#wei tr a{
+				display: inline-block;
+				width: 100%;
+				line-height: 8vh;
+				color: rgb(93,93,93);
+				font-size: 1.6rem;
+				text-decoration: none;
+				font-weight: normal;
+			}
+			.invest-item a{
+				list-style-type: none;
+				text-decoration: none;
+			}
+			.in_sec span{
+				list-style: none;
+				display: flex;
+				justify-content: space-between;
+			}
+			.in_sec li{
+				list-style: none;
+			}
+			.in_sec time{
+				display: flex;
+				justify-content: flex-end;
+			}
+    </style>
+</head>
+<body ng-app="route">
+	<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-5 col-sm-3">
+						<h1 class="logo">
+                        <a href="大医科技.html"><img class="img-responsive" src="http://www.dayigufen.com/v1.0/images/logo.png" alt="大医股份" /></a>
+                    </h1>
+					</div>
+					<div class="col-xs-7 col-sm-9">
+						<nav class="menu">
+							<a href="大医科技.html">
+								<span>首页</span>
+							</a>
+							<a href="产品服务.html">
+								<span>产品/服务</span>
+							</a>
+							<a href="公司新闻.html">
+								<span>公司新闻</span>
+							</a>
+							<a href="投资者关系.html">
+								<span>投资者关系</span>
+							</a>
+							<a class="active" href="健康咨询.html">
+								<span>健康资讯</span>
+							</a>
+						</nav>
+						<div class="menu_btn visible-xs">
+							<span class="span1"></span>
+							<span class="span2"></span>
+							<span class="span3"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="top-top"></div>
+	    <!--<header>-->
+	        <div id="wei">
+	            <table>
+	            	<tr>
+		            	<th><a class="active" href="#/"><img src="images/jiankang.png" height="60" alt="" />高尿酸</a></th>
+		            	<th><a href="#/course/html5"><img src="images/jiankang2.png" height="60" alt="" />高血压</a></th>
+		            	<th><a href="#/about"><img src="images/jiankang3.png" height="60" alt=""/>高血脂</a></th>
+		            	<th><a href="#/workenvironment"><img src="images/jiankang4.png" height="60" alt="" />糖尿病</a></th>
+	            	</tr>
+	            </table>
+	        </div>
+	    <!--</header>-->
+    <br />
+    <br />
+    <main>
+    	<!--路由的所有内容将在此显示-->
+        <div ng-view></div>
+    </main>
+
+    <script>
+        angular.module('route',['ngRoute'])
+        .config(['$routeProvider',function($rp)
+        {
+            $rp.when('/',{
+                templateUrl : 'pages/home.html',
+            })
+            $rp.when('/course/:course',{
+                templateUrl : 'pages/course.html',
+                controller:'CourseController'
+            })
+            $rp.when('/about',{
+                templateUrl : 'pages/about.html'
+            })
+            $rp.when('/workenvironment',{
+                templateUrl: 'pages/workenvironment.html'
+            })
+        }])
+    </script>
+    <script>
+    	var listd = document.querySelectorAll("th a");
+		for(var i = 0; i < listd.length; i++) {
+			(function(i) {
+				listd[i].onclick = function() {
+					//把其他的都给取消了
+					for(var j = 0; j < listd.length; j++) {
+						listd[j].className = "";
+					}
+					//选定当前的
+					this.className = "active";
+				}
+
+			})
+			(i)
+		}
+    </script>
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <footer class="footer"></footer>
+	<script src="js/footer.js"></script>
+</body>
+</html>

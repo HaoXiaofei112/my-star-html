@@ -1,0 +1,193 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+<!--			图标像素不需要太大  32*32  64*64 128*128就好-->
+			<link rel="icon" href="qq.png">
+			<title>登陆</title>
+			<style>
+				
+				body 
+				{
+					height: 100vh;
+					
+					width: 100vw;
+					
+					margin: 0px;
+					
+					background-color: #333;
+				}
+				#bg 
+				{
+					
+/*					v  viewport 视图*/
+					width: 100vw;
+					
+					height: 100vh;
+					
+					background-image: url(bg.jpg);
+/*					设置背景图大小 水平方向自动调整 垂直方向依据原来大小*/
+					background-size: auto 100%;
+/*					设置背景图的位置 图片中心位于屏幕中心*/
+					background-position: center;
+/*					设置图片模糊程度*/
+					filter:blur(20px);
+				}
+				header 
+				{
+/*					border: 2px solid yellow;*/
+					
+					position: absolute;
+					
+					top: 0px;
+					
+					width: 100vw;
+					
+					display: flex;
+					
+					justify-content:space-between;
+					
+					padding: 15px;
+					
+					box-sizing: border-box;
+/*					设置透明度*/
+					opacity: 0.7;
+				}
+				
+				header a 
+				{
+					text-decoration: none;
+					
+					color: white;
+				}
+				header span:nth-child(2) 
+				{
+					font-size: 1.2em;
+				}
+				
+				section 
+				{
+/*					border: 2px solid red;*/
+					
+					position: absolute;
+					
+					top:55px;
+					
+					width: 100vw;
+					
+				}
+				#tx 
+				{
+					width:20vw;
+					
+					height: 20vw;
+					
+					
+					background-image: url(img.jpg);
+					
+					border-radius: 50%;
+					
+					margin: 50px auto;
+					
+					background-position: 50%;
+					
+					background-size: 120% 120%;
+					
+				}
+				
+				form 
+				{
+					width: 70vw;
+					
+					margin: 50px auto;
+					
+/*					position: absolute;*/
+					
+					color: white;
+					
+				}
+				input 
+				{
+					background: none; 
+					
+					border: none;
+					
+					color: white;
+					
+				}
+				input:nth-of-type(3) 
+				{
+					margin: 30px auto 0px auto;
+					
+					background-color: green;
+					
+					width: 100%;
+					
+					line-height: 200%;
+					
+					border-radius: 5px;
+					
+					font-size: 20px;
+				}
+				hr 
+				{
+					color: white;
+				}
+				p 
+				{
+					color: white;
+					
+					text-align: center;
+				}
+				
+				footer img 
+				{
+					width: 50px;
+					
+					height: 50px;
+					
+					margin: 10px;
+					
+					
+				}
+				footer 
+				{
+					display: flex;
+					
+					justify-content:center;
+				}
+			</style>
+	</head>
+	<body>
+		<div id="bg"></div>
+		<header>
+			<span><a href="">返回</a></span>
+			<span><a href="">登陆</a></span>
+			<span><a href="">注册</a></span>
+		</header>
+		<section>
+			<div id="tx"></div> 
+			<form action="">
+			<label for="">账号</label> 
+			<input type="text" placeholder="请输入账号">
+			<hr>
+			<br>
+				
+			<label for="">密码</label> 
+			<input type="password" placeholder="请输入密码">
+			<hr>
+				
+			<input type="submit" value="登陆">
+		    </form>
+			
+			<p>忘记密码？</p>
+		</section>
+		
+		
+		
+		<footer>
+			<img src="weixin.png" alt=""> 
+			<img src="weibo.png" alt=""> 
+			<img src="qq.png" alt=""> 
+		</footer>
+	</body>
+</html>

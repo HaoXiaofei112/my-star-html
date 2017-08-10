@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>display基本使用</title>
+			<style>
+				ul 
+				{
+
+					padding-left: 2em;
+				}
+				
+				.ul 
+				{
+/*					list 列表  item选项 单元格*/
+					display: list-item;
+/*					设置单元格样式*/
+					list-style-type:decimal;
+				}
+				p 
+				{
+					padding-left: 2em;
+				}
+				
+				.table
+				{
+					display:table;
+					
+					border: 2px solid red;
+					
+/*					spacing  空间  间距*/
+					border-spacing: 10px;
+				}
+				.tr 
+				{
+/*					row 行*/
+					display: table-row;
+				}
+				.td 
+				{
+/*					cell单元格*/
+					display: table-cell;
+					
+					width: 100px;
+					
+					height: 50px;
+					
+					border: 2px solid blue;
+				}
+				.caption 
+				{
+/*					caption 标题*/
+					display: table-caption;
+				}
+			</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		
+		<p>
+			<!--display:list-item;
+			list-style-type:circle;-->
+			<span class="ul">1</span>
+			<span class="ul">2</span>
+			<span class="ul">3</span>
+		</p>
+		
+		
+		<table border='1'>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</table>
+		
+		
+		<div class="table">
+			<div class="caption">cool</div>
+			<div class="tr">
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+			<!--display:table-row;-->
+			<div class="tr">
+				<!--display:table-cell;-->
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+			<div class="tr">
+				<div class="td"></div>
+				<div class="td"></div>
+				<div class="td"></div>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+</html>

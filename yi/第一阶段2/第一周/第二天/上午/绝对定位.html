@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>绝对定位</title>
+			<style>
+				div
+				{
+					width: 400px;
+					
+					height: 400px;
+/*					设置顶宽居中*/
+					margin: 100px auto;
+/*					设置边框风格  solid实线*/
+					border: 1px solid red;
+/*					设置父标签的定位属性
+					是为了给子标签的定位提供依据*/
+					position: relative;
+				} 
+				span 
+				{
+					border: 1px solid blue;
+					
+/*					可以调整四个方向
+					top 从上往下
+					left 从左往右 
+					bottom 从下往上 
+					right 从右往左*/
+					position: absolute;
+				}
+				
+				span:nth-child(1)
+				{
+					top: 190px;
+					
+					right: 0px;
+/*					left: 380px;*/
+				}
+				span:nth-child(2)
+				{
+					left: 190px;
+					
+					top: 380px;
+				}
+				span:nth-child(3)
+				{
+					top: 190px;
+				}
+				span:nth-child(4)
+				{
+					left: 190px;
+				}
+			</style>
+	</head>
+	<body>
+		<div>
+			<span>东</span>
+			<span>南</span>
+			<span>西</span>
+			<span>北</span>
+		</div>
+	</body>
+</html>

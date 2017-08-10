@@ -1,0 +1,166 @@
+<!--Emmet 官网http://docs.emmet.io/cheat-sheet/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Emmet</title>
+	<style>
+		
+		body 
+		{
+			width: 100%;
+			
+			width: 100px;
+			
+			width: 100%;
+			
+			height: 100%;
+			
+			opacity: 0.5;
+			
+			opacity: 0.2;
+			
+			
+			
+		}
+	</style>
+</head>
+<body>
+<!--	类名和id的使用
+	如果不需要指定标签类型 那么直接写.类名或者#id名字即可
+	默认为div标签
+	.a    .b -->
+	<div class="a"></div>
+	<div id="b"></div>
+	
+
+		
+<!--	如果需要指定标签类型 则在.或者#前面加上标签类型
+    span.c   section#d-->
+	<span class="c"></span>
+	<section id="d"></section>
+		
+<!--	标签的嵌套-->
+<!--    p span>包含-->
+
+	<p><span></span></p>
+	
+<!--	p>span+div  +表示同级关系-->
+    <p>
+		<span></span>
+		<div></div>
+	</p>
+	
+<!--	p>span ^ div   ^表示回到上级关系-->
+	<p>
+		<span></span> 
+	</p>
+	<div></div>
+	
+	div.foo>
+	<div class="foo">
+		<h1></h1>
+	</div>
+	<div class="bar">
+		<h2></h2>
+	</div>
+	
+<!--	$符号表示数字 从1开始-->
+	<ul>
+		<li id="item1"></li>
+		<li id="item2"></li>
+		<li id="item3"></li>
+	</ul>
+	
+	div+div>p>span+em^bq
+	
+	<div></div>
+	<div>
+		<p>
+			<span></span>
+			<em></em>
+		</p>
+		<blockquote></blockquote>
+	</div>
+	
+	div+div>p>span+em^^bq
+	
+	<div></div>
+	<div>
+		<p>
+			<span></span>
+			<em></em>
+		</p>
+	</div>
+	<blockquote></blockquote>
+	
+	header>ul>li*2>a
+	div>X+footer>p
+	
+	<div>
+		<header>
+			<ul>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+		</header>
+		<footer>
+			<p></p>
+		</footer>
+	</div>
+	
+	<div>
+		<header>
+			<ul>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+		</header>
+	</div>
+	
+	<footer>
+		<p></p>
+	</footer>
+	
+	
+	(div>dl>(dt+dd)*3)+footer>p
+	<div>
+		<dl>
+			<dt></dt>
+			<dd></dd>
+			<dt></dt>
+			<dd></dd>
+			<dt></dt>
+			<dd></dd>
+		</dl>
+	</div>
+	<footer>
+		<p></p>
+	</footer>
+	
+	ul>li.item$$$*5
+	
+    p>{Click }+a{here}+{ to continue}
+	
+	<p>
+		Click
+		<a href="">here</a> 
+		to continue
+	</p>
+	
+	<h1 title="item1">Header 1</h1>
+	<h2 title="item2">Header 2</h2>
+	<h3 title="item3">Header 3</h3>
+	
+	<h1 title="item1">header 1</h1>
+	<h2 ti></h2>
+	<p class="bar"></p>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+
+
+</body>
+</html>

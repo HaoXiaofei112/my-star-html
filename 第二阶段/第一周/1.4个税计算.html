@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var gongZi = 8000;
+
+       var jiZhun = gongZi > 7662 ? 7662 : gongZi;
+
+       var sanXian = jiZhun * 0.225;
+
+       var suoDeE = gongZi - sanXian - 3500;
+
+       var shuiLv ;
+
+       var kouChuShu;
+
+       if(suoDeE <= 1500)
+       {
+            shuiLv = 0.03;
+       }
+       else if (suoDeE <= 4500)
+       {
+            shuiLv = 0.1;
+
+            kouChuShu = 105;
+       }
+       else if (suoDeE <= 9000)
+       {
+           shuiLv = 0.2;
+
+           kouChuShu =555;
+       }
+       else if (suoDeE <= 35000)
+       {
+           shuiLv = 0.25;
+
+           kouChuShu = 1005;
+       }
+       else if (suoDeE <= 55000)
+       {
+           shuiLv = 0.3; 
+
+           kouChuShu = 2755;
+       }
+       else if (suoDeE <= 80000)
+       {
+           shuiLv = 0.35;
+
+           kouChuShu = 5505;
+       }
+       else 
+       {
+           shuiLv = 0.45;
+
+           kouChuShu = 13505;
+       }
+    // 10000  400.
+    // 8000   172.
+      var geShui = suoDeE * shuiLv -kouChuShu;
+
+      alert(geShui);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #box {
+            width: 500px;
+            border: 1px solid #000;
+        }
+        
+        #time {
+            font-size: 80px;
+            color: red;
+            text-align: center;
+            margin: 0px;
+        }
+        
+        #date {
+            font-size: 40px;
+            color: #ff6900;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <p id="time">15:10:00</p>
+        <p id="date"></p>
+    </div>
+</body>
+<script>
+    var time = document.querySelector('#time')
+    var date = document.querySelector('#date')
+    function getTime() {
+        var now = new Date()
+        var h = now.getHours() % 12
+        var m =now.getMinutes()
+        var s = now.getSeconds()
+        h = h< 10? "0" + h : h
+        m = m< 10? "0" + m : m
+        s = s< 10? "0" + s: s
+        time.innerText = h + ":" + m + ":" + s
+
+
+        var y = now.getFullYear()
+        var month = now.getMonth() + 1
+        var day = now.getDate()
+        var week = now.getDay()
+        if(week == 1){
+            week = "一"
+        }else if (week == 2){
+            week = "二"
+        }else if (week == 3){
+            week = "三"
+        }else if (week == 4){
+            week = "四"
+        }else if (week == 5){
+            week = "五"
+        }else if (week == 6){
+            week = "六"
+        }else if (week == 0){
+            week = "日"
+        }
+        
+        date.innerText = y + "年" + month + "月" + day + "号" +  "  星期" + week
+        
+        
+
+
+    }
+    getTime()
+    setInterval(getTime, 1000)
+
+</script>
+
+</html>

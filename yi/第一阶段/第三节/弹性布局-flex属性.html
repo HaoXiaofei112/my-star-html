@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局-flex</title>
+    <style>
+    
+    html{
+        width: 100%;
+
+    }
+    body{
+        height: 100%;
+        margin: 0px;
+        display: flex;
+    }
+    body div{
+        width:100%;
+        height: 200px;
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+    .a{
+        flex:1
+    }
+    /*flex;设置在开启弹性布局的元素的子元素上,设置元素所占比例*/
+    .b{
+         flex:2
+    }
+    .c{
+        flex:1
+    }
+        
+        </style>
+</head>
+<body>
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+</body>
+</html>

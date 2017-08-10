@@ -1,0 +1,463 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>宝钢作业讲解</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			     body 
+				 {
+					 background-color: #eee;
+				 }
+				.navbar 
+				{
+					background-image: url(image/nav-bg.png);
+				}
+				.nav 
+				{
+					padding-left: 60px;
+					
+/*					border: 1px solid red;*/
+					
+				}
+		
+				.nav>li>a 
+				{
+					margin: 5px 10px 0px 10px;
+					
+/*					border: 1px solid blue;*/
+
+                    padding: 10px 5px 5px 5px;
+					
+					color: black;
+					
+					
+				}
+				.nav>li>a:hover 
+				{
+					background: none;
+					
+					color: blue;
+					
+					border-bottom: 3px solid blue;
+				}
+			     .nav>li>.active 
+				{
+					color: blue;
+					
+					border-bottom: 3px solid blue;
+				}
+				
+			    #searchs 
+				{
+					float: right;
+					
+					position: relative;
+					
+					top: 10px;
+				}
+				#searchs>input
+				{
+					border-radius: 15px;
+					
+					border: 1px solid lightgray;
+					
+					padding-left: 10px;
+					
+					padding-top: 3px;
+					
+					padding-bottom: 3px;
+				}
+				.collapsed 
+				{
+					border: 1px solid black;
+				}
+				.icon-bar 
+				{
+					background-color: black;
+				}
+			    
+				.banner 
+				{
+					 height: 480px;
+                     
+					 background-image: url(image/banner.png);
+                    
+					 background-position: 50% 50%;
+				 }
+				 .col-lg-4 
+				 {
+/*					 border: 1px solid blue;*/
+					 
+					 padding-left: 0px;
+				 }
+				 #left , #middle , #right 
+				 {
+					 
+/*					 border: 1px solid red;*/
+					 
+				 }
+				 .col-lg-4 h2 
+				 {
+					 background-image: url(image/s-bg1.png);
+					 
+					 margin: 0px;
+					 
+					 color: white;
+					 
+/*					 em指的是父标签的字体大小
+                     rem 按照html的字体大小进行改变
+					 */
+					 font-size: 1.0em;
+					 
+					 padding: 5px 0px 5px 10px;
+					 
+					 border-top-left-radius: 4px;
+					 
+					 border-top-right-radius: 4px;
+					 
+				 }
+				 .col-lg-4:nth-child(2) h2 
+				 {
+					 background-image: url(image/s-bg2.png);
+				 }
+				 #sections 
+				 {
+					 margin-top: -25px;
+					 
+					
+				 }
+				 #sections article 
+				 {
+					 border: 1px solid lightgray;
+					 
+					 padding: 8px 6px 6px 6px;
+				 }
+				 #left img 
+				 {
+					 width: 90px;
+					 
+/*					 float: left;*/
+				 }
+				 #left section 
+				 {
+					 width: calc(100% - 100px);
+					 
+					 float: right;
+				 }
+				 #sections section h3 
+				 {
+					 margin: 0px;
+					 
+					 font-size: 1.0em;
+					 
+					 font-weight: bold;
+				 }
+				 #sections section p 
+				 {
+					 font-size: 0.8em;
+				 }
+				 .more
+				 {
+					 text-align: right;
+				 }
+				 .clear 
+				 {
+					 clear: both;
+				 }
+				 .dotted-bottom 
+				 {
+					 border-bottom: 1px dotted lightgray;
+				 }
+				 #left dl 
+				 {
+					 font-size: 0.8em;
+					 
+					 color: gray;
+				 }
+				 #left dt 
+				 {
+					 float: left;
+					 
+					 margin-top: 10px;
+					 
+					 width: 75%;
+				 }
+				 #left dd 
+				 {
+					 float: right;
+					 
+					 margin-top: 10px;
+					 
+					 text-align: right;
+					 
+					 width: 25%;
+				 }
+				 #sections article 
+				 {
+					 background-color: white;
+					 
+					 height: 210px;
+				 }
+				 #right img 
+				 {
+					 width: 100%;
+					 
+					 height: 80px;
+				 }
+				 #right a 
+				 {
+					 color: black;
+					 
+					 width: 45%;
+					 
+					 display: inline-block;
+					 
+					 background-color: lightgray;
+					 
+					 margin: 5px auto;
+					 
+					 text-align: center;
+					 
+					 line-height: 200%;
+				 }
+				 #flex 
+				 {
+					 display: flex;
+					 
+					 justify-content:space-between;
+					 
+					 flex-wrap:wrap;
+				 }
+				 
+				 .footer 
+				 {
+					 position: fixed;
+					 
+					 bottom: 0px;
+					 
+					 height: 46px;
+					 
+					 background-color: white;
+					 
+					 border-top: 1px solid lightgray;
+					 
+					 width: 100%;
+					 
+					 padding:12px 0px 0px 0px;
+				 }
+				 .footer nav 
+				 {
+					 text-align: right;
+				 }
+				 .footer nav a 
+				 {
+					 color: black;
+					 
+					 margin-left: 12px;
+				 }
+				 @media (max-width:1300px)
+				 {
+					 .banner
+					 {
+						 height: 480px;
+						 
+						 background-position: 35%  50%;
+						 
+						 background-size: auto 120%;
+					 }
+					 #sections 
+					 {
+						  margin-bottom: 70px;
+					 }
+				 }
+				 @media(max-width:992px)
+				 {
+					 .banner 
+					 {
+						 height: 350px;
+						 
+					 }
+					 .col-lg-4 
+					 {
+						 margin-top: 17px;
+					 }
+					 .col-lg-4:nth-child(1)
+					 {
+						 margin-top: 45px;
+					 }
+					 
+					 .footer 
+					 {
+/*						 设置不使用定位*/
+						 position: static;
+/*						 不给高设置具体值 让其自动调整*/
+						 height: auto;
+					 }
+					 
+					 .footer a 
+					 {
+						 display: block;
+						 
+						 text-align: center;
+						 
+						 margin-top: 13px;
+					 }
+				 }
+				 @media (max-width:768px)
+				 {
+					 .nav 
+					 {
+						 background-color: #333;
+					 }
+					 .nav>li>a 
+					 {
+						 color: white;
+					 }
+					 .nav>li>.active
+					 {
+/*						 设置该 属性的优先级 important 重要的
+						 ！表示提醒的作用*/
+						 color: white !important;
+						 
+						 border: none ;
+					 }
+					 .nav>li>a:hover 
+					 {
+						 border: none;
+					 }
+					 #sections
+					 {
+						 margin-bottom:10px;
+					 }
+					 
+					 
+				 }
+				 @media (max-width:460px)
+				 {
+					 .banner
+					 {
+						 height: 250px;
+						 
+						 background-position: 20% 50%;
+						 
+						 background-size: 150% 100%;
+					 }
+				 }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="" href="">
+						<img src="image/logo.png" alt="">
+					</a>
+					
+					<button class="navbar-toggle collapsed" 
+					data-target='#navbar' data-toggle='collapse'>
+					    <span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a class="active" href="">首页</a></li>
+						<li><a href="">媒体中心</a></li>
+						<li><a href="">关于我们</a></li>
+						<li><a href="">业务板块</a></li>
+						<li><a href="">产品服务</a></li>
+					</ul>
+					
+					<div id="searchs" class="visible-md-block visible-lg-block">
+					   <input type="text" placeholder="Search here...">
+				    </div>
+						
+				</div>				
+			</div>
+		</nav>	
+		<div class="banner"></div>
+			
+		<div class="container" id="sections">
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div id="left">
+					<h2>公司动态</h2>
+					<article>
+						<img src="image/news.png" alt="">					
+						<section>
+							<h3>政府部门参观研发中心</h3>
+							<p>5月18日，一场盛大的创维酷开手机品牌启动暨新品发布经销动暨布经销商大会在深圳手石岩隆重召开...</p>
+                            <p class="more">READ MORE &gt;&gt;</p>
+						</section>
+						<div class="clear dotted-bottom"></div>
+						<dl>
+							<dt>兰新高铁新疆段工程供应钢材逾七十万吨</dt>
+							<dd>2012-12-20</dd>
+							<dt>兰新高铁新疆段工程供应钢材逾七十万吨</dt>
+							<dd>2012-12-20</dd>
+							<dt>兰新高铁新疆段工程供应钢材逾七十万吨</dt>
+							<dd>2012-12-20</dd>
+						</dl>
+						<div class="clear"></div>
+					</article>
+		
+					
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+			    <div id="middle">
+					<h2>研究与观点</h2>
+					<article>
+						<section>
+							<h3>鲲鹏财富：地方政府经济发展金融服务</h3>
+							<p>主做政府项目，只做浙江发达地区政府项目，只和信用良承诺。从2009年创业开始，鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富....</p>
+                            <p class="more">READ MORE &gt;&gt;</p>
+						</section>
+						<div class="clear dotted-bottom" style="margin-bottom:10px"></div>
+						<section>
+							<h3>鲲鹏财富：地方政府经济发展金融服务</h3>
+							<p>主做政府项目，只做浙江发达地区政府项目，只和信用良承诺。从2009年创业开始，鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富鲲鹏财富....</p>
+                            <p class="more">READ MORE &gt;&gt;</p>
+						</section>
+						
+					</article>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div id="right">
+					<h2>产品与服务</h2>
+					<article>
+						<img src="image/header.png" alt="">
+						<div id="flex">
+							<a href="">&gt; 碳钢</a>
+							<a href="">&gt; 特钢</a>
+							<a href="">&gt; 不锈钢</a>
+							<a href="">&gt; 硅钢</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="footer">
+			<div class="container">
+			   <span class="col-md-6 visible-lg-block visible-md-block">Copyright 2004-2012, Seethru Co., Ltd. All right reserved</span>
+			   <nav class="col-md-6">
+				<a href="">网站地图</a>
+				<a href="">关于宝钢</a>
+				<a href="">工作机会</a>
+				<a href="">法律声明</a>
+				<a href="">友情链接</a>
+			   </nav>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>

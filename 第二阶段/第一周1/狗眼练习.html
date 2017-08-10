@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闪瞎钛合金🐶👀</title>
+    <style>
+        span
+        {
+            width: 300px;
+
+            height: 300px;
+
+            background-color: red;
+
+            /*border-radius: 50%;*/
+
+            display: block;
+
+
+        }
+    </style>
+</head>
+<body>
+<span></span>
+
+
+</body>
+</html>
+<script>
+    var spans = document.querySelectorAll('span');
+    // 窗口大小变化时获取屏幕
+    window.onmouseover = function(e)
+    {
+        for(var index = 0 ;index < spans.length ; index ++)
+        {
+            //			 0  1
+//			var a = Math.floor(Math.random() * 2) == 0 ? -150: 150;
+//			算出球体的X坐标
+           var mouseX  = e.pageX ;
+//			算出球体的Y坐标
+           var mouseY = e.pageY ;
+            // 索引从0开始    spans[index]
+            spans[index].style.position = 'absolute';
+
+           spans[index].style.top = mouseY + 'px'  ;
+
+           spans[index].style.left = mouseX + 'px';
+
+
+        }
+    }
+</script>

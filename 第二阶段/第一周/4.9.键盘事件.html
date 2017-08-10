@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+<!--window.onkeydown 
+	window.onkeyup
+	window.onkeypress-->
+	
+	<script>
+		window.onkeydown = function(e)
+		{
+			console.log('键盘按下' + e.key + ' 对应数字是' + e.keyCode);
+			
+			if (e.key == 'A' && e.ctrlKey && e.shiftKey) 
+			{
+				
+			}
+		}
+//		window.onkeyup = function(e)
+//		{
+//			console.log('键盘弹出');
+//		}
+		
+		var count = 0;
+		window.onkeypress = function(e)
+		{
+			console.log('press' + (count++));
+		}
+	</script>
+	
+</body>
+</html>

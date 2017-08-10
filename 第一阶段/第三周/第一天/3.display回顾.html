@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>display回顾</title>
+			<style>
+				section 
+				{
+					/*
+					block 转化成块标签
+					display:none      消失 位置也消失
+					visibility:hidden 消失 位置仍然存在
+					inline-block  行内块  img（既可以设置大小 又在同一行显示）
+					inline  行  不可以设置大小 在同一行显示
+					flex   弹性布局
+					tr  table-row
+					td  table-cell
+					*/
+					/*display:table-caption;*/
+
+					
+					width: 100px;
+					
+					height: 100px;
+					
+					border: 2px solid red;
+					
+					margin: 10px;
+					
+/*					将该标签转化成块标签*/
+/*					display: block;*/
+/*					转化成行标签*/
+/*					display: inline;*/
+/*					转化成行内块*/
+/*					display: inline-block;*/
+/*					设置元素为弹性元素*/
+					display: flex;
+				}
+				section:nth-child(3)
+				{
+/*					隐藏指定的标签 同时位置也被隐藏掉*/
+					display: none;
+				}
+				section:nth-child(4)
+				{
+/*					visibility   可见的
+					hidden       隐藏 
+					设置是否可见   隐藏
+					虽然隐藏掉 但是位置仍然存在*/
+					visibility: hidden;
+				}
+			</style>
+	</head>
+	<body>
+<!--	section{$}*4-->
+		<section>1</section>
+		<section>2</section>
+		<section>3</section>
+		<section>4</section>
+		<section>5</section>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>条件循环</title>
+</head>
+<body>
+    <script>
+        // 三个条件
+        // 1.设置初始值
+        // 2.设定变量范围
+        // 3.设置变量自增自减
+        var index = 0 ;
+        for(var i = 0 ; i < 9 ;i ++)
+        {
+            for(var j = 0; j < 9; j ++)
+            {
+                 index ++ ;
+                //  %d 整型的占位符
+                 console.log('%d * %d =%d',index,index,index);
+            }
+        }
+
+        alert(index);
+
+        // do 做
+        // while 当...的时候
+
+        // var age = 0;
+        // do {
+        //     alert('工作');
+        //     age ++
+        // } while (age < 65);
+
+        // 先判断条件  条件满足就执行循环
+        var count = 0 ;
+        // while(count < 100)
+        // {
+        //     alert('<100');
+        // }
+        if(count < 100) 
+        {
+            alert('<100');
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>大医</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="animate.css">
+	<style>
+		body {
+			width: 100%;
+		}
+			.navbar-header{
+				height: 80px;
+
+			}
+		
+		
+
+		.navbar-header img {
+			width: 200px;
+			margin-top: 5px;
+		
+		}
+
+		.nav a {
+			font-size: 18px;
+			text-align: center;
+		
+
+		}
+		#nav{
+			float:right;
+
+		}
+	
+		#nav a:hover {
+			border-bottom: 2px solid blue;
+			color: blue;
+		}
+		@media only screen and (max-width: 780px){
+
+		}
+		.tupian a{
+			color:blue !important;
+			border-bottom: 2px solid blue;
+
+		}
+
+		.item img {
+			margin: 0 auto;
+			width: 100%;
+			margin-top: 80px;
+		}
+
+		.products {
+
+			text-align: center;
+		}
+
+		.products-bootm {
+			width: 100px;
+			height: 3px;
+			background-color: blue;
+			margin: 0 auto;
+		}
+
+
+
+		.tu img {
+			padding-top: 10px;
+		}
+
+		.tu p {
+			font-size: 20px;
+			color: blue;
+			margin: 30px 10px 15px 10px;
+		}
+
+		.tu-y {
+			width: 200px;
+
+			margin: 0 auto;
+		}
+
+		button {
+			margin-top: 40px;
+			width: 150px;
+			height: 40px;
+			color: cornflowerblue;
+			background-color: white;
+			border: 1px solid cornflowerblue;
+			border-radius: 10px;
+		}
+
+		button:hover {
+			color: white;
+			background-color: cornflowerblue;
+		}
+
+		.news-y {
+			margin: 0 auto;
+			border-bottom: 1px dashed gray;
+			padding: 20px 0 15px 0;
+		}
+
+		.left {
+			float: left;
+			color: gray;
+		}
+
+		.right {
+			float: right;
+			color: gray;
+		}
+
+		.clrar {
+			clear: both;
+		}
+
+		
+
+
+		.home-y {
+			margin-top: 20px;
+			font-size: 20px;
+		}
+
+		.man {
+			background-image: url(img/contact_bg.png);
+			color: white;
+		}
+
+		.man-bootm {
+
+			width: 100px;
+			height: 3px;
+			background-color: white;
+			margin: 0 auto;
+		}
+
+		.ww {
+
+			text-align: left;
+			margin: 0 auto;
+		}
+
+		.ww i,
+		.ww div {
+			font-size: 20px;
+		}
+
+		.footer {
+			padding-top: 50px;
+			width: 700px;
+			margin: 0 auto;
+
+			font-size: 18px;
+			color: white;
+			background-color: black;
+		}
+
+		footer {
+			width: 100%;
+			background-color: black;
+		}
+
+		.footer a {
+			border-left: 1px solid white;
+			color: white;
+			padding: 0 15px 0 15px;
+		}
+
+		.footer a:nth-child(1) {
+			border-left: 1px solid black !important;
+		}
+
+		.footera {
+
+			text-align: center;
+			color: white;
+			padding: 20px 10px 30px 10px;
+		}
+
+		.jumpe {
+			text-align: center;
+			margin: 0 auto;
+			width: 100px;
+			height: 50px;
+			border: 1px solid white;
+		
+		}
+
+		.jump {
+
+
+			
+			animation: rotate 1s linear infinite;
+
+
+			
+		}
+		.qqw{
+			text-align: center;
+			
+			width: 100px;
+			height: 100px !important;
+			border: 1px solid white;
+			padding-bottom: 200px;
+
+		}
+	
+
+
+		@keyframes rotate {
+			0% {
+				transform: 0px;
+			}
+			50% {
+				margin-top: 10px;
+			}
+			100% {
+				margin-top: 0px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!--navbar-inverse黑色
+		navbar-default 灰白色
+		navbar-fixed-top 将导航固定在屏幕上方-->
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!--设置导航-->
+				<!--<a href="" class="navbar-brand"><img src="img/logo.png" alt=""></a>-->
+				<img src="img/logo.png" alt="">
+				<!--toggle开关-->
+				<!--data-toggle监听某件事     data-target 监听某个人-->
+				<button class="navbar-toggle  collapsed" data-toggle='collapse' data-target='#navbar'>
+						 <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						   <span class="icon-bar"></span>
+						 </button>
+
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav" id="nav">
+					<li class="tupian"><a href="首页.html">首页</a></li>
+					<li><a href=" 产品服务.html">产品/服务</a></li>
+					<li><a href="公司新闻.html">公司新闻</a></li>
+					<li><a href="投资者关系.html">投资者关系</a></li>
+					<li><a href="健康咨询.html">健康咨讯</a></li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--轮播-->
+
+	<div id="myCarousel" class="carousel slide">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="img/slide1.jpg" alt="First slide">
+
+			</div>
+			<div class="item">
+				<img src="img/slide2.jpg" alt="Second slide">
+
+			</div>
+			<div class="item">
+				<img src="img/slide3.jpg" alt="Third slide">
+
+			</div>
+		</div>
+		<!-- 轮播（Carousel）导航 -->
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+	<!--产品-->
+	<div class="products">
+		<h2>产品&服务</h2>
+		<h4>products&services</h4>
+		<div class="products-bootm"></div>
+		<div class="container">
+			<div class="tu col-lg-3 col-md-6 col-sm-12">
+				<img src="img/home_pro_icon1.png" alt="">
+				<p>体质监测服务方案</p>
+				<div class="tu-y">面向集团客户提供以体质监测为基础的健康管理服务</div>
+			</div>
+			<div class="tu col-lg-3 col-md-6 col-sm-12">
+				<img src="img/home_pro_icon2.png" alt="">
+				<p>健康体检服务方案</p>
+				<div class="tu-y">面向集团客户提供以健康体检和基因检测为基础的健康管理服务</div>
+
+			</div>
+			<div class="tu col-lg-3 col-md-6 col-sm-12">
+				<img src="img/home_pro_icon3.png" alt="">
+				<p>大医通服务方案</p>
+				<div class="tu-y">面向集团客户或保险公司提供电话咨询，专家挂号，住院安排等服务</div>
+
+			</div>
+			<div class="tu col-lg-3 col-md-6 col-sm-12">
+				<img src="img/home_pro_icon4.png" alt="">
+				<p>专业定制服务方案</p>
+				<div class="tu-y">面向医疗健康行业协会，健康保险公司，跨国公司，提供专业定制的福利管理平台建设方案</div>
+
+
+			</div>
+			<div>
+				<a href="产品服务.html"><button>查看更多</button></a>
+				<div class="jumpe">
+					<div class="jump">
+						<a href="#qq"><img src="img/111.png" alt=""></a>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--新闻-->
+	<div class="products">
+		<h2><a id="qq"></a>公司新闻</h2>
+		<h4>Company News</h4>
+		<div class="products-bootm"></div>
+		<div class="container">
+			<div class="qqq">
+				<div class="tu col-lg-4 col-md-6 col-sm-12">
+					<img src="img/news_li_3.jpg" alt="">
+
+					<div class="news-y">走进腾讯：开展体质监测服务，提升员工健康水平</div>
+					<div>
+						<div class="left">来源：大医股份</div>
+						<div class="right">2016-7-12</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="tu col-lg-4 col-md-6 col-sm-12">
+					<img src="img/news_li_1.jpg" alt="">
+
+					<div class="news-y">中国心肺预防与康复平台上线新闻发布会在京成功...</div>
+					<div>
+						<div class="left">来源：大医股份</div>
+						<div class="right">2016-7-12</div>
+					</div>
+					<div class="clear"></div>
+
+				</div>
+				<div class="tu col-lg-4 col-md-6 col-sm-12">
+					<img src="img/news_li_2.jpg" alt="">
+
+					<div class="news-y">中国心肺预防与康复平台正式上线</div>
+					<div>
+						<div class="left">来源：大医股份</div>
+						<div class="right">2016-7-12</div>
+					</div>
+					<div class="clear"></div>
+
+				</div>
+			</div>
+			
+				
+			
+		
+		</div>
+
+	</div>
+		<div class="jumpe qqw">
+					<a href="公司新闻.html"><button>查看更多</button></a>
+					<div class="jump">
+							<a href="#qw"><img src="img/111.png" alt=""></a>
+
+					</div>
+				</div>
+	<!--健康咨询-->
+	<div class="products">
+		<h2><a id="qw"></a>健康资讯</h2>
+		<h4>Health Information</h4>
+		<div class="products-bootm"></div>
+		<div class="container">
+			<div class=" col-lg-3 col-md-6 col-sm-12 home-i">
+				<img src="img/home1.png" alt="">
+
+				<div class="home-y">高尿酸</div>
+
+			</div>
+			<div class=" col-lg-3 col-md-6 col-sm-12 home-i">
+				<img src="img/home2.png" alt="">
+
+				<div class="home-y">高血压</div>
+
+
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 home-i">
+				<img src="img/home3.png" alt="">
+
+				<div class="home-y">高血脂</div>
+
+
+			</div>
+			<div class=" col-lg-3 col-md-6 col-sm-12 home-i">
+				<img src="img/home4.png" alt="">
+
+				<div class="home-y">糖尿病</div>
+
+
+			</div>
+			<div>
+				<a href="健康咨询.html"><button>查看更多</button></a>
+				<div class="jumpe">
+					<div class="jump">
+						<a href="#qe"><img src="img/111.png" alt=""></a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--联系我们-->
+	<div class="products man">
+
+		<h2><a id="qe"></a> 联系我们</h2>
+		<h4>Contact Us</h4>
+		<div class="man-bootm"></div>
+		<div class="container">
+			<div class=" col-lg-6 col-md-6 col-sm-12 ww">
+				<h2>大医股份-北京总部</h2>
+				<div>
+					<img src="img/1.jpg" alt="">
+					<i>010-82609328</i>
+				</div>
+				<div>
+					<img src="img/2.png" alt="">
+					<i>hr@dayingufen.com</i>
+				</div>
+				<div>
+
+					<div><img src="img/3.png" alt="">北京市海淀区苏州街18号长远天地A2-1707</div>
+				</div>
+			</div>
+			<div class=" col-lg-6 col-md-6 col-sm-12 ww">
+				<h2>大医股份-合肥基地</h2>
+				<div>
+					<img src="img/1.jpg" alt="">
+					<i>400-800-0107</i>
+				</div>
+				<div>
+					<img src="img/2.png" alt="">
+					<i>admin@ihealthink.com</i>
+				</div>
+				<div>
+
+					<div><img src="img/3.png" alt="">合肥市政务文化新区潜山路华邦世贸中心A座3303室</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	</div>
+	<!--尾部-->
+	<footer>
+		<div class="footer">
+			<a href="">产品服务</a>
+			<a href="">公司新闻 </a>
+			<a href="">投资者关系</a>
+			<a href="">健康资讯</a>
+			<a href="">关于我们</a>
+			<a href="">项目通道</a>
+
+
+		</div>
+		<div class="footera">Copyrifht © 2016 大医科技股份有限公司 版权所有 京IC备16026951号-1 </div>
+
+	</footer>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	     // 初始化轮播
+        $(function(){
+            // 进入页面开始轮播
+            $('#myCarousel').carousel('cycle');
+            // 指定轮播开始页
+            $('#myCarousel').carousel('1');
+        });
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>抽奖</title>
+		<style>
+			body 
+			{
+				height: 100%;
+				
+				background: rgba(234, 224, 217, 1);
+				
+				display: flex;
+				
+				justify-content:center;
+				
+				align-items:center;
+			}
+			section 
+			{
+				width: 450px;
+				
+				height: 450px;
+				
+				border-radius: 50%;
+				
+				background-image: url(index.png);
+				
+				z-index: 100;
+				
+				display: flex;
+				
+				justify-content:center;
+				
+				align-items:center;
+			}
+			div 
+			{
+				width: 228px;
+				
+				height: 248px;
+				
+				background-image: url(pointer.png);
+			}
+			
+			div:active 
+			{
+				animation: zhuan 10s ;
+			}
+			@keyframes zhuan 
+			{
+				0%
+				{
+					transform: rotate(0deg);
+				}
+				100%
+				{
+					transform: rotate(3600deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		<section id="sec">
+			<div id="d" onclick="action()"></div>
+		</section>
+		
+		<script src="hongbao.js"></script>
+	</body>
+</html>

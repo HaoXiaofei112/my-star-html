@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>导航条</title>
+			<style>
+				body 
+				{
+					margin: 0px;
+				}
+				header
+				{
+					
+					background-color: white;
+					box-sizing: border-box;
+					
+					width: 100%;
+					
+					height: 80px;
+					
+					border-bottom: 1px solid black;
+				}
+				section
+				{
+					width: 1200px;
+					
+					height: 80px;
+					
+					margin: 0px auto;
+					
+					position: relative;
+					
+/*					background-color: red;*/
+				}
+				img 
+				{
+/*					设置img大小只用设置宽或者高
+					如果设置了宽 高会自动调整
+					如果设置高  宽也会自动调整*/
+					height: 50px;
+					
+					padding: 15px 0 5px 0;
+				}
+				ul 
+				{
+/*					去掉列表前面的点*/
+					list-style-type: none;
+					
+					position: absolute;
+					
+					right: 0px;
+					
+					top: 0px;
+					
+					margin: 0;
+					
+					z-index: 20;
+				}
+				.home>li 
+				{
+					display: inline-block;
+					
+/*					float: left;*/
+					
+					padding: 35px 20px 30px 20px;
+					
+/*					position: relative;*/
+					
+					z-index: 30;
+					
+					position: absolute;
+					
+					top: 0px;
+					
+/*					background-color: white;*/
+ 
+
+				}
+				li:hover 
+				{
+					background-color: lightpink;
+				}
+			    .clear
+				{
+					position: absolute;
+					
+					top: 0px;
+					
+					left: 0px;
+					
+					border: 1px solid black;
+					
+					background-color: white;
+					
+					padding: 0px;
+					
+					z-index: -5;
+				}
+				.clear li 
+				{
+					height: 30px;
+					
+					text-align: center;
+					
+					z-index: -5;
+				}
+				.home li:nth-child(2):hover
+				{
+					z-index: 1000;
+				}
+			</style>
+	</head>
+	<body>
+		<header>
+			<section>
+				<img src="logo.png" alt="">
+				
+				<ul class="home">
+					<li>首页</li>
+					<li>高端课程 &#9660;
+					   <ul class="clear">
+			             <li>VR</li>
+			             <li>HTML</li>
+			             <li>PHP</li>
+			             <li>python</li>
+			             <li>ios</li>
+			             <li>网络运营</li>
+			             <li>UI</li>
+		               </ul>
+					</li>
+					<li>专家师资</li>
+					<li>高薪就业</li>
+					<li>创业学员</li>
+					<li>学员作品</li>
+					<li>智游新闻</li>
+					<li>课程体系</li>
+					<li>关于智游</li>
+				</ul>
+				<div class="clear"></div>
+			</section>
+		</header>
+		
+		<div></div>
+		
+	</body>
+</html>

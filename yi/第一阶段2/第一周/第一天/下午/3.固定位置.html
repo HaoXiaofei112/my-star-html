@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>固定位置</title>
+			<style>
+				div 
+				{
+					background-color: red;
+					
+/*					设置标签定宽居中*/
+					width: 500px;
+					
+					margin: 0 auto;
+					
+/*					设置定位依据html进行定位
+                    此定位属性会影响定宽居中
+					造成定宽居中失败
+					总结：使用固定位置就不能再定宽居中*/
+					position: fixed;
+/*					从上往下移动0像素*/
+					top: 0px;
+				}
+				p 
+				{
+					height: 2000px;
+					
+					background-color: blue;
+				}
+			</style>
+	</head>
+	<body>
+		<div>固定位置</div>
+		<p></p>
+	</body>
+</html>

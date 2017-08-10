@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动编号</title>
+    <style>
+    body{
+        padding-left: 100px;
+    }
+    article{
+        /*想要对某一些标签进行编号,就需要在他们的父级元素中设置
+        一个计数器,并指定相应的名称*/
+        /*第一个值是计数器的名称
+        第二个值是启始值,必须是非负整数,如果不是指定的格式,会忽略掉以默认值进行显示*/
+        counter-reset: h2 0;
+    }
+    h2:before{
+        content: counter(h2) '.';
+        /*对指定的计数器进行递增*/
+        /*incremnt,递增*/
+    counter-increment: h2;
+    }
+    section{
+        counter-reset: h3 0;
+    }
+    h3:before{
+        content: counter(h2)'.'counter(h3);
+        counter-increment: h3;
+    }
+    </style>
+</head>
+<body>
+<h1>郑州理工简介</h1>
+<article>
+    <h2>信息工程系</h2>
+    <section>
+        <h3>计算机网络技术</h3>
+        <h3>物联网应用技术</h3>
+        <h3>动漫制作</h3>
+    </section>
+    <h2>经贸管理系</h2>
+    <section>
+        <h3>电子商务</h3>
+        <h3>会计</h3>
+        <h3>物流管理</h3>
+    </section>
+    <h2>建筑工程系</h2>
+    <section>
+        <h3>工程造价</h3>
+        <h3>搬砖</h3>
+    </section>
+</article>
+</body>
+</html>

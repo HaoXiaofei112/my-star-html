@@ -1,0 +1,112 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>bootstrap空白项目</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+				p 
+				{
+					width: 400px;
+					
+					height: 50px;
+					
+					border: 2px solid red;
+					
+					margin: 0px auto;
+					
+					box-sizing: border-box;
+				}
+				.blue 
+				{
+					border: 2px solid blue;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="">11月</a>			
+					<button class="navbar-toggle collapsed" data-toggle='collapse' data-target='#navbar'>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="">周一</a>
+						</li>
+						<li>
+							<a href="">周二</a>
+						</li>
+						<li>
+							<a href="">周三</a>
+						</li>
+						<li>
+							<a href="">周四</a>
+						</li>
+						<li>
+							<a href="">周五</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+			<section class="col-lg-1 col-md-2 col-sm-3 col-xs-4">李洁华</section>
+		</div>
+		
+		
+		<div class="container">
+<!--			设置网格效果会使顶宽居中失效-->
+			<p class="col-lg-1 col-md-1 col-sm-1 col-xs-1">芭啦芭啦樱之花</p>
+		</div>
+		
+<!--		不平均分配空间-->
+		<div class="container">
+			<p class="col-lg-8">col-lg-8</p>
+			<p class="col-lg-4">col-lg-4</p>
+		</div>
+		
+		<div class="container">		
+			<div class="row" style="background-color:green">
+			   <p class=" blue center-block" style="width:33%" >col-lg-3</p>
+     		</div>
+			<div class="row">
+				<p class="col-lg-3 btn-success">col-lg-3</p>
+			</div>
+			<div class="row">
+				<p class="col-lg-3 btn-warning">col-lg-3</p>
+			</div>
+			<div class="row">
+				<p class="col-lg-3 visible-md-block">中屏显示</p>
+			</div>
+			<div class="row">
+				<p class="col-lg-3 hidden-lg">大屏隐藏</p>
+			</div>
+		</div>
+		
+		
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>钢琴练习</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		html {
+			height: 100%;
+		}
+		
+		body {
+			margin: 0;
+			padding-top: 150px;
+			height: 100%;
+			background: radial-gradient(#666, #000);
+		}
+		
+		main {
+			width: 800px;
+			height: 400px;
+			margin: 0 auto;
+			background: url(keys.png) no-repeat;
+			background-size: cover;
+			border: 15px solid #222;
+			border-radius: 10px;
+			box-shadow: 0 0 30px #999;
+			display: flex;
+		}
+		
+		div{
+			height: 100%;
+			flex-grow: 1;
+		}
+		
+		div:active,
+		div.active {
+			background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(150, 150, 150, 0.3));
+		}
+	</style>
+</head>
+
+<body>
+	<audio src="notes/1.oga"></audio>
+	<audio src="notes/2.oga"></audio>
+	<audio src="notes/3.oga"></audio>
+	<audio src="notes/4.oga"></audio>
+	<audio src="notes/5.oga"></audio>
+	<audio src="notes/6.oga"></audio>
+	<audio src="notes/7.oga"></audio>
+	<audio src="notes/8.oga"></audio>
+	<audio src="notes/9.oga"></audio>
+	<main>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</main>
+</body>
+<script>
+    var divs = document.querySelectorAll('div');
+    var audios = document.querySelectorAll('audio');
+	//设置一个布尔值，代表按键的状态，false代表未按下，true代表按下
+    var keyDownStatus = false;
+    for(var i = 0; i < divs.length; i++){
+        divs[i].index = i;
+        divs[i].onmousedown = function(){
+            audios[this.index].load();
+            audios[this.index].play();
+        }
+    }
+    window.onkeydown = function(event){
+        //当按键按下时，该函数会不断执行，导致音频不断重新加载，重新播放
+        
+		//根据状态的改变，使得下面的代码只执行一次
+		//函数要无限执行，这个无法改变，是浏览器特性，但是没有相应的代码运行，等效于只执行一次函数
+        if(keyDownStatus == false){
+            keyDownStatus = true;
+			var code = event.keyCode;
+            if(code >= 49 && code <= 57){
+                var keyActiveIndex = code - 49;
+                audios[keyActiveIndex].load();
+                audios[keyActiveIndex].play();
+                divs[keyActiveIndex].classList.add('active');
+            }
+        }
+    }
+    window.onkeyup = function(){
+        keyDownStatus = false;
+        for(var i = 0; i < divs.length ; i++){
+            divs[i].classList.remove('active')
+        }
+    }
+</script>
+
+</html>

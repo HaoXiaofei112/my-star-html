@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div 
+        {
+            width: 100px;
+
+            height: 100px;
+            /*0~360*/
+            /*0 红色
+            120 绿
+            240  蓝*/
+            /*参数1；色度
+            参数2:饱和度
+            参数3：亮度*/
+            background-color: hsl(180, 100%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        var div =document.querySelector('div');
+        // Math 数学
+        // random 随机
+        // Math.random() 获取一个随机数 (0 ~ 1) 0.91939923919191
+        // Math.floor()取整  ()里面写需要被取整的数字
+        var random = Math.floor(Math.random() * 360);
+
+        div.style.backgroundColor = 'hsl(' + random + ',100%,50%)'
+    </script>
+</body>
+</html>

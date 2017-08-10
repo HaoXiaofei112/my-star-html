@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素节点</title>
+</head>
+<body>
+    <ul>
+        <li>IOS</li>
+        <li>HTML5</li>
+        <li>PHP</li>
+        <li>VR</li>
+        <li>UI</li>
+    </ul>
+    <script>
+        // create 创建 创造
+        // element 元素
+        // 创建一个li类型的标签
+        var newli =document .createElement('li');
+        var ul =document.querySelector('ul');
+        
+        newli.innerText = 'java';
+        newli.childNodes[0].appendData('bigData');
+         ul.appendChild(newli);
+        //  next 下一个
+        //  element 节点
+        //  sibling 兄弟
+        // previous 上一个
+        
+         alert(newli.previousElementSibling.childNodes[0].nodeValue);
+// 获得上一个兄弟节点的HTML标签
+         alert(newli.previousElementSibling.outerHTML);
+        //  获取所有子节点中的第一个
+         alert(ul.firstChild);
+        //  获取所有Li标签中的第一个
+         alert(ul.firstElementChild);
+        //  获取所有标签的个数 非所有子节点
+         alert(ul.childElementCount);
+        //  获取所有子节点的个数
+         alert(ul.childNodes.length);
+        //removeChild  删除一个节点 
+        // 可以设置一个变量 用来接收被删除的内容
+        var value =  ul.removeChild(ul.firstElementChild);
+
+        // ul.appendChild(value);
+        // replace 替换
+        ul.replaceChild(value,newli);
+        // insert 插入
+        //  adjacent 相邻的
+
+        // ul.insertAdjacentElement
+        // 在结束之前插入
+        ul.insertAdjacentText('beforeEnd','will over');
+        // 在结束之后插入
+        ul.insertAdjacentText('afterEnd','game over');
+        // begin 开始 在开始之前插入
+        ul.insertAdjacentText('beforeBegin','will start');
+        // 在开始之后插入
+        ul.insertAdjacentText('afterBegin','start already');
+
+
+        ul.insertAdjacentHTML('beforeEnd','<li>新插入的单元格</li>')
+        
+       /*
+       DOM结构之节点
+       1.创建一个标签
+       2.获取标签的上个兄弟标签
+       3.获取标签的下个兄弟标签
+       4.获取标签的子标签个数
+       5.获取标签的子节点个数
+       6.删除一个标签
+       7.替换一个标签
+       8.在指定位置插入一个标签
+       
+       
+       */
+
+    
+    </script>
+</body>
+</html>

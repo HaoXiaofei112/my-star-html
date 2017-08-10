@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>换肤</title>
+</head>
+<body>
+    <script>
+    var nav =document.createElement('nav');
+    nav.style.height =  '50px';
+    nav.style.backgroundColor = 'black';
+    document.body.appendChild(nav);
+    document.body.style.margin = '0px';
+    // 循环创建按钮·
+    for(var index = 0 ; index < 4 ; index++){
+       var div =document.createElement('div');
+       div . style.width = '30px';
+       div.style.height = '30px';
+       div.style.margin = '10px';
+       div.style.display = 'inline-block';
+       nav.appendChild(div);
+       if(index == 0){
+           div.style.backgroundColor = 'red';
+           div.onclick =function(){
+               document.body.style.backgroundColor=  'red';
+           }
+       }
+       else if(index == 1){
+              div.style.backgroundColor = 'lightgreen';
+                div.onclick =function(){
+               document.body.style.backgroundColor=  'lightgreen';
+           }
+       }
+        else if(index == 2){
+              div.style.backgroundColor = 'orange';
+                div.onclick =function(){
+               document.body.style.backgroundColor=  'orange';
+           }
+       }
+        else {
+              div.style.backgroundColor = 'pink';
+                div.onclick =function(){
+               document.body.style.backgroundColor=  'pink';
+           }
+       }
+    }
+    </script>
+    
+</body>
+</html>

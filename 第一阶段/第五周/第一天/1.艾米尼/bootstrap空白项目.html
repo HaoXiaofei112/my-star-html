@@ -1,0 +1,195 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>bootstrap空白项目</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+				body 
+				{
+					padding-top: 50px;
+				}
+				header 
+				{
+					background-color: #eee;
+					
+					padding-bottom: 5px;
+					
+					margin-bottom: 10px;
+				}
+				h1 
+				{
+					font-size: 22px;
+				}
+				
+				th:last-child , td:last-child 
+				{
+					text-align: center;
+				}
+				table 
+				{
+					margin-top: 10px;
+				}
+				form>div>label 
+				{
+					text-align: left !important;
+				}
+				form>div>div>input 
+				{
+					display: inline-block;
+					
+					width: 34% !important;
+				}
+				form>div:nth-child(4)>div>input
+				{
+					width: 60% !important;
+				}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="" class="navbar-brand">艾米尼儿童摄影</a>
+					<button class="navbar-toggle collapsed" data-toggle='collapse' data-target='#navbar'>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="">首页</a></li>
+						<li class="active"><a href="">客户</a></li>
+						<li><a href="">宝贝</a></li>
+						<li><a href="">孕妈咪</a></li>
+						<li><a href="">会员卡</a></li>
+						<li><a href="">预约</a></li>
+						<li><a href="">订单</a></li>
+						<li><a href="">产品</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<header>
+			<div class="container">
+				<h1>客户查询及管理</h1>
+			</div>
+		</header>
+		
+		<div class="container">
+<!--	    btn 让按钮的风格变成扁平化风格
+			btn-success 让按钮变成绿色-->
+			<button class="btn btn-success">添加客户</button>
+			
+			<a href="#" class="btn btn-warning " data-toggle="modal" data-target="#myModal">
+               <span class="glyphicon glyphicon-search"></span> 搜索
+            </a>
+<!--		fade 设置弹出框渐隐渐消-->
+			<div class="modal fade" id="myModal" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     <h4 class="modal-title" id="myModalLabel">客户搜索</h4>
+                  </div>
+                <div class="modal-body">
+					
+                  <form class="form-horizontal" role="form">
+                    
+                    <div class="form-group">
+                       <label for="lastname" class="col-sm-2 control-label">姓名:</label>
+                       <div class="col-sm-10">
+                         <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                       </div>
+                   </div>
+				   <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">QQ:</label>
+                        <div class="col-sm-10">
+                           <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                     </div>
+                    <div class="form-group">
+                       <label for="lastname" class="col-sm-2 control-label">手机:</label>
+                       <div class="col-sm-10">
+                         <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                       </div>
+                   </div>
+				     <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">身份证:</label>
+                        <div class="col-sm-10">
+                           <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                     </div>
+                      <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">客户经理:</label>
+                        <div class="col-sm-10">
+                           <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                     </div>
+				</form>
+
+				</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">&#x3000;关闭&#x3000; </button>
+                <button type="button" class="btn btn-success"> &#x3000;搜索&#x3000; </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+		</div>
+		
+		<div class="container">
+<!--			.table为表格添加基本样式-->
+			<table class="table table-bordered ">
+				<tr class="active">
+					<th>添加时间</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>QQ</th>
+					<th>手机</th>
+					<th>客户经理</th>
+					<th>详情</th>
+				</tr>
+				<tr>
+					<td>2016-06-06 16:03</td>
+					<td>summer</td>
+					<td>母</td>
+					<td>928936111</td>
+					<td>15003871288</td>
+					<td>李洁华</td>
+					<td>
+						<span class="glyphicon glyphicon-edit"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>2016-06-06 16:03</td>
+					<td>毛球</td>
+					<td>公</td>
+					<td>828936112</td>
+					<td>15003871288</td>
+					<td>李洁华</td>
+					<td>
+						<span class="glyphicon glyphicon-edit"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>2016-06-06 16:03</td>
+					<td>毛球</td>
+					<td>公</td>
+					<td>828936112</td>
+					<td>15003871288</td>
+					<td>李洁华</td>
+					<td>
+						<span class="glyphicon glyphicon-edit"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>

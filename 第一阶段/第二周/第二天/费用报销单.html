@@ -1,0 +1,194 @@
+<html>
+	<head>
+		<script></script>
+		<link rel="stylesheet" href="">
+		<meta charset="utf-8">
+		<title>费用报销单</title>
+		<style>
+			main 
+			{
+				
+
+				width: 21cm;
+/*				solid 实线*/
+				border: 1px solid black;
+				
+				margin: 3cm auto 0 auto;
+					
+/*				参数1:水平方向阴影的偏移距离
+				参数2:垂直方向阴影的偏移距离
+				参数3:阴影的扩散半径
+				参数4:阴影的颜色		*/
+				/*线性渐变 linear-gradient
+				径向渐变 radial-gradient*/
+				box-shadow: 10px 10px 25px red;
+			}
+		    
+/*			tr:nth-child(1) 找到第一行单元格
+			td:nth-child(1) 找到每一行的第一个单元格
+			tr:nth-child(1) td:nth-child(1) 找到第一行第一个单元格*/
+			tr:nth-child(1) td:nth-child(1) 
+			{
+				width: 6cm;
+			}
+			tr:nth-child(1) td:nth-child(2)
+			{
+				width: 2cm;
+			}
+			tr:nth-child(1) td:nth-child(3)
+			{
+				width: 2cm;
+			}
+			tr:nth-child(1) td:nth-child(4)
+			{
+				width: 3cm;
+			}
+			tr:nth-child(1) td:nth-child(5)
+			{
+				width: 3.5cm;
+			}
+		    td
+			{
+				height: 0.8cm;
+				
+				border: 1px solid black;
+				
+				text-align: center;
+			}
+			table 
+			{
+/*				设置边框合并*/
+				border-collapse: collapse;
+				
+				margin: 0.3cm auto;
+			}
+			h1 
+			{
+				width: 5.5cm;
+				
+				font-size: 23px;
+				
+				margin:18px auto 0 auto ;
+				
+				border-bottom: 1px solid black;
+			
+			}
+			p 
+			{
+				margin: 8px 0;
+			}
+			p span:nth-child(2)
+			{
+				float: right;
+			}
+			p span:nth-child(1)
+			{
+				position: relative;
+				
+				left: 82px;
+			}
+		    
+			table table 
+			{
+				margin: 0px;
+				
+				width: 100%;
+				
+			}
+			td table  td 
+			{   
+/*				&& || > < ! = == !=*/
+				width: 16.6% !important;
+				
+				border: none;
+				
+				border-right: 1px solid black;
+			}
+			td table td:nth-child(6)
+			{
+				border-right: none;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<table>
+				<caption>
+					<h1>费&#X3000;用&#X3000;报&#X3000;销&#X3000;单</h1>
+					<p>
+						<span>报销日期&#x3000;&#x3000;&#x3000;年&#x3000;&#x3000;月&#x3000;&#x3000;日&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;</span>
+						<span>附件&#x3000;&#x3000;张</span>
+					</p>
+				</caption>
+				<tr>
+					<td>费&#x3000;用&#x3000;项&#x3000;目</td>
+					<td>金&#x3000;额</td>
+					<td>类&#x3000;别</td>
+					<td rowspan="2">负责人 (签章)</td>
+					<td rowspan="2"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="2">审&#x3000;查&#x3000;意&#x3000;见</td>
+					<td rowspan="2"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="2">报销人 (签章)</td>
+					<td rowspan="2"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>￥</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="5">　
+						核实金额（大写）　 佰　　拾　 万 　 仟　　佰　 拾 　 元　　角　 分　　￥ 
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="5">
+						<table>
+							<tr>
+								<td>借款额</td>
+								<td></td>
+								<td>应退金额</td>
+								<td></td>
+								<td>应补金额</td>
+								<td></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<footer>
+				<span>审核</span>
+				<span>出纳</span>
+			</footer>
+		</main>
+	</body>
+</html>

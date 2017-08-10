@@ -1,0 +1,64 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>bootstrap回顾</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+				
+		</style>
+	</head>
+	<body>
+<!--	navbar 设置该标签为导航 
+		navbar-inverse 设置导航的样式-->
+		<nav class="navbar navbar-inverse">
+<!--		将导航上的所有元素添加到容器当中-->
+			<div class="container">
+				
+<!--			添加在navbar-header里面的类名为navbar-brand
+				的a标签 会实现一个类似logo的效果-->
+				<div class="navbar-header">
+                    
+<!--                 button在这个地方显示为 汉堡按钮样式
+                    1.表示 将折叠的内容保存在类名为 navbar-toggle collapsed
+                      的button里面
+                    2.data-toggle 表示监听哪个事件 （偷牛）
+                      data-target 表示监听的目标   （男孩）-->
+					<button class="navbar-toggle collapsed" data-toggle = 'collapse' data-target = '#navbar'>
+							
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a class="navbar-brand" href="">智游</a>
+				</div>
+				
+<!--              navbar-collapse 在汉堡按钮消失时 菜单栏隐藏
+                  collapse 在汉堡按钮出现时 菜单栏折叠-->
+				<div id="navbar" class="collapse navbar-collapse ">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="">主页</a>
+						</li>
+						<li>
+							<a href="">公司简介</a>
+						</li>
+						<li>
+							<a href="">关于我们</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+  
+		</nav>
+     
+	</body>
+<!--bootstrap里面的文件都有对jquery的引用
+	所以要把jquery放在bootstrap的前面-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>

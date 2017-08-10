@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>   今天下雨了</div>
+    <script>
+      var link =document.createElement('link');
+      link.rel = 'stylesheet';
+    //   on 当。。。。的时候
+    // resize  重新设置大小
+    // window  窗口   获取屏幕大小
+      window.onresize =function(){
+        //   client 客户端
+
+        // 重新获取当前窗口的宽度
+         var width =document.body.clientWidth;
+         if(width > 800){
+             link.href = '4.1big.css';
+
+         }
+         else if(width > 600){011
+              link.href = '4.1smale.css';
+
+         }
+         else{
+             link.href = '4.1.normal.css'; 
+         }
+         document.head.appendChild(link);
+      }
+    </script>
+    
+</body>
+</html>

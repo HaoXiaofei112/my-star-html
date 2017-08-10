@@ -1,0 +1,33 @@
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+			<title>图片处理</title>
+			<style>
+				div
+				{
+/*					使用块标签必须设置宽高才能显示图片
+                    width height 设置的是标签的宽高*/
+					width: 100%;
+					
+					height: 600px;
+/*					background-size 设置背景图的宽高*/
+					background-size: 1264px 600px;
+					
+					background-image: url(header.jpg);
+				}
+				img 
+				{
+/*					设置图片的宽为父标签的宽 
+					高不用设置 会根据宽放大或者缩小的比例
+					自动进行方大或者缩小*/
+					width: 100%;
+					
+				}
+			</style>
+	</head>
+	<body>
+		<img src="header.jpg" alt="">
+	</body>
+</html>
+

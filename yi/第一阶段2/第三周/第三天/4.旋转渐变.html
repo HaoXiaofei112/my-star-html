@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title></title>
+			<style>
+				body 
+				{
+					height: 100%;
+					
+					margin: 0px;
+					
+					overflow: hidden;
+				}
+				div 
+				{
+					width: 100px;
+					
+					height: 100px;
+					
+					background-color: red;
+					
+					position: absolute;
+					
+					top: 500px;
+					
+					left: 800px;
+					
+					animation: zhuan 4s linear infinite;
+					
+					transform-origin: -150px -150px;
+				}
+				section 
+				{
+					width: 10px;
+					
+					height: 10px;
+					
+					background-color: black;
+					
+					position: absolute;
+					
+					top: calc(500px - 150px - 5px);
+					
+					left: calc(800px - 150px - 5px);
+				}
+				
+				@keyframes zhuan 
+				{
+					0%
+					{
+						transform: rotate(0deg);
+					}
+					20%
+					{
+						background-color: red;
+					}
+					40%
+					{
+						background-color: blue;
+					}
+					60%
+					{
+						background-color: black;
+					}
+					80%
+					{
+						background-color: orange;
+					}
+					100%
+					{
+						transform: rotate(360deg);
+						
+						background-color: yellow;
+					}
+				}
+			</style>
+	</head>
+	<body>
+		<div></div>
+	    <section></section>
+	</body>
+</html>

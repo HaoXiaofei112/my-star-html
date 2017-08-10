@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过度</title>
+    <style>
+    html{
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+       
+
+    }
+    div{
+        width: 400px;
+        height: 400px;
+         background: purple;
+        border-radius: 50%;
+        /*过度*/
+        /*1,需要进行过度的样式 property:属性*/
+        transition-property: box-shadow;
+        /*2.指定过度的时间.duration:时间段*/
+        transition-duration: 5s;
+        /*3.过度过程中变化的速率变化*/
+        transition-timing-function: ease;
+        /*4,延迟过度*/
+        transition-delay: 3s;
+        transition: background 2s ease;
+    }
+    div:hover{
+        background: yellow;
+        /*阴影*/
+        box-shadow: 0 0 50px 100px red;
+    }
+
+    </style>
+</head>
+<body>
+<div></div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+//1.将类A放入到类B中 B继承A的样式
+//2.类A可以带参数 也可以不带
+//--------------------混合
+.A(@color:red)   //（）里面为参数
+{
+	border: 2px solid @color;
+}
+
+.B 
+{
+	width: 400px;
+	
+	height: 400px;
+
+	// border: 2px solid blue;
+	
+	.A(blue);
+}
+
+
+//-----------------继承
+//:extend 继承
+.C:extend(.B)
+{
+	// width: 400px;
+
+	// height: 400px;
+
+	// border: 2px solid blue;
+
+	margin: 100px auto;
+}

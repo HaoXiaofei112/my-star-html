@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>插图与标题</title>
+			<style>
+/*				body 
+				{
+					counter-reset: counterImage;
+				}*/
+				figure 
+				{
+/*					文本居中 对图像仍然有效*/
+					text-align: center;
+					
+					counter-increment: counterImage;
+				}
+				figcaption:before 
+				{
+					content: '图' counter(counterImage);
+				}
+				figcaption[lang = en]:before 
+				{
+					content: 'fig.' counter(counterImage);
+				}
+			</style>
+	</head>
+	<body>
+<!--	通常用来设置图片-->
+		<figure>
+			<img src="0.png" alt="">
+<!--			figure caption-->
+			<figcaption>儿时照</figcaption>
+			<figcaption lang="en">child</figcaption>
+		</figure>
+		
+		<figure>
+			<img src="0.png" alt="">
+<!--			figure caption-->
+			<figcaption>儿时照</figcaption>
+			<figcaption lang="en"></figcaption>
+		</figure>
+		
+		<figure>
+			<img src="0.png" alt="">
+<!--			figure caption-->
+			<figcaption>儿时照</figcaption>
+			<figcaption lang="en"></figcaption>
+		</figure>
+		
+		
+		<ul>
+			<li></li>
+		</ul>
+
+		<table>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+
+		<article>
+			<address></address>
+		</article>
+
+		<ol>
+			<li></li>
+		</ol>
+
+		
+
+
+
+		<figure>
+			<img src="0.png" alt="">
+<!--			figure caption-->
+			<figcaption>儿时照</figcaption>
+			
+			<figcaption lang="en">child</figcaption>
+		</figure>
+		
+		<abbr title="前端的总称">HTML5</abbr>
+	</body>
+</html>

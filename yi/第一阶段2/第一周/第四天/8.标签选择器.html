@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>标签选择器</title>
+			<style>
+				
+/*				p标签必须为section的子标签
+				p标签必须在section下面第一个的位置*/
+				section p:nth-child(3)
+				{
+					background-color: red;
+				}
+				section p:nth-child(4)
+				{
+					background-color: blue;
+				}
+				
+/*				type 类型
+                
+				1.p标签必须为section标签的子标签
+				2.获取所有p类型的标签中第一个标签*/
+				section p:nth-of-type(1)
+				{
+					background-color: orange;
+				}
+				
+				section p:nth-of-type(2n + 1)
+				{
+					background-color: lightgreen;
+				}
+				
+/*				找到最后一个标签
+				要确保该标签是h1类型*/
+				h1:last-child
+				{
+					background-color: red;
+				}
+/*				找到所有h1标签中的
+				最后一个该类型的标签*/
+				h1:last-of-type
+				{
+					
+				}
+/*				找到第一个标签
+				并且该标签必须为h1类型*/
+				h1:first-child
+				{
+					
+				}
+/*				找到所有h1标签中的第一个*/
+				h1:first-of-type
+				{
+					
+				}
+				
+				
+			</style>
+	</head>
+	<body>
+		<h1>今天天气很错</h1>
+		<h1>雨一直下</h1>
+		<h1>你在听课，心却在网吧</h1>
+		<h1>听老师在上面巴拉巴拉</h1>
+		
+		<section>
+			<div> div </div>
+			<span> span </span>
+			<div>你好</div>
+			<p> p1 </p>
+			<p> p2</p>
+			<p> p3 </p>
+		</section>
+		
+		<h1> 红色 </h1>
+	</body>
+</html>

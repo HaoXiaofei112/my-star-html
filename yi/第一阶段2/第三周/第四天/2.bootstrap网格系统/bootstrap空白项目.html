@@ -1,0 +1,67 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>bootstrap空白项目</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+		        .container:nth-child(1) div:nth-child(2n) 
+				{
+					background-color: red;
+				}
+				.container:nth-child(1) div:nth-child(2n+1)
+				{
+					background-color: blue;
+				}
+				h2 
+				{
+					font-weight: bold;
+				}
+				
+				
+		</style>
+	</head>
+	<body>
+<!--	将网格内容放在容器当中-->
+		<section class="container">
+<!--		col   column 列 
+			lg    large  巨大的（大屏幕）-->
+			<div class="col-lg-6 col-md-4 col-sm-2">123</div>
+			<div class="col-lg-6 col-md-4 col-sm-2">123</div>
+			<div class="col-lg-6 col-md-4 col-sm-2">123</div>
+			<div class="col-lg-6 col-md-4 col-sm-2">123</div>
+			<div class="col-lg-6 col-md-4 col-sm-2">123</div>
+			<div class="col-lg-6 col-md-4 col-sm-2">123</div>	
+		</section>
+		
+		<section class="container">
+			
+			<div class="col-lg-6 col-md-6">
+				<h2>三国演义</h2>
+				<p>东汉末年，三方割据势力的故事,曹操打刘备，曹操打刘备孙权，
+				   曹操打刘备，刘备打曹操，孙权打刘备，刘备打孙权，刘备打曹操
+				   ，孙权打曹操，曹操灭刘备，西晋灭曹操，西晋灭孙权。
+				</p>
+			 </div>
+			 <div class="col-lg-6 col-md-6">
+				 <h2>西游记</h2>
+				 <p>一个僧人携带宠物旅游的故事</p>
+			  </div>
+<!--	    	clearfix 清除浮动-->
+			 <div class="clearfix"></div>
+			
+			 <div class="col-lg-6 col-md-6">
+				<h2>水浒传</h2>
+				<p>宋朝农民起义的故事</p>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<h2>红楼梦</h2>
+				<p>贾家家族衰落的故事</p>
+			</div>
+		</section>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>

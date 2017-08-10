@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>标签字体类型 </title>
+			<style>
+/*				weight 重量 体重
+                  字体粗细*/
+				.font-weight
+				{
+/*					设置字体粗细 bold粗*/
+					font-weight: bold;
+				}
+				.font-italic
+				{
+/*					设置字体风格：斜体*/
+					font-style: italic;
+				}
+				.underline
+				{
+/*				
+/*					underline   下划线*/
+					text-decoration: underline;
+				}
+				.through
+				{
+/*					设置删除线文本*/
+					text-decoration: line-through;
+				}
+				
+				q 
+				{
+					margin : 10px 10px 10px 10px;
+					
+					quotes: '{' '}' '[' ']' ;
+				}
+			</style>
+	</head>
+	<body>
+<!--	<br> 换行-->
+		普通文本 <br>
+		<span>span类型的文本也是普通文本，本身不带有任何感情色彩</span> 
+		<br><br>
+		
+<!--	加粗	strong 强壮； -->
+        <!--SEO  搜索引擎优化  魏则西之死  莆田系-->
+		<strong>加粗文本，有很强烈的强调含义，表示提醒重要内容</strong> <br>
+		<b>加粗文本，有淡淡的强调含义，感情色彩不如strong强烈</b>       <br>
+		<span class="font-weight">加粗文本，本身没有任何感情色彩，仅仅表示加粗</span>
+		<br><br>
+
+	    
+		<h1>惊现！男人看了XXX，女人看了XXX</h1>
+		<strong>惊现！男人看了XXX，女人看了XXX</strong>
+		<!--
+			html5  语义化标签
+			语义化标签   strong   address  time  article
+			           div      div      div     div
+				div + css	-->
+		<em>斜体文本,有很强烈的强调含义，表示这是一个重要内容</em> <br>
+		<i>斜体文本，有淡淡的强调含义，感情不如em强烈</i> <br>
+		<span class="font-italic">斜体文本，本身没有任何感情色彩，仅仅表示斜体</span>
+		<br><br>
+			
+<!--		insert 插入-->
+		insert
+		<ins>下划线文本，有很强烈的强调含义，表示插入一个新的内容</ins> <br>
+		<u>下划线本文，本身没有任何含义，仅仅显示一个下划线</u> <br>
+		<span class="underline">下划线文本，仅仅显示一个下划线</span>
+		<br><br>
+		
+<!--		delete 删除-->
+		<del>删除线文本，很强烈的强调意味，表示删除一块内容</del> <br>
+		<s>删除线文本，s的删除意味不是很强烈</s>  <br>
+		<span class="through">删除线文本，仅仅显示一个删除线</span>
+		<br> <br>
+		
+<!--		small 小-->
+		正常字体大小 <small>小一号的字体</small>  <br>
+		
+		正常字体大小 <sup>此乃上标 </sup> <br>
+			
+		正常字体大小 <sub>此乃下标</sub> <br>
+			
+	    现在温度 3 <sup>℃</sup>  <br>
+		
+<!--		q 标签会自动将标签里面的内容加上“”
+        如果q里面还包含了一个q 那么里面的q会变成‘’-->
+		<q>
+			出淤泥而不染，濯清涟而不妖。出自
+			<q>爱莲说
+				<q>你说呢</q>
+			</q>
+		</q>
+			
+			
+	</body>
+</html>

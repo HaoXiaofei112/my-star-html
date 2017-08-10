@@ -1,0 +1,247 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>bootstrap空白项目</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			html{
+				width:100%;
+
+			}
+			.log{
+				width:100%;
+				background-image: url(image/nav-bg.png)
+			
+			}
+			.logo{
+				width:85%;
+				margin:0 auto;
+				
+			
+				
+			}
+			.logo img{
+				margin-top:-20px;
+			}
+			 a{
+				color:black;
+				
+
+			}
+			 li a:hover{
+			 border-bottom:2px solid blue;
+
+			}
+			input{
+				border-radius: 50px;
+				float: right;
+				margin-top:-40px;
+			}
+			.clear{
+				clear: both;
+				
+			}
+			.first {
+			    margin-top:50px;
+				width:100%;
+				height: 50%;
+			
+				background-image: url(image/banner.png);
+			}
+			
+			.yi-y{
+				background-image: url(image/s-bg1.png);
+				color:white;
+				
+			}
+			
+			.yi-i p{
+				color:blue;
+				float:right;
+			}
+			.yi-img{
+				float:left;
+			}
+			.yi-yi{
+				margin: 5px;
+			
+			}
+			.yi-w{
+				border-top:1px dashed black;
+			
+			
+			}
+			#blue{
+				color:blue;
+			}
+			.yi-w p:nth-child(1){
+				float:left;
+				
+
+			}
+				.yi-w p:nth-child(2){
+				float:right;
+			
+				
+			}
+			
+		
+
+			
+			.er-y{
+					background-image: url(image/s-bg2.png);
+					color: white;
+
+			}
+			.san-y{
+			
+			
+				background-image: url(image/s-bg1.png);
+				color:white;
+			}
+			.san-img img{
+				width: 100%;
+				padding: 5px;
+			}
+			.san-s{
+				width:40%;
+				background-color: grey;
+				text-align: center;
+				float:left;
+				margin: 5px;
+			}
+			.san-i{
+				width:40%;
+				background-color: grey;
+				text-align: center;
+				float:right;
+				margin: 5px;
+			}
+	
+		.navbar{
+			z-index: 1000;
+		}
+		
+
+
+
+	
+
+		</style>
+	</head>
+	<body>
+		<!--col column 数列 large巨大  middle 中间的 -->
+		<!--visible-md-block 中屏可见  hidden-lg 大屏隐藏-->
+	   	<div class="navbar  navbar-fixed-top navbar-inverse log">	
+			<div class="container logo">
+				<div class="navbar-header">
+					<!--设置导航-->
+						<a href="" class="navbar-brand"><img src="image/logo.png" alt=""></a>
+						<!--toggle开关-->
+						<!--data-toggle监听某件事     data-target 监听某个人-->
+						<button class="navbar-toggle  collapsed" data-toggle='collapse'
+						 data-target='#navbar'>
+						 <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						   <span class="icon-bar"></span>
+						 </button>
+						 
+
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li><a href="">首页</a></li>
+						<li><a href="">媒体中心</a></li>
+						<li><a href="">关于我们</a></li>
+						<li><a href="">业务板块</a></li>
+						<li><a href="">产品服务</a></li>
+
+
+					</ul>
+				</div>
+				<div>
+					<input type="text"  class="hidden-md hidden-sm hidden-xs"placeholder="&#x3000;Search here...">
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="first">
+	
+
+		</div>
+		
+	
+					
+			<div class="container">
+				<div class="row" >
+						<div class=" yi col-lg-4 col-md-12 ">
+							<div class="yi-y">公司简介</div>
+							<div class="yi-i">
+								<div class="yi-img"> <img src="image/news.png" alt="">   </div>
+								
+								<div class="yi-yi">
+									<b>政府部门参观研发中心</b>
+									<div>&#x3000;女你不帮你侧面，法律空白课程目标不可抗力部门初步方便vknvbcm</div>
+								</div>
+								<p>READ MORE>></p>
+							</div>
+							<div class="clear"></div>
+							<div class="yi-w">
+								<div class="yi-w">
+									<p id="blue">部分电的那个女女考试大门口</p>
+									<p>2011-12-20</p>
+								</div>
+								<div class="clear"></div>
+								<div class="yi-w">
+									<p>部分电的那个女女考试大门口</p>
+									<p>2011-12-20</p>
+								</div>
+								<div class="clear"></div>
+								<div class="yi-w">
+									<p>部分电的那个女女考试大门口</p>
+									<p>2011-12-20</p>
+								</div>
+								<div class="clear"></div>
+
+							
+
+							</div>
+							
+					
+					</div>
+					<div class=" er col-lg-4 col-md-6 col-sm-1">
+							<div class="er-y">研究与观点</div>
+						
+					</div>
+					<div class="san  col-lg-4 col-md-6 col-sm-12">
+						<div class="san-y">产品与服务</div>
+						<div class="san-img"><img src="image/header.png" alt=""></div>	
+						<div>
+							<div class="san-s">>碳钢系列</div>
+							<div class="san-i">>特钢系列</div>
+							<div class="san-s">>不锈钢系列</div>
+							<div class="san-i">>碳钢系列</div>
+						</div>
+					
+					</div>
+					<div class="clear"></div>
+					
+
+				
+					
+				</div>
+			</div>
+				
+	
+
+
+	
+		
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+</html>

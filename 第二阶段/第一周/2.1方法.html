@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>方法</title>
+</head>
+<body>
+    <!--onclick
+    on  在...之上
+    click 点击
+    方法括号里面的内容 我们称之为参数-->
+    <div onclick="myClick(123)">点我</div>
+    <script>
+        // function 功能
+        // @keyframes animationName
+        function myClick(a)
+        {
+            alert('点我' + a);
+        }
+        console.log(name2);
+        // 全局变量
+        var name2 = '梁朝伟';
+
+        function funA() 
+        {
+            console.log(name2);
+
+            function funB()
+            {
+                console.log('456');
+
+                function funC()
+                {
+                    var name1 = '张家辉';
+
+                    console.log(name1);
+
+                    console.log(name3);
+                }
+                funC();
+            }
+            funB();  
+
+            var name3 = '彭于晏'; 
+        }
+        // 只写方法名称 表示调用这个方法
+        // funA();
+
+        // 字符串类型的数字也是可以进行加减的
+        alert( +'789' + 123 );  //alert(+'789' + +'123');
+        alert(789 - 123);
+
+
+        // 1.声明方法时候参数叫做形参
+        // 2.调用方法时候的参数叫做实参
+        function funD(value)
+        {
+            alert(value);
+        }
+        funD('张家辉');
+        funD('DIV')
+
+        /*
+        总结：
+        1.标签的点击事件
+          方法名称不能为click()
+        2.方法的声明和调用
+        3.方法的有效范围 变量有效范围
+        4.形参实参的区别
+        5.数字相加，数字字符串相加，字符串字符串相加
+
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <!--文本输入框-->
+        用户名:<input type="text" placeholder="请输入用户名" value="这里是默认值">
+        <br>
+        <!--密码输入框-->
+        密码:<input type="password" placeholder="密码">
+        <!--单选-->
+        <br>
+        <!--需要有相同的name值关联起来-->
+        <!--lable标签关联后边文字，只能关联ID
+            应该吧input都添加lable标签，增强用户体验-->
+        <input type="radio" name="sex" id="man">
+        <label for="man">:男</label><br>
+        <input type="radio" name="sex" id="woman">:女<br>
+        
+        <!--多选-->
+        哪些爱好?<br>
+        <!--checked="checked" 或者 checked 默认被选中-->
+        <input type="checkbox" name="game" checked="checked">:英雄联盟<br>
+        <!--disabled 不能被选中-->
+        <input type="checkbox" name="game" disabled>:王者荣耀<br>
+        <input type="checkbox" name="game">:雷霆战机<br>
+        <input type="checkbox" name="game">:倩女幽魂<br>
+        <input type="checkbox" name="game">:地&nbsp; 下&nbsp; 城<br>
+        <input type="checkbox" name="game">:剑&nbsp; &nbsp; &nbsp; &nbsp;灵<br>
+        <!--下拉选项框-->
+        <select name="city" id="">
+            <!--默认:selected-->
+            <!--不被选中:disabled-->
+            <option value="bj">北京</option>
+            <option value="sh" selected>上海</option>
+            <option value="gz" disabled>广州</option>
+            <option value="zz">郑州</option>
+        </select>
+        <br>
+        <!--电话输入框-->
+        <input type="tel">
+        <br>
+        <!--邮箱输入框-->
+        <input type="email">
+        <br>
+        <!--数字输入框-->
+        <input type="number">
+        <br>
+        <!--取色器-->
+        <input type="color">
+        <br>
+        <!--日期-->
+        <input type="date">
+        <br>
+        <!--重置-->
+        <input type="reset">
+        <br>
+        
+        
+        
+        
+    </form>
+</body>
+</html>

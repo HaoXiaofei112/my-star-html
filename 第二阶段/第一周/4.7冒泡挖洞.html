@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>冒泡挖洞</title>
+    <style>
+        main 
+        {
+            width: 400px;
+
+            height: 400px;
+
+            background-color:orange;
+        }
+        section 
+        {
+            width: 200px;
+
+            height: 200px;
+
+            background-color: pink;
+        }
+        div 
+        {
+            width: 100px;
+
+            height: 100px;
+
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <main onclick="click1()">
+        <section>
+            <div></div>
+        </section>
+    </main>
+    <script>
+        function click1()
+        {
+            alert('点击了1')
+        }
+
+        var main =document.querySelector('main');
+
+        var section =document.querySelector('section');
+
+        var div =document.querySelector('div');
+        // 这种写法  方法名字不能加()
+        main.onclick = click2;
+
+        function click2()
+        {
+            alert('点击了2');
+        }
+
+        main.onclick = function()
+        {
+            alert('点击了3');
+        }
+        // add 增加
+        // event 事件
+        // listen 听
+        // listener 监听者
+        // 增加一个事件的监听
+        // 参数1：监听什么事件
+        // 参数2：监听到事件后做什么操作
+        // 设置监听事件为false 表示该事件是冒泡事件
+        // 如果不设置false 默认为false
+        main.addEventListener('click',function(){
+            alert('监听到main冒泡事件')
+        },false)
+
+        section.addEventListener('click',function()
+        {
+            alert('监听到section冒泡事件')
+        },false)
+
+        div.addEventListener('click',function()
+        {
+            alert('监听到div冒泡事件')
+        },false)
+
+        // 挖洞也称之为 捕获
+         main.addEventListener('click',function(){
+            alert('监听到main挖洞事件')
+        },true)
+
+        section.addEventListener('click',function()
+        {
+            alert('监听到section挖洞事件')
+        },true)
+
+        div.addEventListener('click',function()
+        {
+            alert('监听到div挖洞事件')
+        },true)
+
+    </script>
+</body>
+</html>

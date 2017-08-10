@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标事件</title>
+	<style>
+		section 
+		{
+			width: 200px;
+			
+			height: 200px;
+			
+			background-color: blue;
+			
+			border-radius: 50%;
+			
+			margin: 100px auto;
+		}
+		section:hover 
+		{
+			
+		}
+		div 
+		{
+			width: 400px;
+			
+			height: 40px;
+			
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div></div>
+	</section>
+	
+	<script>
+		var sec = document.querySelector('section');
+		//1.增加单击事件
+		sec.onclick = function()
+		{
+			
+		}
+		sec.addEventListener('click',function()
+		{
+			console.log('单击')
+		})
+		
+		//2.双击事件  double 双倍
+		sec.ondblclick = function() 2
+		{
+			console.log('双击事件');
+		}
+		
+		sec.addEventListener('dblclick',function()
+		{
+			console.log('增加监听 - 双击事件');
+		})
+		
+		//3.鼠标活动范围监听	
+//		over 在...的上面
+		sec.addEventListener('mouseover',function()
+		{
+			console.log('鼠标over状态');
+		})
+//		out 在....的外面
+		sec.addEventListener('mouseout',function()
+		{
+			console.log('鼠标out状态');
+		})
+		
+//		enter 进入
+		sec.onmouseenter = function()
+		{
+			console.log('鼠标enter状态');
+		}
+		sec.onmouseleave = function()
+		{
+			console.log('鼠标leave状态');
+		}
+		
+		//4.左键 右键 滑轮
+//		onmousedown   window.onkeydown
+		sec.onmousedown = function(e)
+		{
+//			which 哪一个
+//			1 判定为左键
+//			2 判定为滑轮
+//			3 判断为右键
+			console.log(e.which);
+		}
+		sec.onmouseup = function(e)
+		{
+			console.log('鼠标上弹');
+		}
+		
+		//5.鼠标  事件
+		sec.onmousemove = function(e)
+		{
+//			XXX.style.backgroundColor = 'hsl(,100%,50%)'
+			console.log('鼠标移动X' + e.pageX + ' Y' + e.pageY);
+		}
+		
+		//6.滑轮移动
+		sec.onwheel = function(e)
+		{
+			console.log(e.deltaX + ' ' + e.deltaY + ' ' + e.deltaZ );
+		}
+	
+	</script>
+		<!--算出球体的Y坐标
+		var mouseY = e.pageY + Math.random() * 300 - 150;-->
+</body>
+</html>

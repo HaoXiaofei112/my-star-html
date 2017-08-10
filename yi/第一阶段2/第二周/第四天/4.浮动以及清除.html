@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>浮动以及清除</title>
+			<style>
+				body 
+				{
+/*					设置鼠标指针样式*/
+					cursor: pointer;
+					
+				}
+				ul 
+				{
+/*					设置列表的风格样式*/
+					list-style-type: none;
+				}
+				li 
+				{
+/*					设置浮动为左浮动*/
+					float: right;
+					
+					margin: 20px 50px;
+					
+					background-color: #EEE;
+					
+					width: 80px;
+					
+					height: 30px;
+					
+					text-align: center;
+					
+					padding-top: 15px;
+					
+					border-radius: 10px;
+				}
+				li:hover 
+				{
+					background-color: red;
+					
+					color: white;
+				}
+				li:active 
+				{
+					background-color: orange;
+				}
+			
+				div 
+				{
+/*					clear 清除
+                    both 同时清除掉左浮动以及右浮动*/
+					clear: both;
+				}
+				/*Hack*/
+				ul::before,ul::after{
+			     content: '.';
+                 clear: both;
+                 display: block;
+                 width: 0;
+                 height: 0;
+                 visibility: hidden;
+			 }
+			</style>
+	</head>
+	<body>
+		<h1>雨一直下</h1>
+		<ul>
+			<li>HTML5</li>
+			<li>CSS</li>
+			<li>JS</li>
+			<li>IOS</li>
+			<li>VR</li>
+		</ul>
+<!--	如果不想让一些标签也出现浮动
+		就需要在使用这些标签前
+		让浮动清除-->
+		<!--<div></div>-->
+		<h1>雨一直下</h1>
+		
+<!--	掌握要点
+		1.浮动方向
+		2.清除浮动-->
+	</body>
+</html>

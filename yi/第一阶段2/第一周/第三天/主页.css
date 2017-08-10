@@ -1,0 +1,196 @@
+body
+{
+	margin: 0px;
+}
+
+#nav
+{
+	width: 100%;
+	
+	height: 60px;
+	
+	background-color: white;
+	
+/*	设置位置固定*/
+	position: fixed;
+/*	设置底部边框的线条*/
+	border-bottom: 1px solid gray;
+/*	设置标签的层次关系*/
+	z-index: 100;
+}
+/*设置nav里面的div标签*/
+#nav div
+{
+	width: 960px;
+	
+	height: 60px;
+	
+/*	background-color: greenyellow;*/
+	
+	margin: 0px auto;
+}
+#nav img
+{
+	height: 40px;
+	
+	margin: 10px;
+}
+#nav span
+{
+/*	background-color: orange;*/
+	
+/*	float 浮动 设置元素出现在何处*/
+	float: right;
+/*	设置字体大小*/
+	font-size: 20px;
+/*	设置上下左右间距*/
+	margin: 20px;
+}
+#nav a
+{
+	text-decoration: none;
+	
+	color: black;
+	
+	margin-left: 20px;
+}
+/*当鼠标滑动到a标签上面的时候*/
+#nav a:hover
+{
+	color: #B06803;
+}
+
+#header img
+{
+	width: 100%;
+	
+	margin-top: 60px;
+}
+/*在写p标签内容之间要添加的内容*/
+p:before
+{
+/*	content内容、*/
+	content: '“';
+	
+	font-size: 32px;
+	
+	position: relative;
+	
+	top: 10px;
+}
+p:after
+{
+	content: '”';
+	
+	font-size: 32px;
+	
+	position: relative;
+	
+	top: 10px;
+}
+p
+{
+	width: 960px;
+	
+	margin: 20px auto;
+/*	设置行高*/
+	line-height: 150%;
+	
+	font-size: 18px;
+}
+
+h1:before
+{
+	content: '\258A ';
+	
+	position: relative;
+	
+	left: 60px;
+}
+h1
+{
+	color: #B06803;
+}
+
+.section 
+{
+	text-align: center;
+	
+	position: relative;
+}
+.section img
+{
+	width: 960px;
+}
+.section p
+{
+	text-align: left;
+}
+.classmate
+{
+	background-image: url(classmates.jpg);
+	
+	width: 960px;
+	
+	height: 612px;
+	
+	margin: 20px auto;
+	
+	position: relative;
+}
+.classmate img
+{
+	border: 3px solid white;
+/*	border 边框 radius角度*/
+	border-radius: 50%;
+/*	设置定位属性为绝对定位*/
+	position: absolute;
+}
+/*获取三个img标签中的第一个*/
+.classmate img:nth-child(1)
+{
+	width: 250px;
+	
+	height: 250px;
+	
+	top: 20px;
+	
+	left: 20px;
+}
+.classmate img:nth-child(2)
+{
+	width: 300px;
+	
+	height: 300px;
+	
+	top: 280px;
+	
+	left:300px;
+}
+.classmate img:nth-child(3)
+{
+	width: 200px;
+	
+	height: 200px;
+	
+	top: 50px;
+	
+	right: 20px;
+}
+hr
+{
+	width: 960px;
+	
+	margin: 0px auto;
+	
+	color: gray;
+}
+footer
+{
+	width: 960px;
+	
+	margin: 30px auto;
+	
+	color: gray;
+	
+}

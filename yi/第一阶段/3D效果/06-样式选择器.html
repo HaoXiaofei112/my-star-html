@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>样式选择器</title>
+    <style>
+        /*
+        基本结构：
+        样式选择器 {
+            属性名1：属性值;
+            属性名2: 属性值;
+            。。。。
+        }
+        */
+        /*通配符选择器*/
+        *{
+            font-size: 20px;
+            /*设置字体大小*/
+        }
+        /*标签选择器*/
+        h2{
+            color:red;
+            /*设置内容文本的颜色*/
+        }
+        /*类名选择器*/
+        .class-name{
+            background: orange;
+            /*设置背景色*/
+        }
+        /*id选择器*/
+        #id-name{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="class-name">元素选择器</h2>
+    <ol>
+        <li>通配符*：选择指定范围内的所有元素</li>
+        <li>标签选择器：通过标签名来选择相应的元素</li>
+        <li class="class-name">类名选择器：通过定义的类名来选择，不限于标签，在一个页面中可以出现多次</li>
+        <li id="id-name">id选择器：通过对指定元素定义id来选择，不限于标签，但是，一个id名在同一个页面中只能出现1次</li>
+    </ol>
+</body>
+</html>

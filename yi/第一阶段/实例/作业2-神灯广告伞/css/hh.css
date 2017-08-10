@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: '微软优雅';
+}
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background-color: rgb(246, 246, 246);
+   
+}
+.yi{
+    width:60%;
+    height: 100px;
+    margin: 0 auto;
+    clear: both;
+}
+.float:before, .float:after{
+        content: '.';
+        clear: both;
+        display: block;
+        width:0;
+        height: 0;
+        visibility: hidden;
+    }
+.yi-left{
+    float: left;
+}
+.yi-right{
+    float: right;
+}
+.yi-right-left{
+   float: left; 
+   margin-top:10px;
+   
+}
+.yi-right-right{
+   float: right;  
+   color:red;
+}
+#yi-r-r{
+    font-size: 10px;
+    color:gray;
+}
+.er{
+
+ clear: both;
+}
+  
+
+   ul{
+       width:100%;
+       background-color:red;
+        list-style: none;
+        margin: 0 auto;
+        float: right;
+        overflow: hidden;
+       
+    }
+    li{
+        width:6%;
+        height: 30px;
+        float: left;
+        color:white;
+        text-align:center;
+      padding-top:5px;
+        border-top: 1px solid red;
+        font-size: 13px; 
+    }
+    li:hover{
+        background: white;
+        color:red;
+    }
+    .datu img{
+        width:100%; 
+      
+    }
+    .san{
+    width:60%;
+    height: 100%;
+    margin: 0 auto;
+      clear: both;
+   
+   
+}
+.san-left{
+    width:25%;
+    float: left;    
+}
+.san-left-y p{
+padding-right:50px;
+ text-align: right;
+}
+.san-left-e p{
+text-align: left;
+margin-left:10px;
+clear: both;
+}
+#ww{
+    float: right;
+    margin-right:65%;
+}
+
+.san-right{
+    width:75%;
+    float: right;  
+}
+.tuer-l{
+    width:100%; 
+   
+}
+
+.tu-bei{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-top:2px solid red;
+}
+.tuer-r{
+   
+    float: left;
+    margin-top:12px;
+    margin-left: 10px;
+}
+#qq{
+    float: right;
+    margin-right:87%;
+}
+.san-r img{
+    width:33%;
+  
+}
+.san-r-t{
+    clear: both;
+}
+
+
+
+.tu-six{
+ width:30%;
+ margin: 0 auto;  
+ background-color:white; 
+ float:left;
+ margin: 10px;
+}
+.tu-six img{
+   margin-top:15px;
+   width:99%;
+}
+.tu-six div{
+   
+    margin-top:10px;
+  text-align: center;
+  
+}
+.clear{
+    clear: both; 
+
+}
+footer{
+    width: 100%;
+    background-color: red;
+    margin-top: 10px;
+    padding-top:10px;
+}
+.si {
+  
+    width:60%;
+    height: 100px;
+    margin:0 auto;
+    font-size:11px;
+    color: white;
+    
+    
+}
+
+
+
+

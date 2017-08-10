@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>垂直居中</title>
+			<style>
+				section 
+				{
+					
+					width: 600px;
+					
+					height: 100px;
+					
+					margin: 100px auto;
+					
+					border: 2px solid blue;
+					
+					font-size:40px;
+					
+					text-align: center;
+					
+/*					设置该元素的子元素垂直居中*/
+					align-items:center;
+					
+					padding-top: 30px;
+					
+					box-sizing: border-box;
+					
+/*					line-height: 100px;*/
+
+
+				}
+				
+				div 
+				{
+					width: 600px;
+					
+					height: 100px;
+					
+					margin: 100px auto;
+					
+					border: 2px solid red;
+					
+					font-size: 40px;
+					
+/*					-moz    火狐浏览器的私有属性前缀
+                    -webkit 谷歌浏览器和手机
+					display: -moz-box; 
+					这句代码使设置位置的代码无效*/
+					display: -moz-box;
+/*					让内容在水平方向居中对齐*/
+					-moz-box-pack:center;
+/*					让内容在垂直方向居中对齐*/
+					-moz-box-align:center;
+
+
+					animation-name: zhuan ;
+
+					animation-delay: 3s;
+
+
+				}
+			</style>
+	</head>
+	<body>
+		<section>
+			today is cool
+		</section>
+		<div>
+			 天真冷
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>时钟</title>
+			<style>
+				section 
+				{
+					width: 650px;
+					
+					height: 650px;
+					
+					background-image: url(clock.jpg);
+					
+					margin: 50px auto;
+					
+/*					border: 2px solid red;*/
+					
+					position: relative;
+				}
+				div 
+				{
+					transform-origin: 80% 50%;
+					
+					position: absolute;
+					
+					border-top-left-radius: 5px;
+					
+					border-bottom-left-radius: 5px;
+					
+					animation: zhuan 43200s linear infinite;
+				}
+				#hour
+				{
+					width:150px;
+					
+					height: 10px;
+								
+					background-color: black; 
+										
+					left: calc(50% - 120px);
+					
+					top: calc(50% - 5px);
+					
+					
+				}
+				
+				#minute
+				{
+					width:190px;
+					
+					height: 7px;
+					
+					background-color: lightgreen;
+					
+					left: calc(50% - 152px);
+					
+					top: calc(50% - 3.5px);
+					
+					animation-duration: 3600s;
+					
+				}
+				#second 
+				{
+					width: 230px;
+					
+					height: 4px;
+					
+					background-color: orange;
+					
+					left:calc(50% - 184px);
+					
+					top:calc(50% - 2px);
+					
+					animation-duration: 60s;
+				}
+				
+				p 
+				{
+					width: 30px;
+					
+					height: 30px;
+					
+					background-color: red;
+					
+					border-radius: 50%;
+					
+					position: absolute;
+					
+					left: calc(50% - 15px);
+					
+					top: calc(50% - 15px);
+					
+					margin: 0px;
+					
+				}
+				
+				@keyframes zhuan
+				{
+					0%
+					{
+						transform: rotate(0deg);
+					}
+					100%
+					{
+						transform: rotate(360deg);
+					}
+				}
+				
+			</style>
+	</head>
+	<body>
+		<section>
+			<div id="hour"></div>
+			<div id="minute"></div>
+			<div id="second"></div>
+			<p></p>
+		</section>
+	</body>
+</html>

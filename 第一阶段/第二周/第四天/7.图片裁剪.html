@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片裁剪</title>
+		<style>
+			section
+			{
+				width: 400px;
+				
+				height: 100px;
+				
+				background-color: black;
+				
+				margin: 100px auto;
+				
+				position: relative;
+				
+/*				overflow: hidden;*/
+			}
+			div 
+			{
+				width: 200px;
+				
+				height: 200px;
+				
+				border-radius: 50%;
+				
+				background-color: yellow;
+				
+/*				使用绝对定位的标签才可以被裁剪掉*/
+				position: absolute;
+				
+				top: 100px;
+/*				clip 裁剪
+                rect 矩形
+				参数1:从上往下裁剪的大小
+				参数2:从左往右保留的大小
+				参数3:从上往下保留的大小
+				参数4:从左往右裁剪的大小*/
+				clip:rect(0px,200px,200px,150px); 
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div></div>
+		</section>
+	</body>
+</html>

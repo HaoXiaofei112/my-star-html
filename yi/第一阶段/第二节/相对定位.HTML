@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+       span{
+           background: red;
+       } 
+       span:nth-of-type(2){
+           /*relative:相对定位,相对于元素原来的位置*/
+           position: relative;
+            bottom: 10px;
+            /*top/bottom;left/right:不能同时设置*/
+           
+       }
+    </style>
+</head>0
+
+<body>
+  <span>第一个span</span>
+  <span>第二个span</span>
+    
+</body>
+</html>

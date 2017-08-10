@@ -1,0 +1,48 @@
+//@radius 声明一个变量 名字叫做radius 
+//:后面为值
+@radius:50%;
+// 声明一个颜色变量 
+// 变量命名：不能中文 纯数字 遵守驼峰命名法
+// 大驼峰（方法）所有单词首字母大写
+// 小驼峰（变量）首字母小写 其余单词首字母大写
+@color:orange;
+body 
+{
+	background-color: black;
+}
+section 
+{
+	width: 400px;
+	
+	height: 400px;
+	
+	background-color: @color;
+	
+	border-radius: @radius;
+	
+	border:5px solid white;
+}
+div 
+{
+	width: 50% ;
+	
+	height: 50%;
+	
+	background-color: @color;
+	
+	border-radius: @radius;
+	
+	border:5px solid white;
+}
+p 
+{
+	width: 50%;
+	
+	height: 50%;
+	
+	background-color: @color;
+	
+	border-radius: @radius;
+	
+	border:5px solid white;
+}

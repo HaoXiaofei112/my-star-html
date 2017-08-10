@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>后代选择器</title>
+			<style>
+
+				/*后代选择器
+				兄弟选择器
+				伪类选择器
+				*/
+				span 
+				{
+					background-color: red;
+				}
+/*				section里面的span颜色为蓝色*/
+				section span 
+				{
+					background-color: blue;
+				}
+				
+				p span 
+				{
+					background-color: yellow;
+				}
+			</style>
+	</head>
+	<body>
+<!--		红色-->
+		<span>span</span>
+<!--		红色-->
+		<div>
+			<span>div</span>
+		</div>
+		
+<!--		蓝色-->
+		<section> 
+			<span>section</span>
+			
+			<div>
+				<span>123</span>
+			</div>
+			
+			<p>
+<!--				层数越低 优先级越高-->
+				<span>456</span>
+			</p>
+		</section>
+		
+		<p>
+			<span></span>
+			
+			<section>
+				<span></span>
+			</section>
+		</p>
+		
+		<section>
+			<span>
+				<span></span>
+			</span>
+			<p>
+				<span></span>
+			</p>
+		</section>
+	</body>
+</html>

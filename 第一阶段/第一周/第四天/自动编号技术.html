@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="XXX.css">
+		<meta charset="utf-8">
+			<title>自动编号技术</title>
+			<style>
+				body
+				{
+/*					content 内容
+					count 总数；数量
+					counter 计数器
+					set  设置
+					reset  重新设置；重置
+					重置计数器 计数器重置以后的值默认为0
+					mainIndex计数器的名字 随意设置*/
+					counter-reset: mainIndex;
+				}
+				h1:before 
+				{
+/*					name 名字*/
+					content: '书籍' counter(mainIndex);
+					
+/*					increment 增加 默认每次增加1*/
+					counter-increment: mainIndex;
+				
+				}
+				h1 
+				{
+					counter-reset: subIndex;
+				}
+				h2
+				{
+					padding-left: 80px;
+					
+					
+					counter-reset: index;
+				}
+/*				在哪个标签中使用计数器
+				就在这个标签的:before中
+				设置增加计数器的值并且显示计数器*/
+				h2:before 
+				{
+/*					counter(mainIndex) 书籍索引
+					counter(subIndex)  章节索引*/
+					content: '章节' counter(mainIndex) '.' counter(subIndex);
+					
+					counter-increment: subIndex;
+				}
+				
+				h3:before 
+				{
+/*					main 主要的 sub 子  index 索引*/
+					content: counter(mainIndex) '.' counter(subIndex) '.' counter(index);
+					
+					counter-increment: index;
+				}
+				h3 
+				{
+					padding-left: 160px;
+				}
+			</style>
+	</head>
+	<body>
+		<h1>西游记</h1>
+		<h2>灵猴出世</h2>
+		<h3>发现水帘洞</h3>
+		<h3>老猴死</h3>
+		
+		<h2>雷劈石猴 扑街 剧终</h2>
+		
+		<h1>三国演义</h1>
+		<h2>曹操诛杀董卓失败 扑街</h2>
+		<h2>刘备卖草鞋饿死 扑街 剧终</h2> 
+		<h2>孙权统一</h2>
+		
+		<h1>水浒传</h1>
+		<h2>洪太尉扑街</h2>
+		
+		
+		<h1>红楼梦</h1>
+		<h2>石头出了个孙悟空</h2>
+	</body>
+</html>

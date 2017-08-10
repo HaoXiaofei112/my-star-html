@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+    ul,li{
+        list-style: none;
+    }
+    ul{
+        border: 2px solid green;
+        /*消除浮动带来的高度塌陷的影响,让父元素的高度恢复正常*/
+        /*overflow: auto;*/
+        /*兼容IE*/
+        zoom:0;
+        float: right;
+    }
+    /*推荐使用一下方式*/
+    ul:before, ul:after{
+        content: '.';
+        clear: both;
+        display: block;
+        width:0;
+        height: 0;
+        visibility: hidden;
+    }
+    li{
+  
+        border: 1px solid red;
+        /*向左浮动*/
+       float:left;
+    }
+    </style>
+</head>
+<body>
+   <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVAscript</li>
+      <li>JQuery</li> 
+      <li>NodeJS</li>
+      <li>Vuejs</li>
+      <li>Aeactjs</li>
+      <li>Reactjs</li>
+       </ul> 
+       <div>vjkdbcvb</div>
+</body>
+</html>

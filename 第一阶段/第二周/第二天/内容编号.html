@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>内容编号</title>
+			<style>
+				body 
+				{
+/*					重置计数器  重置后计数器默认从0开始*/
+					counter-reset: bigCounter;
+				}
+				h1:before 
+				{
+/*					当每使用一次h1标签 都让bigCounter计数器加一*/
+					counter-increment: bigCounter;
+					
+/*					content内容
+                    在内容的前面添加当前计数器的值*/
+					content: counter(bigCounter) '.';
+				}
+				h1 
+				{
+/*					重置小计数器*/
+					counter-reset: smallCounter;
+				}
+			    h2:before 
+				{
+					counter-increment: smallCounter;
+					
+					content: counter(bigCounter) '.' counter(smallCounter);
+				}
+			</style>
+	</head>
+	<body>
+		<h1>第一次使用它，感觉萌萌哒</h1>
+		<h2>第一次</h2>
+	    <h2>萌萌哒</h2>
+		<h1>第二次使用它，感觉XXX</h1>
+		<h1></h1>
+	</body>
+</html>

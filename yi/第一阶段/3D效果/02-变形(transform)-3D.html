@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>变形(transform)-3D</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        div {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto 50px;
+            background: orange;
+        }
+        
+        section {
+            width: 300px;
+            height: 300px;
+            /*opacity: 0.6;*/
+        }
+        /*对元素进行3D效果转换，相当于搭建了一个远处的舞台（包裹元素即父元素设置视距），
+        然后对演员进行动作设置（子元素进行变形），先要有一个3D的环境*/
+        
+        #div1 {
+            display: flex;
+            justify-content: space-around;
+            /*子元素在舞台元素上的位置也会影响转换后形成的图像，因为变更位置后相对视点位置不同*/
+            transform-style: preserve-3d;
+            /*transform-style规定在3D空间中如何展现被嵌套元素*/
+            /*默认值flat：子元素将不保留其3D位置。*/
+            /*preserve-3d：子元素将保留其3D位置。*/
+            perspective: 900px;
+            /*视点距离：现在应用在舞台元素，当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。*/
+            /*类同于近大远小，perspective设置值越大，表示显示3D效果的区域距浏览器屏幕距离越大，默认值为none,取值为0时效果同none*/
+            /*perspective属性包括两个属性：none 或 具有单位的长度值<length>。
+            其中perspective属性的默认值为none，表示无限的角度来看3D物体，但看上去是平的。
+            另一个值<length>接受一个长度单位大于0的值。而且其单位不能为百分比值。
+            值越大，角度出现的越远，从而创建一个相当低的强度和非常小的3D空间变化。
+            反之，此值越小，角度出现的越近，从而创建一个高强度的角度和一个大型3D变化。*/
+            perspective-origin: 25% 25%;
+            /*当为元素定义 perspective-origin 属性时，表示其子元素展示效果的基点位置。
+                注释：该属性必须与 perspective 属性一同使用，而且只影响 3D 转换元素。*/
+            /*视点位置是以舞台元素（父级元素）的相对坐标系为准的，原点在父级元素的左上角作为x轴与y轴的交点(0,0),perspective设定的距离即为z轴对应的距离*/
+        }
+        
+        #div1 section {
+            background: blue;
+            transform: rotateX(90deg);
+        }
+        /*分割线以上是整个舞台元素（父级元素）作为透视对象，视点只有一个，
+        所以横向排列的子元素进行相同的3D转换后可视的图像不尽相同，因为对于每个子元素的视点位置不同*/
+        /*-----------分-------------------割-------------------线--------------------------------*/
+        /*分割线一下是每个子元素作为舞台元素，自己作为自己的透视对象，
+        都有自己独立的视点，所以进行相同的3D转换后可视的图像仍然相同*/
+        
+        #div2 {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        #div2 section {
+            background: red;
+            /*perspective: 600px;*/
+            /*不能这样写，原因见上*/
+            transform: perspective(900px) rotateY(45deg);
+            /*视距位置写在子元素上时怎么调整视点位置?*/
+            /*perspective的定义要在其他3d变换之前，否则无效 如translateZ等，
+            无论是分开书写，还是同时写到transform属性里面。
+            这个也很好理解，要首先确定眼睛所在的位置，在屏幕上的成像才会有此计算。*/
+            perspective-origin: 0 100%;
+            /*这句无效*/
+        }
+        /*分割线以上是只有一层嵌套元素进行3D效果展示*/
+        /*-----------分-------------------割-------------------线--------------------------------*/
+        /*分割线以下是有多层嵌套元素进行3D效果展示*/
+        
+        #div3 {
+            perspective: 900px;
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #sec1 {
+            background: red;
+            transform-style: preserve-3d;
+            /*当确定舞台元素（父级元素）时，其第一层子元素的第一轮3D转换会在舞台范围内显示相应的3D效果。
+            但当子元素嵌套的子元素（第二层子元素）想要再次进行3D转换 并在舞台元素内的展现出3D效果时，就必须在第一轮子元素中设置transform-style: preserve-3d;*/
+            transform: perspective(900px) rotateY(45deg);
+            /*transform: rotateY(45deg);*/
+            /*以上两种设置显示效果不相同，是什么原因呢？*/
+        }
+        
+        #sec2 {
+            background: blue;
+            /*transform-style: preserve-3d;*/
+            transform: rotateY(40deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+    <div id="div2">
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+    <div id="div3">
+        <section id="sec1">
+            <section id="sec2">
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

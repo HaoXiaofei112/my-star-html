@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>引用和引号</title>
+			<style>
+				q 
+				{
+					quotes: '“' '”' '《' '》';
+				}
+				cite:before 
+				{
+					content: '“';
+				}
+				cite:after 
+				{
+					content: '”';
+				}
+			</style>
+	</head>
+	<body>
+<!--		q 和 cite的区别-->
+<!--	q表示引用的内容 文本
+		cite 经常用来表示引用文献 文章 出处 来源-->
+		<p><q>臣本布衣，躬耕于南阳</q>--出自《出师表》</p>
+		<q>清明时节雨纷纷,路上行人欲断魂。出自<q>清明</q></q>
+		<br>
+			
+		<cite>少小离家老大回,乡音未改鬓毛催</cite>
+	</body>
+</html>

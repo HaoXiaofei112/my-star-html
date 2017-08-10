@@ -1,0 +1,53 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <title>bootstrap空白项目</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+				body 
+				{
+					height: 1000px;
+				}
+		</style>
+	</head>
+	<body>
+		<!--
+		navbar-inverse 黑色
+		navbar-default 白色
+		navbar-fixed-top 请导航固定在屏幕上方
+		-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<!--设置导航logo-->
+					<a href="" class="navbar-brand">智游</a>
+					<!--toggle 开关
+					data-toggle 监听某件事
+					data-target 监听某个人-->
+					<button class="navbar-toggle collapsed" 
+					data-toggle='collapse' data-target='#navbar'>
+					 <!--icon 图标-->
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li><a href="">首页</a></li>
+						<li><a href="">公司简介</a></li>
+						<li><a href="">员工风采</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+</html>

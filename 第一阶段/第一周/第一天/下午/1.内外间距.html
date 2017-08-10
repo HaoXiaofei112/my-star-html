@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>内外间距</title>
+			<style>
+				body 
+				{
+					margin: 0px;
+				}
+/*				div属于块标签 默认为屏幕的宽*/
+				div 
+				{
+/*					设置背景色为蓝色*/
+					background-color: orange;
+/*					设置外间距
+                    一个值：上下左右
+					两个值：值1表示上下 值2表示左右
+					三个值：值1表示上 值2表示左右 值3表示下
+					四个值：分别是 上，右，下，左*/
+					margin: 50px 100px 150px 200px;
+/*					设置内间距
+                    内容距离标签边框的距离称之为内间距*/
+					padding: 50px;
+				}
+				p 
+				{
+/*					rgb为三原色 取值范围0~255   a alpha 透明度 0~ 1*/
+					background-color: rgba(64, 64, 64, 0.7);
+					
+					width: 200px;
+				    
+					padding: 10px 30px 10px 20px;
+					
+					border-top-right-radius: 10px;
+					
+					border-bottom-right-radius: 10px;
+
+				}
+			</style>
+	</head>
+	<body>
+<!--	块标签如果没有设置宽高 那么该标签的大小
+		就为内容的大小-->
+		<div>上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午上课第一天下午</div>
+		<p>我是来看看有没有外间距的</p>
+	</body>
+</html>

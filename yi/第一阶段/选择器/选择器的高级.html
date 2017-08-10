@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*后代选择器
+    对标签的嵌套结构要求不大
+    */
+    section span{
+        color:red;
+    }
+    /*子选择器*/
+    article > div{
+        border: 2px solid red;
+    }
+    /*群组选择器*/
+    /*逗号计算优先级是最低的*/
+    ol li ,ul li {
+        /*list-style: none;*/
+         border: 2px solid red;
+
+    }
+    /*相邻选择器*/
+    #div + p{
+        color:red;
+    }
+    /*伪类选择器*/
+    /*hover:当鼠标悬停在制定的标签上方时添加对应的样式*/
+    aside:hover{
+        color:red;
+    }
+    /*focus:标签获取焦点时添加样式
+    :nth-child和nth-of-type
+    visited 访问过的链接*/
+    </style>
+</head>
+<body>
+    <!--section:部分,章节,用于功能相识或相同的重复部分-->
+  <section>
+      <div>保护
+          <span>保护对方v</span>
+      </div>
+      </section> 
+    <article>
+        <!--article 文章,不能包裹h1-->
+   <div>段落1
+       <div>bvn</div>
+   </div>
+   <div>段落2</div>
+    </article>
+    <!--ol:有序列表-->
+    <!--ul:无须列表-->
+    <ol>
+        <li>g</li>
+        <li>v</li>
+        <li>s</li>
+    </ol>
+    <ul>
+        <li>bg</li>
+    </ul>
+    <div id="div">hfgb </div>
+    <p>fgbvcb</p>
+    <p>gfgfbv</p>
+    <aside>侧边栏</aside>
+</body>
+</html>

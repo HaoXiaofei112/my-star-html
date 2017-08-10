@@ -1,0 +1,78 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM结构之属性节点</title>
+    <style>
+        .color 
+        {
+            color: orange;
+        }
+        .font 
+        {
+            font-size: 50px;
+        }
+        .bg 
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--target _blank 新开一个页面
+    为什么国外国内有差别？
+    1.用户习惯
+    2.国情不同-->
+    <a href="https://www.baidu.com"  id="one" class="color" title="百度一下,你就知道"  target="_blank" >百度</a>
+    <script>
+        var a =document.querySelector('a');
+        // attribute 属性
+        // property  属性
+        console.log(a.attributes.length);
+
+        for(var index = 0 ; index < a.attributes.length ;  index++)
+        {
+            var attr = a.attributes[index];
+
+            console.log(attr);
+        }
+        // title = '百度一下，你就知道'
+        var attr = a.attributes[3];
+        
+        console.log(attr.name);
+        console.log(attr.value);
+
+        a.title = '百度一下，你啥都忘了';
+        // set 设置  settting
+        a.setAttribute('title','不如用谷歌');
+        // 参数1:设置哪个属性
+        // 参数2:给属性设置什么值
+        a.setAttribute('href','https://www.jd.com');
+        // get 获取   参数:获取哪个属性
+        var t =  a.getAttribute('title');
+
+        console.log(t);
+        // className 类名
+        // 只保留font这个类
+        a.className = 'font';
+        // add 增加
+        a.classList.add('color');
+        // remove 删除
+        a.classList.remove('font');
+        // toggle 开关
+        a.classList.toggle('bg');
+
+        a.classList.toggle('bg');
+
+        /*
+        总结:
+        1.获取所有以及指定的属性
+        2.用set和get方法设置及获取属性
+        3.className及classList操作
+        */
+
+    </script>
+</body>
+</html>

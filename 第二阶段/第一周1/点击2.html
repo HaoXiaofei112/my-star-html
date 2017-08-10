@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=button, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击</title>
+    <style>
+#thediv
+{
+ width:200px;
+ height:100px;
+ line-height:100px;
+ text-align:center;
+ background-color:green;
+}
+
+</style>
+</head>
+
+<body>
+    <button  onclick="myClick()">显示\隐藏切换</button>
+
+<div id="thediv" style="display:block"></div>
+</body>
+
+<script >
+var div=document.getElementById("thediv");
+function myClick()
+{
+ if(div.style.display=='block')
+ {
+  div.style.display='none';
+ }
+ else
+ {
+  div.style.display='block';
+ }
+}
+
+ 
+</script>
+</html>

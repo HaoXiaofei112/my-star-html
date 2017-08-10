@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闪瞎钛合金🐶👀</title>
+	<style>
+		span 
+		{
+			width: 50px;
+			
+			height: 50px;
+			
+			background-color: red;
+			
+			border-radius: 50%;
+			
+			display: block;
+			
+
+		}
+	</style>
+</head>
+<body>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<script>
+		var spans = document.querySelectorAll('span');
+		
+		window.onmousemove = function(e)
+		{
+			for(var index = 0 ;index < spans.length ; index ++)
+			{
+				//			 0  1
+//			var a = Math.floor(Math.random() * 2) == 0 ? -150: 150;
+//			算出球体的X坐标
+			var mouseX  = e.pageX + Math.random() *  300 - 150;
+//			算出球体的Y坐标
+			var mouseY = e.pageY + Math.random() * 300 - 150;
+			
+			spans[index].style.position = 'absolute';
+			
+			spans[index].style.top = mouseY + 'px';
+			
+			spans[index].style.left = mouseX + 'px';
+			
+			spans[index].style.transform = 'scale(' + Math.random() +')';
+			
+//			hue 色度 0和360表示红色  120表示绿色  240表示蓝色
+//			saturation  饱和度    100%
+//			lightness   亮度      50%
+			spans[index].style.backgroundColor = 'hsl(' +
+			 Math.floor(Math.random() * 360) + ',100%,50%)' ;
+			}
+		}
+	</script>
+</body>
+</html>

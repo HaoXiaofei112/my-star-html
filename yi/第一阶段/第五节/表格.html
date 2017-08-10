@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+   table{
+       width:1000px;
+       height:160px;
+       border:4px solid black;
+       /*相邻的单元格边框合并*/
+       border-collapse: collapse;
+       /*相邻的单元格之间的空间*/
+       /*border-spacing: 10px;*/
+   }
+   /*如果给tr设置边框,需要给table设置border-collapse:collapse*/
+   /*table tr{
+     
+       border:2px solid blue;
+   }*/
+   table tr:nth-child(1){
+       background: black;
+       color:white;
+   }
+   table td{
+       border: 2px solid black;
+       text-align: center;
+   }
+    </style>
+</head>
+<body>
+    <!--table;表格标签-->
+    <table border="4">
+        <!--tr:表格的行-->
+        <tr>
+            <!--td:表格的列-->
+            <td>星期一 </td>
+            <td>星期二</td>
+            <td>星期三</td>
+            <td>星期四</td>
+            <td>星期五</td>
+            <td>星期六</td>
+            <td>星期天</td>
+        </tr>
+          <tr>
+            <td>一 </td>
+            <td>二</td>
+            <td>三</td>
+            <td>四</td>
+            <!--列合并.合并之后要删除多余的列-->
+            <td colspan="2">五</td>
+         <!--行合并.合并之后要删除多余的行-->
+            <td rowspan="3">休息</td>
+        </tr>
+          <tr>
+            <td>星一 </td>
+            <td>星二</td>
+            <td>星三</td>
+            <td>星四</td>
+            <td>星五</td>
+            <td rowspan="2">休息</td>
+           
+        </tr>
+            <tr>
+            <td>星一 </td>
+            <td>星二</td>
+            <td>星三</td>
+            <td>星四</td>
+            <td>星五</td>
+           
+        </tr>
+    </table>
+</body>
+</html>

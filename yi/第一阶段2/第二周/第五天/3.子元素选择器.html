@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>子元素选择器</title>
+			<style>
+				span 
+				{
+					background-color: red;
+				}
+				
+/*				子元素选择器 
+                选择该标签的子标签*/
+				section > span
+				{
+					background-color: blue;
+				}
+
+				
+			</style>
+	</head>
+	<body>
+		<span>span</span>
+			
+		<section>
+<!--		     蓝色-->
+			<span>section</span>
+<!--		    红色-->
+			<div>
+				<span>div</span>
+			</div>
+		</section>
+
+		<section>
+			<span>
+				<span></span>
+			</span>
+
+		</section>
+		
+		
+		
+		<section>
+			<span>section</span>
+		</section>
+	</body>
+</html>

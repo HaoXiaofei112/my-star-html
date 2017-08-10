@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>css层叠样式表的基本解释</title>
+			<style>
+				p 
+				{
+					font-size: 50px;
+				}
+				span 
+				{
+					color:  red;
+					
+				}
+/*				设置p标签里面的span标签的属性 */
+				p span 
+				{
+					font-size: 100px;
+					
+					color: blue;
+				}
+			</style>
+	</head>
+	<body>
+		<p>骐骥一跃不能十步</p>
+		<span>驽马十驾功在不舍</span>
+		
+<!--	子标签继承父标签的属性 父标签为50px-->
+		<!--字体大小-->
+		<p> 
+			<!--红色-->
+			<span>又大又红</span>
+		</p>
+
+        
+		<!--字体属性会被继承
+		color 
+		font-size
+		font-family
+		font-style
+		font-weight
+		-->	
+		<span>
+			<p>你好</p>
+		</span>
+		
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>动画（animation）</title>
+    <style>
+        body{
+            padding-top: 100px;
+        }
+        div{
+            width: 150px;
+            height: 150px;
+            background: red;
+            margin: 0 auto;
+            /*animation：动画*/
+            /*1. 动画名称*/
+            animation-name: shake;
+            /*2. 播放一次需要的时间*/
+            animation-duration: 2s;
+            /*3. 播放动画的次数，
+            infinite，无限次
+            还可以接受一些非负数，可以是小数
+            默认是 1次
+            */
+            animation-iteration-count: 1;
+            /*4. 动画播放过程中速率的变化*/
+            animation-timing-function: linear;
+            /*5. 动画执行的方向
+            动画方向默认值是 normal，即每次动画都是从正方向开始的
+            alternate，交替的，让动画在第偶数次反向播放，第奇数次正向播放
+            alternate-reverse，反向交替，让动画在第偶数次正向播放，第奇数次反向播放
+            */
+            animation-direction: alternate;
+            /*6. 定义动画结束时所处的状态*/
+            /*设置动画结束之后保持什么状态。
+            1.none：表示不设置结束之后的状态，默认情况下回到跟初始状态一样。
+            2.forwards：表示将动画元素设置为整个动画结束时的状态。
+            3.backwards：明确设置动画结束之后回到初始状态。
+            4.both：表示设置为结束或者开始时候的状态。一般都是回到默认状态（不是结束状态？）*/
+            animation-fill-mode: forwards;
+            /*7. 动画延迟*/
+            /*animation-delay: -3s;*/
+            
+        }
+        /*设置动画的过程*/
+        @keyframes shake {
+            /*动画的过程就是一些样式的变化，
+            其中要求：动画开始和结束指定的样式必须相同，进行闭合*/
+            /*from {
+                transform: translate(0);
+                width: 150px;
+            }
+            to {
+                transform: translate(200px);
+                width: 300px;
+            }*/
+            0%{
+                transform: translate(0);
+                width: 150px;
+            }
+            50%{
+                transform: translate(200px);
+                width: 300px;
+            }
+            100%{
+                transform: translate(0);
+                width: 150px;
+            }
+        }
+        /*8. 动画暂停和继续*/
+        div:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯电脑管家</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: white;
+        }
+        .head {
+            width: 1200px;
+            height: 100%; 
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .head img{
+            width:205px;
+            height: 40px;
+        }
+        nav{
+            margin-left:-250px;
+            height: 100%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            font-size:0px;
+            height: 100%;
+        }
+        nav ul li {
+            display: inline-block;
+            padding: 0 20px;
+            border-left:1px solid wheat;
+            text-align: center;
+            font-size: 16px;
+            height:100%;
+            line-height: 80px;
+            color:#333
+        }
+        nav ul li:nth-of-type(5){
+            border-right: 1px solid wheat;
+        }
+        nav ul li:hover{
+            color:#033bb6;
+            cursor:pointer; 
+        }
+        .head .right {
+            width:200px;
+            height:100%;         
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .head .right .phone,
+        .head .right .mac,
+        .head .right .global{
+            width:45px;
+            height:45px;          
+            border: 1px solid white;
+        }
+        .head .right .phone {
+            background-image: url(img/ic_block.png);
+            background-size: 135px;
+            background-position: -45px 0px;
+        }
+         .head .right .phone:hover{
+             background-position: -45px -45px;
+         }
+         .head .right .mac {
+            background-image: url(img/ic_block.png);
+            background-size: 135px;     
+        }
+         .head .right .mac:hover{
+             background-position: 0px -45px;
+         }
+         .head .right .global {
+            background-image: url(img/ic_block.png);
+            background-size: 135px;
+            background-position: 45px 0px;
+        }
+         .head .right .global:hover{
+             background-position: 45px -45px;
+         }
+         .banner{
+             width:100%;
+            min-width: 1200px;
+            font-size: 0px;            
+         }
+         .banner img{
+             width:  100%;
+         }
+         main{
+             width:1200px; 
+             margin: 0 auto;  
+         }
+         .first{
+             height:280px;      
+             display: flex;
+             justify-content: space-between;
+         }
+         .first > div{
+             width:19%;     
+         }
+        .first> div .icon{
+             width:150px;
+             height:150px;
+             border-radius: 50%;
+             margin: 0px auto;
+             margin-top:50px;
+          /**/box-shadow: 0 0 20px #aaa;
+          transition: 0.5s;
+         }
+         .first .yi .icon:hover{
+        background-size: 110%;
+        background-position: center center;
+         }
+          .first .er .icon:hover{
+        background-size: 110%;
+        background-position: center center;
+         } .first .san .icon:hover{
+        background-size: 110%;
+        background-position: center center;
+         } .first .si .icon:hover{
+        background-size: 110%;
+        background-position: center center;
+         } .first .wu .icon:hover{
+        background-size: 110%;
+        background-position: center center;
+         }
+         h3,h5{
+          text-align: center;
+         }
+         .first .yi .icon{
+             background-image: url(img/icon1.png);
+             background-size: 100%;
+         }
+          .first .er .icon{
+             background-image: url(img/icon2.png);
+               background-size: 100%;
+         }
+          .first .san .icon{
+             background-image: url(img/icon3.png);
+               background-size: 100%;
+         } .first .si .icon{
+             background-image: url(img/icon4.png);
+               background-size: 100%;
+         } .first .wu .icon{
+             background-image: url(img/icon5.png);
+               background-size: 100%;
+         }
+         .chanpin{
+             margin-top: 20px;
+         }
+         .chanpin .title{
+             font-size: 22px;
+              color:#5b8346; 
+              border-left:2px solid #2f6cfa;
+              padding-left: 20px;  
+           line-height:100%;
+         }
+        .chanpin .list{ 
+          height:200px;
+          display: flex;
+          justify-content: space-between;
+          margin-top:10px;
+        }
+        .chanpin .list > div{
+            width: 292px;
+            height: 100%;
+          background-size: 100%;
+          position: relative;
+          text-align: right;
+        }
+        .chanpin .list .a{
+            background-image: url(img/chanpin1.jpg);
+        }    
+        .chanpin .list .a p{
+            color:white;
+            padding-left: 35px;
+        }
+        .chanpin .list .a div{
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+        }
+         .chanpin .list .b{
+            background-image: url(img/chanpin2.jpg);
+        } 
+         .chanpin .list .b p{
+            color:white;
+            padding-left: 35px;
+        }
+        .chanpin .list .b div{
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+        }
+        .chanpin .list .c{
+            background-image: url(img/chanpin3.png);
+        } 
+         .chanpin .list .c p{
+            color:white;
+            padding-left: 35px;
+        }
+        .chanpin .list .c div{
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+           
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+        }
+        .chanpin .list .d{
+            background-image: url(img/chanpin4.png);
+        } 
+         .chanpin .list .d p{
+             margin-top: 17px;
+            color:white;
+            margin-right:15px;
+        }
+        .chanpin .list .d h3 {
+         margin-top:18px;
+         margin-left: 180px;
+         width: 100px;
+         height: 30px;
+         background-color:#5b8346;
+         color:white; 
+        }
+        .chanpin .list .d div{
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+        }
+        .dongtai{
+             margin-top: 20px;
+         }
+         .dongtai .title{
+             font-size: 22px;
+              color:#5b8346; 
+              border-left:2px solid #2f6cfa;
+              padding-left: 20px;  
+           line-height:100%;
+         }
+        .dongtai .list{     
+          height:200px;
+          display: flex;
+          justify-content: space-between;
+          margin-top:10px;
+        }
+        .dongtai .list > div{
+            width: 292px;
+            height: 100%;
+          background-size: 100%;
+          position: relative;
+           text-align: right;/*右对齐*/
+        }
+        .dongtai .list .a{
+            background-image: url(img/hd1.png);
+        }
+         .dongtai .list .a p{
+            color:white;
+            padding-left: 35px;       
+        }
+         .dongtai .list .a div {
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+
+        }
+         .dongtai .list .b{
+            background-image: url(img/hd2.jpg);
+        } 
+          .dongtai .list .b div{
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+
+        }
+        .dongtai .list .c{
+            background-image: url(img/hd3.png);
+        }
+          .dongtai .list .c div{
+              
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+
+        } 
+        .dongtai .list .d{
+            background-image: url(img/hd4.jpg);
+        }
+          .dongtai .list .d div{
+            position: absolute;
+            bottom:0px;
+            color:wheat;
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /*设置透明度*/
+            padding: 10px, 5px,5px;
+
+        }
+      .kk{
+            width: 1200px;
+            height:100px;
+            box-shadow: 0 0 2px #aaa;
+        }
+          .kk .title{
+             font-size: 18px;
+              color:#5b8346; 
+              border-left:2px solid #2f6cfa;
+              padding-left: 20px;  
+           line-height:100%;
+           margin-top: 10px;
+           margin-left: 10px;
+      padding-top:10px;
+         }
+           .kk .list{        
+          height:200px;
+          display: flex;
+          justify-content: space-between;
+          margin-left:15px;
+           margin-right: 15px;
+        }    
+            .kk .list > div{
+            width: 290px;
+            /*height: 100%;*/
+          /*background-size: 100%;*/
+          position: relative;
+          text-align: left;
+       }
+       .tb{
+           width: 1200px;
+           height:70px;       
+           margin-top: 60px;
+       }
+          .tb .list{
+         /*弹性布局*/
+          height:20px;
+          display: flex;
+          /*间距*/
+          justify-content: space-between;
+        width:1000px;   
+        }   
+        .tb .list .gg img{
+           width: 100px;
+            height: 27px;
+        }
+        .tb .list .ww{
+            color:blue;
+        }
+        .wei{
+            width: 1200px;
+            height:50px;
+              display: flex;   
+        }
+        .lst{
+            margin-right: 20px;
+        }
+        .wei .qq .list{
+             display: flex;
+               justify-content: space-between; 
+            height:25px;
+            width: 1100px;    
+        }
+         .wei .qq .lll{
+         display: flex;
+          justify-content: space-between; 
+          width: 300px; 
+          height: 25px;  
+        }
+        .mo{
+            width:400px;
+            margin: 0 auto;  
+        }
+        .mo .one{
+           
+               display: flex;
+          justify-content: space-between;  
+        } 
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <img src="img/logo.png" alt="照片">
+            <nav>
+                <ul>
+                    <li>首页</li>
+                    <li>产品介绍</li>
+                    <li>活动中心</li>
+                    <li>在线安全</li>
+                    <li>论坛</li>
+                </ul>
+            </nav>
+            <div class="right">
+                <div class="phone">   
+                </div>
+                <div class="mac"> 
+                </div>
+                <div class="global">  
+                </div>
+                <div class="login"><a href="#">登录</a></div>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="img/179.png" alt="">
+    </div>
+    <main>
+<div class="first">
+<div class="yi">
+    <div class="icon"></div>
+  <h3>安全防护</h3>
+  <h5>杀毒,漏洞全方位护航</h5>
+</div>
+<div class="er">
+     <div class="icon"></div>
+         <h3>垃圾清理</h3>
+         <h5>极致清理,流畅如新</h5>
+</div>
+<div class="san">
+    <div class="icon"></div>
+       <h3>电脑加速</h3>
+       <h5>一键加速,游戏快人一步</h5>
+</div>
+<div class="si">  
+     <div class="icon"></div>
+           <h3>软件管理</h3>
+         <h5>软件升级,卸载,拦截轻松搞定</h5>
+</div>
+<div class="wu">
+     <div class="icon"></div>
+     <h3>工具箱</h3>
+      <h5>集合众多电脑实用工具</h5>
+</div>
+</div>
+<div class="chanpin">
+    <div class="title">产品动态</div>
+    <div class="list">
+        <div class="a">
+            <p>微信+管家,安全有保障 </p> 
+            <div>电脑管家(微信登录保护)</div>
+        </div>
+        <div class="b">
+              <p>网购多套路,管家来保护</p>
+            <div>电脑管家(网购安全)</div>
+        </div>
+        <div class="c">
+              <p>清除病毒国际测评最高分</p>
+            <div>电脑管家(2016AVC评测)</div>
+        </div>
+        <div class="d">
+            <img src="img/123.gif" alt="">
+              <p>电脑管家最新体验版<br>      2016/12/30</p>
+              <h3>下载体验</h3>
+            <div>电脑管家体验版专区</div> 
+        </div>
+    </div>
+</div>
+<div class="dongtai">
+    <div class="title">最新动态</div>
+    <div class="list">
+        <div class="a">
+             <p>非物质文化遗产,24节气壁纸全集</p>
+            <div class="qq">电脑管家(专属壁纸)</div>
+        </div>
+        <div class="b">
+           <div>电脑管家(清理+公益)</div>
+        </div>
+        <div class="c">
+          <div>电脑管家(会员特权)</div>
+        </div>
+        <div class="d"><img src="img/123.gif" alt="">
+         <div>电脑管家(嘉年华)</div>
+        </div>
+    </div>
+</div>
+    <div class="kk"> 
+         <div class="title">安全资讯</div>
+  <div class="list">
+      <ul>
+            <li>[安全]警惕萝莉病毒感染魔兽地图</li>
+           <li>[杀毒]木马伪装2017年假期日历</li>
+       </ul>
+        <ul>
+            <li>[安全]警惕萝莉病毒感染魔兽地图</li>
+           <li>[杀毒]木马伪装2017年假期日历</li>
+       </ul> 
+       <ul>
+            <li>[安全]警惕萝莉病毒感染魔兽地图</li>
+           <li>[杀毒]木马伪装2017年假期日历</li>
+       </ul>
+         <ul>
+            <li>[安全]警惕萝莉病毒感染魔兽地图</li>
+           <li>[杀毒]木马伪装2017年假期日历</li>
+       </ul>
+        </div>
+    </div>
+    <div class="tb">
+        <div class="list">
+<li>合作伙伴</li>
+<img src="img/bb.png" alt="">
+<img src="img/cc.png" alt="">
+<img src="img/dd.png" alt="">
+<img src="img/ee.png" alt="">
+<img src="img/ff.png" alt="">
+<div class="gg">
+<img src="img/gg.png" alt="">
+</div>
+<img src="img/hh.png" alt="">
+<p class="ww">合作申请>></p>
+        </div>
+    </div>
+    <div class="wei">
+<div class="lst">
+    <p>友情链接</p>
+    </div>
+    <div class="qq">
+    <div class="list">
+<p>搜狗下载</p>
+<p>蓝钻</p>
+<p>腾讯课堂</p>
+<p>腾讯电脑管家</p>
+<p>安卓手机软件</p>
+<p>腾讯视频</p>
+<p>应用宝</p>
+<p>腾讯软件中心</p>
+<p>软件管理</p>
+<p>广点通</p>
+<p>腾爱.糖大夫</p>
+<p>腾讯云</p>
+<p>QQ音乐</p>
+ </div>
+ <div class="list">
+<p>iTools助手</p>
+<p>全民WIFI</p>
+<p>快玩游戏</p>
+<p>应用汇</p>
+<p>rom之家</p>
+<p>A5站长网</p>
+<p>ZOL下载频道</p>
+<p>IT之家</p>
+<p>太平洋电脑网</p>
+<p>多特软件站</p>
+<p>win10之家</p>
+<p>QQ空间手机版</p>
+<p>腾讯微云</p>
+ </div>
+ <div class="lll">
+     <p>一加手机</p>
+     <p>亿智蘑菇</p>
+     <p>来电</p>   
+     <p>这很神价</p>
+    </div>
+ </div>
+    </main>
+    <br>
+    <br>
+    <div class="mo">
+        <div class="one"> 
+            <p>腾讯公司</p>
+            <p>|</p>
+            <p>版权所有</p>
+            <p>|</p>
+            <p>市场合作</p>
+            <p>|</p>
+            <p>关于管家</p>
+        </div>
+        <div class="two"> 
+            Copyright ©️ 1998-2017 Tencent,All Rights Reserved.
+        </div>
+    </div>
+
+    <hr>
+</body>
+</html>
+
+
+
+
+
+
+
+

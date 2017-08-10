@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.5.换肤</title>
+    <style> 
+
+    body{
+        margin: 0;
+    }
+    nav{
+        height: 50px;
+        background-color: black;
+
+    }
+    button{
+        width:30px;
+        height: 30px;
+        margin: 10px;
+        border:1px solid red;
+       
+    }
+    
+    </style>
+</head>
+<body>
+    <!--事件传递链-->
+    <nav onclick="myClick(event)">
+       <button onclick1() id="red" style="background-color:red"></button>
+       <button  onclick2()  id="blue"style="background-color:blue"></button>
+       <button  onclick3()  id="yellow" style="background-color:yellow"></button>
+       <button  onclick4()  id="green" style="background-color:green"></button>
+
+    </nav>
+    <script>
+          var btns =document.querySelectorAll('button');
+        //   event 事件
+        // event 包含被点击对象的信息（哪个对象 ，对象有什么属性）
+        // 参数（形参：只知道变量的名字 不知道变量的具体值）；
+        function myClick(event){
+            // event.target  获取被电击的队形（目标）
+            // alert(event.target);
+
+            var el = event.target;
+            // tagName)标签名
+            if(el.tagName == 'BUTTON'){
+                // 获取标签上的ID
+                var ID = el.id;
+                var link =document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = ID + '.css';
+                document.head.appendChild(link);
+            }
+
+       
+        }
+    
+    </script>
+    
+</body>
+</html>

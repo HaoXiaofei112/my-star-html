@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>变形(transform)-2D</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background: orange;
+            color: red;
+            /*Transform字面上就是变形，改变的意思。
+            具体取值有：
+            1.none：不进行转换
+            2.rotate(x)：旋转，单位deg
+            3.translate(x,y)：平移
+            4.scale(x,y)：缩放
+            5.skew(x,y)：斜切变换
+            6.matrix：矩阵变形（不详细讲，自学）
+            重要：使用多个属性时需要有空格隔开。
+            */
+            transform: none;
+
+            transform: rotate(30deg);
+            /*如果设置的值为正数表示顺时针旋转，如果设置的值为负数，则表示逆时针旋转。
+            默认基点位置是元素的中心点*/
+
+            transform: translate(120px,150px);
+            /*表示对象进行平移，按照设定的x,y参数值，x为在X轴上平移距离，y为在Y轴上的平移距离。
+            当值为负数时，反方向移动物体。
+            若传递一个参数，则第二个参数默认为0
+            也可以单独在一个轴上进行移动
+            可以使用translateX()，或translateY()
+            默认基点位置是元素的中心点
+            */
+
+            transform: scale(2,2);
+            /*参数传递方式与translate相似，
+            表示对象进行缩放，按照设定的x,y参数值，x为在X轴上进行缩放，y为在Y轴上的进行缩放。
+            如果只传递一个参数，默认在X轴和Y轴上同时缩放
+            缩放基数为1，如果其值大于1元素就放大，反之其值小于1，元素缩小。
+            同时也可以使用scaleX(),scaleY();
+            默认基点位置是元素的中心点
+            */
+            
+            transform: skew(30deg,45deg);
+            /*对元素进行扭曲变行，
+            第一个参数是水平方向扭曲角度，第二个参数是垂直方向扭曲角度。
+            其中第二个参数是可选参数，如果没有设置第二个参数，那么Y轴为0deg。
+            也可以使用skewX(),skewY();
+            默认基点位置是元素的中心点
+            */
+
+            transform: translate(50px,100px) scale(0.5) rotate(-45deg);
+            /*也可以对同一元素进行多种样式的转换，其中，不同的转换用 空格 隔开，排序不分先后*/
+            transform-origin: right top;
+            /*transform-origin(X,Y):用来设置元素的运动的基点（参照点）。默认点是元素的中心点。
+            取值可以是字符值（left，right，top，bottom），百分比或是其他单位*/
+        }
+    </style>
+</head>
+<body>
+    <div>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+</body>
+</html>

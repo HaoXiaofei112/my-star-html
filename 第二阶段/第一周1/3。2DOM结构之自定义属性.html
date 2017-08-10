@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定属性</title>
+</head>
+<body>
+    <!--toggle 开关
+    data 开头的属性为data属性 也是自定义属性
+    -->
+    <div  data-toggle='collapse' data-target='navbar' data-name='goudan' data-age='12' data-school='zhiyou'></div>
+
+    <script>
+    var div =document.querySelector('div');
+    // set 设置，集合
+    // data 数据
+    // DOMStringMap
+    console.log(div.dataset);
+    console.log(div.dataset.name);
+    div.dataset.name = '离';
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*选择器{
+样式属性名:属性值;
+}
+    */
+    /*用法一,标签选择器,直接通过标签名称来选择*/
+    header{
+        color:red;
+    }
+    /*用法二,类名选择器,通过指定的类名来进行选择一个标签可以有多个类名,
+    多类名之间用空格隔开*/
+    .nav1{
+        color:beige;
+    }
+    .nav2{
+        font-size: 20px;
+    }
+    /*在一个页面中id的值只能出现一次*/
+    #main{
+        border:1px solid red;
+
+    }
+    /*用法4,通配符选择器
+    选择指定范围内的所有标签*/
+    *{
+       box-sizing:border-box;
+    }
+    </style>
+</head>
+<body>
+    <header>头部标签,用来包裹页面头部区域的内容</header>
+    <nav class="nav1 nav2">导航标签</nav>
+    <main id="main">主要的,用于页面中主要的内容,一般一个页面中只有一个</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用文本标签</title>
+    <style>
+        .bold_text{
+            /*设置文本粗体*/
+            font-weight: bold;
+        }
+        .q{
+            /*设置文本斜体效果*/
+           font-style: italic;
+           /*normal:字体正常*/
+        }
+        .w{
+            /*设置下划线*/
+            text-decoration: underline;
+            /*none:去除*/
+        }
+        .e{
+           /*删除线文本*/ 
+           text-decoration: line-through;
+        }
+        .r{
+            /*自定义符号*/
+            quotes:'<' '>';
+        }
+    </style>
+</head>
+<body>
+    百度v <br>
+    <span>普通文本,span标签没有斜体粗体等特殊效果表示一般内容</span><br>
+    <strong>加粗文本 strong标签带有很强的强调含义,用于标识重要内容</strong><br>
+    <b>b标签加粗文本,b标签强调含义较弱</b><br>
+    <!--通过css样式将文本加粗-->
+    <span class="bold_text">通过css样式加粗文本没有任何强调意义</span><br>
+    <!--
+        1.强调含义不同
+        2.代码多少不一样
+        3.通过样式设置效果可以更加的灵活多变
+        4.通过css样式把普通文本设置成加粗文本,也可以吧加粗文本变成普通文本
+    -->
+    <!--斜体文本-->
+    <em>斜体文本,em标签具有很强的强调意义,用于标记重要的斜体文字</em><br>
+    <i>斜体文本,i标签强调含义较弱</i><br>
+    <span class="q">通过css样式设置文本斜体,只是添加斜体效果没有强调意义</span><br>
+    <!--下划线-->
+    <!--isn:insert,插入-->
+    <ins>下划线文本,isn本身是插入的意思,表示新增</ins><br>
+    <u>下划线文本,强调含义比叫弱只是添加下滑线效果</u><br>
+    <span class="w">下划线</span>
+    <br>
+    <!--删除线文本-->
+    <del>删除线文本,带有删除的含义,用来表示被废弃的内容</del><br>
+    <s>删除线文本,s标签的强调含义较弱</s><br>
+    <span class="e">删除线文本</span><br>
+    <!--小字号文本-->
+    <small>小字号,比普通文字要略小的文本</small>
+    <br>
+    <!--上标文字-->
+    普通<sup>上标文字</sup><br>
+    <!--下标文字-->
+    普通<sub>下标文字</sub><br>
+    <!--带有引号的文本
+    为了避免引号等引用的符号污染主要文本内容-->
+    <q>带有引号的文本</q><br>
+    <q class="r">自定义符号</q>
+    <!---->
+    
+</body>
+</html>

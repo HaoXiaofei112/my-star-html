@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+#userName{
+    width:500px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: 2px solid red;
+    /*过度时间*/
+    transition: 1s;
+    background-color: gold;
+
+
+    
+}
+#userName:focus{
+    width:400px;
+
+
+
+}
+input[type=submit]{
+    background-color: greenyellow;
+    width:800px;
+    height: 60px;
+    font-size: 30px;
+    color:white;
+    border-radius: 50px;
+
+}
+
+</style>
+</head>
+<body>
+  <form>
+   <label for="userName">用户名:</label><input type="text" id="userName"> 
+    <label for="psw">密码:</label><input type="password" id="psw"> 
+  <label for="man">男:</label><input type="radio" id="man"> 
+    <label for="woman">女:</label><input type="radio" id="woman"> 
+    <select name="city" id="city">
+        
+        <option value="zz">正在</option>
+        <option value="ss">试试</option>
+        <option value="tt">天天</option>
+        </select>
+         <!--上传文件-->
+         <input type="file">
+         <!--huakuai-->
+         <input type="range">
+    
+        <input type="submit" value="立即登录">
+      </form>  
+</body>
+</html>

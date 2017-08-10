@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: '微软优雅';
+}
+body{
+    margin: 0;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: bottom;
+}
+a{
+    text-decoration: none;
+color:inherit;
+}
+.container{
+    width: 1000px;
+margin: 0 auto;
+}
+.clearfix:before, .clearfix:after{
+    content: ',';
+    width: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    /*清除浮动*/
+    clear: both;
+
+}
+.col{
+    float: left;
+}
+.col-8{
+    width: 66.6%;
+}
+.col-4{
+    width: 33.3%;
+}
+
+/*通用样式*/
+/*-------------------------------------------*/
+nav{
+    height: 80px;
+    background-color: grey;
+}
+nav #title{
+  float: left;  
+}
+nav #user{
+    float: right;
+}
+nav #title *{
+    display: inline-block;
+    margin: 0;
+    height: 80px;
+    line-height: 80px;
+    margin-right: 10px;
+
+}
+nav #user *{
+    height: 80px;
+   line-height: 80px;
+    margin-left: 10px;
+}
+/*单行文字上下居中,使用行高等于父元素高度即可*/
+#aeticle-ifo span{
+    margin-right: 15px;
+    color:#666;
+}
+article{
+    font-size: 20px;
+    line-height: 150%;
+}
+.text-indent{
+    /*em是相对于当前标签中的字体大小,也就是一个字的大小*/
+    text-indent: 2em;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+article img{
+    width:60%;
+    display: block;
+    margin: 0 auto;
+}
+.card{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 20px;
+}
+.card-head {
+    background-color:lightblue;
+    border-radius: 4px 4px 0 0;
+}
+.card-head h3{
+    margin: 0 ;
+    padding: 10px;
+    font-size: 16px;
+}
+.card-body li{
+    padding: 10px;
+    border-bottom: 1px solid lightblue;
+}
+.card-body li:hover{
+    background-color: grey;
+}
+.media{
+    /*转化为表格*/
+    display: table;
+     border-bottom: 1px solid lightblue;
+     padding: 10px;
+
+}
+.media-head{
+ display:table-cell;
+ padding-right: 10px;
+}
+.media img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+  
+}
+.media-body{
+    display: table-cell;
+    vertical-align: top;
+}
+.media h4, .media p{
+    margin: 0;
+}
+  
+
+
+
+

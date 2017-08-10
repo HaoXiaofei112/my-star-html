@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>浮动以及固定位置</title>
+			<style>
+				footer 
+				{
+/*					固定位置*/
+					position: fixed;
+/*					从下往上0个像素*/
+					bottom: 0px;
+					
+					height: 100px;
+					
+					background-color: orange;
+					
+					width: 100%;
+				}
+				section
+				{
+					border:1px solid red;
+					
+					color: red;
+					
+					width: 25%;
+					
+					height: 40px;
+					
+					float: left;
+					
+/*					不设置border-box属性的话 
+					width:25%指的是section的内容大小
+					除此之外 它还有边框大小
+					设置的话
+					指的是让width：25%为内容大小+内间距+边框大小*/
+					box-sizing: border-box;
+				}
+			</style>
+	</head>
+	<body>
+		<footer>
+			<section>&hearts;</section>
+			<section>&hearts;</section>
+			<section>&hearts;</section>
+			<section>&hearts;</section>
+		</footer>
+	</body>
+</html>

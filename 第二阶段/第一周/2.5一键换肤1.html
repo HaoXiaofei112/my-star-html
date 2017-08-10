@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="2.5red.css">
+    <title>一键换肤</title>
+    <style>
+        body 
+        {
+            margin: 0px;
+        }
+        nav 
+        {
+            height: 50px;
+
+            background-color: black;
+        }
+        button 
+        {
+            width: 30px;
+
+            height: 30px;
+
+            margin: 10px;
+
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!--事件传递链-->
+    <nav onclick="myClick(event)">
+        
+        <button id="red" style="background-color:red"></button>
+        <button id="blue" style="background-color:blue"></button>
+        <button id="orange" style="background-color:orange"></button>
+        <button id="pink" style="background-color:pink"></button>
+    </nav>
+
+    <script>
+        var btns =document.querySelectorAll('button');
+        // event 事件  
+        // event包含被点击对象的信息(哪个对象，对象有什么属性)
+        // 参数（形参:只知道变量名字 不知道具体的值）
+        function myClick(event)
+        {
+            // target 目标 
+            // event.target  获取被点击的对象（目标）
+            // alert(event.target);
+            // HTMLButtonELement HTMLElement
+            var el = event.target;
+
+            // alert(el.tagName);
+            // tagName 标签名
+            // if(el.tagName == 'BUTTON')
+            {
+                // 获取标签上的id
+                var ID = el.id;
+
+                var link =document.createElement('link');
+
+                link.rel = 'stylesheet';
+
+                link.href = '2.5' + ID + '.css';
+
+                document.head.appendChild(link);
+            }
+        }
+    </script>
+</body>
+</html>

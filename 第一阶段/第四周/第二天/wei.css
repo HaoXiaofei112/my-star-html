@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+}
+section {
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+  border-radius: 30px;
+  border: 5px solid white;
+}
+div {
+  width: 50% ;
+  height: 50%;
+  background-color: pink;
+  border-radius: 30px;
+  border: 5px solid white;
+}
+p {
+  width: 50%;
+  height: 50%;
+  background-color: pink;
+  border-radius: 30px;
+  border: 5px solid white;
+}

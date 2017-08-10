@@ -1,0 +1,268 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>简历</title>
+			<style>
+				body 
+				{
+					/*repeat*/
+					height: 100%;
+					
+					background-image: url(wood.png);
+					
+					overflow: hidden;
+/*					family 家庭；家族*/
+					font-family: 时尚中黑简体;
+					
+					padding-top:50px;
+				}
+				span 
+				{
+					position: relative;
+					
+					top: -30px;
+					
+					color: yellow;				
+					
+				}
+				section 
+				{
+					width: 400px;
+					
+					height: 100px;
+					
+					border-radius: 18px;
+					
+					background-color: red;
+					
+					margin: 0px auto;
+					
+					position: relative;
+					
+					box-shadow: 0px 0px 5px black;
+					
+/*					裁减掉超出标签的部分*/
+					overflow: hidden;
+				}
+				.hole
+				{
+					width: 26px;
+					
+					height: 26px;
+					
+					border-radius: 50%;
+					
+					background-image: url(wood.png);
+					
+					position: absolute;
+					
+					left: 10px;
+					
+					bottom: 10px;
+					
+				}
+				.jl
+				{
+					z-index: 1000;
+					
+					background-color: white;
+					
+					left: -80px;
+					
+/*					transition 渐变  渐渐完成
+					transform  变换  瞬时完成
+					rotate 旋转 translate 平移 scale 缩放
+					顺时针旋转 正值   逆时针旋转 负值
+					deg degree 角度*/
+					transform: rotate(-3deg);
+					
+					background-image: url(diwen.png);
+/*					设置背景图尺寸*/
+					background-size: 70% ;
+/*					设置背景图不平铺*/
+					background-repeat: no-repeat;
+/*					设置背景图的位置*/
+					background-position: 70% 13%; 
+				}
+				.jl h1 
+				{
+					text-align: right;
+					
+					font-size: 75px;
+					
+					font-family: 迷你简双线体;
+					
+					font-weight: normal;
+					
+					position: relative;
+					
+					top: -50px;
+					
+				}
+				.jl p 
+				{
+					position: relative;
+					
+					top: -180px;
+					
+					left: 40px;
+					
+					font-size: 35px;
+					
+					color: mediumpurple;
+				}
+				.jl p small 
+				{
+/*					将small标签转化成块标签
+                    块标签自带换行功能*/
+					display: block;
+					
+					color: black;
+				}
+				.geren
+				{
+					z-index: 900;
+					
+					background-color: greenyellow;
+					
+					text-align: right;
+					
+					left: 80px;
+				}
+				h3 
+				{
+					margin: 0px;  
+					
+					text-align: right;
+					
+					padding-right: 15px;
+					
+					padding-top: 10px;
+					
+					font-size: 22px;
+				}
+				
+				.geren p:nth-child(3)
+				{
+					position: relative;
+					
+					right: 15px;
+					
+					top: -15px;
+				}
+				.geren p:nth-child(4)
+				{
+					position: relative;
+					
+					top: -100px;
+					
+					right: 170px;
+				}
+				.yx 
+				{
+					background-color: mediumseagreen;
+					
+					color: white;
+					
+					top: -10px;
+					
+					left: -80px;
+				}
+				.yx h2 
+				{
+					position: relative;
+					
+					left: 150px;
+					
+					top: 10px;
+				    
+					margin: 0px;
+					
+					z-index: 9;
+				}
+				.yx h1 
+				{
+					text-align: right;
+					
+					font-size: 200%;
+				}
+				
+				.yellow 
+				{
+					width: 180px;
+					
+					height: 180px;
+					
+					background-color: yellow;
+					
+					border-radius: 50%;
+					
+					position: absolute;
+					
+					top: -20%;
+					
+					left: 10%;
+/*					设置标签的透明度 取值范围0~1*/
+					opacity: 0.7;
+					z-index: 10;
+				}
+				.blue
+				{
+					z-index: 8;
+					width: 250px;
+					
+					height: 250px;
+					
+					background-color: blue;
+					
+					border-radius: 50%;
+					
+					position: absolute;
+					
+					right: 50px;
+					
+					top: -50%;
+					
+					opacity: 0.5;
+				}
+			</style>
+	</head>
+	<body>
+		<span>请安装 迷你简双线体 和 时尚中黑简体</span>
+		<section class="jl">
+			<div class="hole"></div>
+			<h1>简历</h1>	
+			<!--sub  sup-->
+			<p>孙悟空<small>pretty monkey king</small></p>
+		</section>
+		
+		<section class="geren">
+			<div class="hole"></div>
+			<h3>个人信息</h3>
+			<p>
+				种族:妖族  
+				<br>
+				出生日期:公元前1046
+				<br>
+				身高:150cm				
+			</p>
+			<p>
+				籍贯:东胜瀛洲傲来国
+				<br>
+				政治面貌:妖王
+				<br>
+				毕业院校:花果山专修学院	
+				<br>
+				专业:水果拼盘
+			</p>
+		</section>
+		
+		<section class="yx">
+			<div class="hole"></div>
+			<h2>求职意向</h2>
+			<h1>高级技工</h1>
+			<div class="yellow"></div>
+			<div class="blue"></div>
+		</section>
+	</body>
+</html>

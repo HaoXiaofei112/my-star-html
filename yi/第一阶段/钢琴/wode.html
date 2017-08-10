@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钢琴</title>
+    <style>
+        html{
+            height:100%;
+        }
+        body{
+            height:100%;
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           background-color: #000;
+        }
+        
+        main{
+            width:800px;
+            height:600px;
+            border:10px solid #000;
+            border-radius: 5px;
+            box-shadow: 0 0 50px #fff;
+            background-image: url(keys.png);
+            background-repeat: no-repeat;
+            background-size:  100% 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        main div{
+            /*设定使用弹性布局的元素是否进行剩余空间扩展*/
+            flex-grow: 1;
+    
+            
+        }
+        
+    </style>
+</head>
+<body>
+    audio[src=notes/$.oga]*9
+
+   <main>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+  </main>
+  <audio src=""></audio>
+</body>
+</html>

@@ -1,0 +1,22 @@
+section {
+  width: 400px;
+  height: 400px;
+  font-size: 40px;
+  border: 2px solid blue;
+}
+section p {
+  color: red;
+  width: 50% ;
+  height: 50%;
+  border: 2px solid red;
+}
+section p a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: orange;
+  border: 2px solid orange;
+}
+section p a:hover {
+  color: greenyellow;
+}

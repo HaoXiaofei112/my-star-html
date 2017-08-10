@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+            width: 100%;
+        }
+    body{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+           	align-items:center;
+             perspective: 1000px;
+             margin: 0px;
+        }
+       main{
+          width:200px;
+           height: 200px;
+           	transform-style: preserve-3d;
+			animation: zhuan 10s linear infinite;
+       }
+       div{
+            width:100%;
+           height: 100%;
+           position: absolute;
+           display: flex;
+        
+
+       }
+       .yi{
+           transform: translateZ(100px);
+          background-color: red;
+           border: 1px solid red;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+       }
+       .yi-y{
+           width:30px;
+           height: 30px;
+           background-color: black;
+           border-radius: 50%;
+           margin: 15px;
+     
+       }
+       .er{
+           transform: translateZ(-100px);
+    
+         background-color: green;
+       
+            display: flex; 
+           align-items: center;
+           justify-content: space-between;
+       }
+       .san{
+           transform: rotateX(90deg) translateZ(100px);
+         background-color: yellow;
+           display: flex;
+           flex-wrap: wrap;
+            align-content:space-between;
+
+          
+
+       }
+       .san-y{
+           width:100%;
+           height:33.33%;
+         
+       }
+       .san-e{
+             width:100%;
+           height:33.33%;
+       
+            display: flex;
+            justify-content: center;
+           align-items: center;
+
+       }
+    
+       .san-s{
+             width:100%;
+           height:33.33%;
+       
+            display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+    
+        
+       }
+      
+       .shi{
+           transform: rotateX(90deg) translateZ(-100px);
+        background-color: purple;
+  
+            display: flex; 
+            flex-wrap: wrap;
+            align-content: center;
+       }
+      .shi-y{
+          width:100%;
+          height: 50%;
+              display: flex; 
+            justify-content: space-around;
+           align-items: center;
+      }
+        .shi-e{
+            width: 100%;
+            height: 50%;
+              display: flex; 
+            justify-content: space-around;
+           align-items: center;
+      }
+      .wu{
+          	transform: rotateY(90deg) translateZ(100px);
+          background-color: blue;
+            display: flex; 
+            flex-wrap: wrap;
+            align-content: center;
+
+      }
+      .wu-y{
+             width:100%;
+           height:33.33%;
+            display: flex;
+            justify-content: space-around;
+           align-items: center;
+      }
+         
+      .liu{
+          	transform: rotateY(90deg) translateZ(-100px);
+        background-color: orange;
+            display: flex; 
+            flex-wrap: wrap;
+            align-content: center;
+
+      }
+    
+    
+ 	@keyframes zhuan 
+				{
+					0%
+					{
+						transform: rotateX(0deg) rotateY(0deg);
+					}
+					100%
+					{
+						transform: rotateX(720deg) rotateY(720deg);
+					}
+				}
+
+        
+
+
+    </style>
+</head>
+<body>
+    <main>
+     
+        <div class="yi">
+            <div class="yi-y">
+
+            </div>
+        </div>
+       <div class="er">
+           <div class="yi-y"></div>
+            <div class="yi-y"></div>
+
+       </div>
+        <div class="san">
+            <div class="san-y">
+            <div class="yi-y"></div>
+            </div>
+            <div class="san-e">
+            <div class="yi-y"></div>
+            </div>
+            <div class="san-s">
+            <div class="yi-y"></div>
+            </div>
+          
+
+        </div>
+        <div class="shi">
+            <div class="shi-y">
+              <div class="yi-y"></div>
+              <div class="yi-y"></div> 
+            </div>
+            <div class="shi-e">
+                 <div class="yi-y"></div>
+                 <div class="yi-y"></div>  
+            </div>
+        </div>
+        <div class="wu">
+              <div class="wu-y">
+                 <div class="yi-y"></div>
+                 <div class="yi-y"></div>  
+            </div>
+              <div class="san-e">
+                 <div class="yi-y"></div> 
+            </div>
+              <div class="wu-y">
+                 <div class="yi-y"></div>
+                 <div class="yi-y"></div>  
+            </div>
+
+        </div>
+        <div class="liu">
+               <div class="wu-y">
+                 <div class="yi-y"></div>
+                 <div class="yi-y"></div>  
+            </div>
+              <div class="wu-y">
+                 <div class="yi-y"></div>
+                 <div class="yi-y"></div> 
+            </div>
+              <div class="wu-y">
+                 <div class="yi-y"></div>
+                 <div class="yi-y"></div>  
+            </div>
+        </div>
+
+    
+   </main>
+</body>
+</html>

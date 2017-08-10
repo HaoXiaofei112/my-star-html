@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钢琴</title>
+    <style>
+    html{
+        height: 100%;
+    }
+    body{
+       height: 100%;
+        margin: 0;
+        /*开启弹性布局,对子元素进行排列*/
+        display: flex;
+        /*水平聚中*/
+        justify-content: center;
+        /*垂直居中*/
+        align-items: center;
+        background-color: black;
+    }
+    main{
+        width: 800px;
+        height: 400px;
+        border: 3px solid black;
+        /*阴影*/
+        box-shadow: 0 0 50px wheat;
+        border-radius: 5px;
+        background-image: url(keys.png);
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    div{
+        flex-grow: 1;
+    }
+    /*伪类选择器,
+    当元素被点中时触发的样式*/
+    div:active{
+        background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)60%,rgba(150,150,150,0.3));
+
+    }
+    </style>
+</head>
+<body>
+    <!--audio[src=notes/$.oga]*9快速生成-->
+    <audio src="notes/1.oga"></audio>
+	<audio src="notes/2.oga"></audio>
+	<audio src="notes/3.oga"></audio>
+	<audio src="notes/4.oga"></audio>
+	<audio src="notes/5.oga"></audio>
+	<audio src="notes/6.oga"></audio>
+	<audio src="notes/7.oga"></audio>
+	<audio src="notes/8.oga"></audio>
+	<audio src="notes/9.oga"></audio>
+  <main>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+ </main>  
+</body>
+<script>    
+
+// 选中琴键,这是一个集合
+var keys = document.querySelectorAll('div')
+
+// 选中音频文件集合
+var audios = document.querySelectorAll('audio')
+// 给每一个div添加一个点击事件
+// 给元素添加事件时,只能给单个元素添加,而不是对集合进行添加
+// 使用循环便利的方法
+for(var i = 0; i < 9; i++){
+    // 给每一个div都添加一个差异化属性,
+    // 属性值就是自己的索引值
+    keys[i].index = i;
+    // 添加一个点击事件
+    keys[i].onclick = function(){
+        // 得到div的索引值
+      var k = this.index;
+    // 根据索引值去音频集合中去取对应的 音频进行播放 
+      audios[k].load();
+      audios[k].play();
+
+    }
+
+}
+// 添加键盘事件
+// 键盘事件只能使用window去调用
+window.onkeydown = function(e){
+    console.log(0);
+    // 使用e.keyCode 来获取对应的ASCII值
+// alert(e.keyCode);
+// 49-57对应1-9
+// 使用判断条件进行过滤,不是1-9不做任何操作
+var key = e.keyCode;
+if(key >= 49 && key <= 57){
+    // 将得到的key值减去49.转化为0-8;
+    key =key - 49;
+       audios[key].load();
+      audios[key].play();
+
+}
+}
+</script>
+</html>

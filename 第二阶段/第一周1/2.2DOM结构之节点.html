@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签获取修改</title>
+</head>
+<body>
+    <ul>
+        <li>IOS</li>
+        <li>HTML5</li>
+        <li>PHP</li>
+        <li>JAVA</li>
+        <li>VR</li>
+        <li>UI</li>
+        <li>UYI</li>
+    </ul>
+    <div>123</div>
+    <script>
+        // 找到所有标签中的第一个
+        var ulList =document.querySelector('ul');
+        
+        // object 对象
+        // element 元素，节点
+        // node 子节点
+        // length 长度（在此表示个数）
+        alert(ulList.childNodes.length);
+        for(var i = 0 ; i < ulList.childNodes.length ; i ++){
+        //    分别获取列表中的子节点
+           var node = ulList.childNodes[i];
+        //    [object Text]             文本对象
+        // [object HTMLLiElement]     标签对象 获取文本
+        //    alert(node);
+        //    打点调用属性    .后面的称之为属性 nodeType type类型
+        //    if(node.nodeType !=Node.TEXT_NODE){
+            //    nodeValue 属性 节点的值
+            //    alert(node.childNodes[0].nodeValue);
+
+        //    }
+          
+
+        }
+        // 标签节点+  .childNodes[0].nodeValue; 可以获取标签上的文本
+        // 获取指定标签的内容
+        var ui = ulList.childNodes[11].childNodes[0];
+        // alert(ui)
+        // append 追加
+        // data 数据
+        ui.appendData('Nice to meet you');
+        // 参数1，从索引几开始删除
+        // 参数2，删除多少长度
+        // replace 替换
+        ui.deleteData(3,4);
+
+
+        // ui.replaceData(4,5,6);
+        var value = ui.nodeValue;
+
+        // sub子 string 字符串
+        // 分割字符串
+        // 参数1.从第几位开始分割（索引从0开始）
+        // 参数2，分割到第几位
+        // value = value.substring(2,4);
+        // 参数1 从第几位开始分割
+        // 参数2 分割的长度
+
+        value = value.substr(2,4);
+        alert(value);
+
+
+/*
+DOM 标签组成的树状图
+标签有三部分组成
+1.标签
+2.属性
+3.文本
+
+
+
+
+
+
+1.怎样获取标签
+2.获取标签子节点
+3.子节点的种类
+4.获取子节点的文本
+5，子节点追加内容
+6.子节点删除内容
+7.子节点替换内容
+8.字符串分割
+
+
+
+
+*/
+      
+
+    
+    </script>
+    
+</body>
+</html>

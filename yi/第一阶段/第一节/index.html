@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距-margin</title>
+    <style>
+    body{
+        margin: 0px;
+    }
+    .a {
+        width:200px;
+        height:200px;
+        background-color: black;
+        /*外边距: 元素距离他父元素或相邻元素的边框的距离*/
+        /*当一个值时是上下左右的外边距*/
+        margin: 100px;
+        /*当有两个值时第一个值是上下的值,第二个值是左右的值*/
+        margin: 100px 200px;
+        /* 当有三个值时第一个值是上边距,第二个值是左右边距,第三个值是下边距*/
+        margin: 100px 200px 50px;
+        /*当四个值时是,第一个值是上的值,第二个值是右的值,第三个的值是下的值,第四个值是左的值*/
+        margin: 50px 100px 50px 50px ;
+        font-size: 0px;
+
+    }
+    
+    .b {
+        width:200px;
+        height: 200px;
+        background-color:red;
+        /*相邻的两个元素之间的上下外边距会重叠,他两个之间的距离是以最大的那个外边距为准*/
+        margin: 50px;
+    }
+    .a span{
+        display:inline-block;
+        width:30px;
+        height: 30px;
+        background:white;
+        /*相邻的两个元素的左右外边距不会重叠*/
+        margin: 0px 30px;
+
+    }
+    </style>
+</head>
+<body>
+   <div class="a"> 
+       <span></span>
+       <span></span>
+       
+       
+       </div> 
+   <div class="b"></div>
+
+</body>
+</html>

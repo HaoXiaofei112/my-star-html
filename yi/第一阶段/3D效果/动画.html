@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+    body{
+        padding-top:300px;
+    }
+    div{
+        width:150px;
+        height: 150px;
+        background: red;
+        margin: 0 auto;
+        /*animation:动画*/
+        /*1,动画名称*/
+        animation-name: shake;
+        /*2.播放一次动画所需要的时间*/
+        animation-duration: 2.5s;
+        /*3.播放动画的次数.infinite:无限次
+        还可以接受一些非负数,可以是小数
+        默认是一次*/
+        animation-iteration-count:infinite;
+        /*4,动画播放过程中速率的变化*/
+        animation-timing-function: linear;
+        /*5,动画执行的方向
+        动画方向默认值是normal.即每次动画都是从正方向开始的
+        alternate.交替的.让动画在第偶数次反向播放.第奇数次正向播放,
+        alternate-reverse.反向交替.让动画在第偶数次正向进行,奇数次反向进行*/
+        animation-direction: alternate;
+        /*
+        */
+        animation-fill-mode: both;
+        /*7.动画延迟*/
+        animation-delay: 3s;   
+    }
+    /*设置动画的过程*/
+    @keyframes shake{
+        /*动画的过程就是一些样式的变化,
+        其中的要求:动画开始和结束指定的样式必须相同,
+        进行闭合*/
+        /*from{
+            transform:translate(0);
+            width: 150px;
+
+        }
+        to{
+              transform:translate(200px);
+              width: 300px;
+        }*/
+        0%{
+           transform:scale(0,0 );
+           
+            background-color: darkblue;
+        }
+        50%{
+             transform:scale(3,2);
+         
+          background-color:blueviolet;
+
+        }
+        100%{
+           transform:scale(0,0);
+          
+             background-color:bisque;
+        }
+        
+    }
+     /*8.动画暂停和继续*/
+     div:hover{
+            animation-play-state:running;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+  
+</body>
+</html>

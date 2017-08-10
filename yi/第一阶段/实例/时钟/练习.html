@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+    html{
+        height:100%;
+    }
+    body{
+        margin: 0px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        width:150px;
+        height: 150px;
+        border-radius: 10%;
+        background: linear-gradient(#999,#555,#000);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle{
+        width:90%;
+        height: 90%;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px black inset;
+    }
+    .hour{
+        width: 6px;
+        height: 60%;
+        position: absolute;
+        left: calc(50%-3px);
+        top:calc(50%-30%);
+        transform: rotate(45deg)
+    }
+    .hour div{
+        width:100%;
+        height: 50%;
+        background: black;
+    }
+        .minute{
+        width: 4px;
+        height: 80%;
+        position: absolute;
+        left: calc(50%-2px);
+        top:calc(50%-40%);
+ 
+    }
+    .minute div{
+        width:100%;
+        height: 50%;
+        background: red;
+    }
+        .second{
+        width: 2px;
+        height: 96%;
+        position: absolute;
+        left: calc(50%-1px);
+        top:calc(50%-48%);
+    }
+    .second div{
+        width:100%;
+        height: 50%;
+        background: gold;
+    }
+        .point{
+        width:10px;
+        height: 10px;
+        border-radius: 50%;
+        background:yellow;
+        position: absolute;
+        left: calc(50% - 8px);
+        top: calc(50% - 8px);
+        border: 4px solid black;
+    }
+    
+    </style>
+</head>
+<body>
+  <div class="box">
+      <div class="circle">
+        <div class="hour">
+            <div></div>
+            </div> 
+          <div class="minute">
+              <div></div>
+              </div>  
+                </div> 
+          <div class="second">
+              <div></div>
+              </div>
+              
+
+
+
+
+      </div>
+      </div>  
+</body>
+</html>

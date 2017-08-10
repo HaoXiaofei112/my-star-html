@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>存款计算器</title>
+    <style>
+        /*通配符 所有标签*/
+        *   
+        {
+            /*现在
+              大小 = content + padding + border
+              默认
+              大小 = content
+            */
+            box-sizing: border-box;
+        }
+
+        main 
+        {
+            width: 400px;
+
+            height: 800px;
+
+            border: 2px solid orange;
+        }
+        h1 
+        {
+            background-color: orange;
+
+            color: white;
+
+            text-align: center;
+
+            font-size: 25px;
+
+            height: 40px;
+
+            margin: 0px;
+
+            line-height: 40px;
+
+            font-weight: normal;
+        }
+        input 
+        {
+            width: 380px;
+
+            height: 40px;
+
+            border: 2px solid orange;
+
+            margin: 8px;
+
+            font-size: 23px;
+
+            padding-left: 10px;
+        }
+        button 
+        {
+            width: 380px;
+
+            height: 40px;
+
+            background-color: orange;
+
+            margin: 8px;
+
+            color: white;
+
+            text-align: center;
+
+            font-size: 23px;
+
+            border: none;
+        }
+        p 
+        {
+            font-size: 25px;
+            
+            color: gray;
+
+            text-align: center;
+
+            font-family: 时尚中黑简体;
+        }
+    </style>
+</head>
+<body>    
+    <main>
+        <h1>存款收益计算器</h1>
+        <input type="text" placeholder="存款本金">
+        <input type="text" placeholder="预期利率">
+        <input type="text" placeholder="预期期数">
+
+        <button onclick="myClick()">计算</button>
+
+        <p>本息合计:0元</p>
+       
+    </main>
+    <script>
+            var inputs = document.querySelectorAll('input');
+
+            var p = document.querySelector('p');
+
+
+            function myClick()
+            {
+                // 获取标签输入框的内容
+                var value1 = inputs[0].value; 
+
+                var value2 = inputs[1].value;
+
+                var value3 = inputs[2].value;
+                // parseInt 转化成int类型
+                // parseFloat 转化成float
+                var result = value1 * value2 * value3 + parseInt(value1);
+
+                console.log(result);
+
+                p.innerText = '本息合计:' + result + '元';
+            }
+    </script>
+</body>
+</html>

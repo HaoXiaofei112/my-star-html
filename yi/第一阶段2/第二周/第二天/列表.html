@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>列表</title> 
+			<style>
+				ul 
+				{
+/*					去掉左边的点*/
+/*					padding-left: 0px;*/
+/*                  设置列表的风格样式
+                    list 列表 style风格 typel类型*/
+					list-style-type: none;
+
+				
+				}
+				ul li:before 
+				{
+					content: '🐭 🐂 🐅 🌞 🌛 ';
+				}
+				
+				ol 
+				{
+/*					padding-left: 0px;*/
+
+                    list-style-type: none;
+				}
+				ol li:before 
+				{
+					content: '🐰';
+				}
+			</style>
+	</head>
+	<body>
+		<ul>
+			<li>啤酒</li>
+			<li>饮料</li>
+			<li>矿泉水</li>
+		</ul>
+		
+		<ol>
+			<li>花生</li>
+			<li>瓜子</li>
+			<li>八宝粥</li>
+		</ol>
+	</body>
+</html>

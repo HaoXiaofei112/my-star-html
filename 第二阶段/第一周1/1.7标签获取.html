@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签获取</title>
+</head>
+<body>
+    <div id="only" class="one" name='user'></div>
+    <script>
+        // document 文档
+        // get 获取
+        // element 元素，节点
+        // by 通过。。。。
+
+        var div1 = document.getElementById('only');
+        // getElementsByClassName会将有相同类名的标签放入到同一个容器当中容器当中的索引是从0开始的
+        var div2 =documeng.getElementsByClassName('one')[0];
+        // 通过标签名
+        var div3 =document.getElementsByTagName('div')[0];
+        // 通过name 属性来找
+        var div4 =document.getElementsByName('user')[0];
+        // 找到所有标签中的第一个
+        var div5 =document.querySelector('div');
+        // ALL所有的
+        var div6 =document.querySelectorAll('div')[0];
+        
+    </script>
+    
+</body>
+</html>

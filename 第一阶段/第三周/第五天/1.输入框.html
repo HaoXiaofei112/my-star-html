@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>输入框</title>
+			<style>
+				
+			</style>
+	</head>
+	<body>
+<!--	form 表单
+        action 开始;行动 表示将数据传送到哪个URL（地址）-->
+		<form action="">
+<!--		form表单一般包含两部分
+			1.标题  2.输入框-->
+<!--		label 标签  一般指文本标签-->
+l            <label for=""></label>
+			<label for="psw" >账号:</label>
+<!--		input 放入...里面 这里是输入框
+            type='text' 默认类型；文本类型-->
+			<!--<input id="username" placeholder="请输入邮箱" type="text" pattern="/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/" />
+			pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$-->
+			<input type="checkbox" name="a" >
+			<input type="checkbox" name="a" >
+			<!--checked 被选择-->
+			<input type="checkbox" name="a" checked>
+			
+			<label for="">可以</label>
+			<input type="text">
+			
+			<label for="">吗</label>	
+			<input type="text">
+		</form>
+		
+		<form action="">
+			<label for="username">密码:</label>
+<!--		输入框类型是密码类型-->
+			<input id="psw" type="password">
+		</form>
+		
+		<form action="">
+<!--		radio 收音机  在此表示单选
+            如果想让选项在同一类 那么name值要一样-->
+			<input name="remember" type="radio">
+			<label for="">记住密码</label>
+				
+			<input name="remember" type="radio"> 
+			<label for="">不记住密码</label>
+			<!--
+			如果name值不一样  
+			不可以作为同一个问题的备选答案-->
+			<input type="radio" name="rem">
+			<label for="">都可以</label>
+
+		</form>
+		
+		谁喜欢你
+		<form action="">
+			<!--checkbox 复选框-->
+			<input type="checkbox" name="girl">
+			<label for="">貂蝉</label> 
+				
+			<input type="checkbox" name="girl">
+			<label for="">杨贵妃</label>  
+				
+			<input type="checkbox" name="girl"> 
+			<label for="">西施</label>
+				
+			<input type="checkbox" name="girl">
+			<label for="">王昭君</label>
+		</form>
+		
+	</body>
+</html>

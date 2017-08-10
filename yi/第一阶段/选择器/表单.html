@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <form >
+        <!--文本输入框-->
+        <input type="text" placeholder="请输入用户名" value="这里是默认值"><br>
+        <!--密码输入框-->
+        <input type="password" placeholder="密码"><br>
+        <!--单选,需要使用一个相同的name值关联起来-->
+
+        <input type="radio" name="sex" id="man">:男 <br>
+        <label for="man">:男</label><br>
+          <input type="radio" name="sex" id="woman">:女 <br>
+          <input type="radio" name="sex" id="ET">:外星人 <br>
+          <hr>
+          <!--多选-->
+          爱好:<br>
+          <input type="checkbox" name="game" checked>:英雄联盟<br>
+          <input type="checkbox" name="game">:王者荣耀<br>
+          <input type="checkbox" name="game">:地下城<br>
+          <input type="checkbox" name="game">:cf<br>
+          <input type="checkbox" name="game" disabled>:cs<br>
+          <!--下拉选项框-->
+          <select name="city" >
+              <option value="qq">抢钱</option>
+              <option value="aa" selected>安安</option>
+              <option value="ss">试试</option>
+              <option value="dd">等等</option>
+              <option value="ff" disabled>方法</option>
+          </select><br>
+          <!--电话输入框-->
+          <input type="tel"><br>
+          <!--邮箱输入框-->
+          <input type="email"><br>
+          <!--数字输入框-->
+          <input type="number">
+          <!--取色器-->
+          <input type="color">
+          <!--日期-->
+          <input type="date">
+          <!--按钮-->
+          <input type="button" value="按钮">
+          <button type="button">按钮2</button>
+          <!--重置-->
+          <input type="reset" value="从新填写">
+          <!--提交-->
+          <input type="submit" value="立即登录">
+
+    </form>
+</body>
+</html>

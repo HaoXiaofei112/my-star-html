@@ -1,0 +1,77 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+<!--			IE = edge 以最高模式来支持浏览器-->
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1,
+		 maximum-scale=1,
+	     user-scalable=no">
+		 <title>bootstrap基本使用</title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+/*				div
+				{
+					animation:; 
+					-webkit-animation:;   
+					-moz-animation: ;
+				}*/
+				@media(max-width:768px)
+				{
+					ul 
+					{
+						background-color: black;
+					}
+				}
+				
+		</style>
+	</head>
+	<body>
+<!--	  1. navbar 在此处是为了表示这个是一个导航
+          2. navbar-inverse 设置的是导航的样式
+		  3. navbar-fixed-top 设置位置固定在页面上方
+		  4. role 角色 role='navigation' 设置角色为导航-->
+		  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<!--	     container 容器
+			 我们需要将导航条里面的内容放在容器中
+			 表示为一个整体-->
+			 <div class="container">
+<!--			 写在navbar-header里面的类名为navbar-brand
+				 的a标签，字体会被放大，充当一个logo的效果-->
+				 <div class="navbar-header">
+					 
+					<a class="navbar-brand" href="">智游</a>
+<!--				导航菜单的内容 会被放在类名为navbar-toggle collapsed
+					的标签里面-->
+<!--				data-toggle  监听的事件  (超速)
+					data-target  监听的目标 （司机）   data 数据  date 日期  -->       
+				    <button  class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">      
+<!--					   三个类名为icon-bar的span标签 实现汉堡效果-->
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </button>
+				 </div>
+				 
+				
+<!--			 1.collapse 设置汉堡效果出现时 内容菜单是否折叠 
+				 如果添加collapse则折叠 不添加collapse则默认展开
+				 2.navbar-collapse 设置汉堡效果消失时 是否会在导航栏出现菜单
+				 如果添加则出现 如果不添加则不出现-->
+				 <div id="navbar" class="collapse navbar-collapse">
+                     <ul class="nav navbar-nav">
+						
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#about">About</a></li>
+<!--			    	class='active' 表示设置是否选中-->
+                       <li class="active"><a href="#contact">Contact</a></li>
+                    </ul>
+                 </div>
+			 </div>
+
+			 
+		 </nav>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>

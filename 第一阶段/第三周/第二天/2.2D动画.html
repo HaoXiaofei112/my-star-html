@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>2D动画</title>
+			<style>
+				div 
+				{
+					width: 400px;
+					
+					height: 10px;
+					
+					background-color: red;
+					
+					margin: 400px auto;
+					/*设置变换的中心点 
+					参数1：水平方向
+					参数2：垂直方向*/
+					/*transform 转变 变换
+					  transition 渐变 过渡*/
+					transform-origin: 80%  50%;
+					
+					/*rotate 旋转
+					scale  缩放
+					translate 平移
+					skew  斜拉
+					*/
+					/*transform: rotate() scale() translate()*/
+/*					transform: skew(20deg);*/
+					/*linear 匀速*/  
+					animation:rotate 6s linear infinite;
+
+					/*animation-name:zhuan ;
+
+					animation-duration: 2s;
+
+					animation-timing-function: linear;
+
+					animation-iteration-count: infinite;*/
+
+
+
+					
+				}
+				@keyframes rotate 
+				{
+					0%
+					{
+						transform: rotate(0deg);
+					}
+					100%
+					{
+						transform: rotate(360deg);
+					}
+				}
+				
+				
+			</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing:border-box; 
+    }
+    html{
+        height: 100%;
+    }
+body{
+    height: 100%;
+      margin:0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+main{
+    width:560px;
+    height: 520px;
+    /*border: 2px solid red;*/
+    display: flex;
+    /*animation: scale 1s infinite linear;
+    */
+    animation-name:scale;
+    /*scale 缩放*/
+    animation-duration: 1s;
+    /*动画执行速度*/
+    animation-timing-function: linear;
+    /*动画执行的次数*/
+    animation-iteration-count: infinite;
+    /**/
+    /*translate()平移*/
+    /*rotate()旋转 deg */
+}
+@keyframes scale{
+    0%{
+        /*转换,改变*/
+        transform: scale(1);
+
+    }
+      25%{
+       transform: scale(0.5);
+    }
+    50%{
+       transform: scale(1.5);
+    }
+     75%{
+       transform: scale(2);
+    }
+     100%{
+       transform: scale(1);
+    }
+
+}
+section{
+    /*border: 2px solid green;*/
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+div{
+    background:red;
+}
+#left1{
+    flex-basis: 120px;
+    height: 120px;
+border-radius: 120% 0 0 0;
+}
+#left2{
+    flex-basis: 160px;
+    height: 120px;
+    border-radius:0 120%  0 0;
+}
+#left3{
+    flex-basis: 280px;
+    height: 400px;
+    border-radius: 0 0 0 100% ;
+}
+#right1{
+    flex-basis: 120px;
+    height: 120px;
+border-radius:  120% 0 0 0;
+}
+#right2{
+    flex-basis: 160px;
+    height: 120px;
+    border-radius:0 120%  0 0;
+}
+#right3{
+    flex-basis: 280px;
+    height: 400px;
+    border-radius: 0 0  100% 0;
+}
+    
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div id="left1"></div>
+        <div id="left2"></div>
+        <div id="left3"></div>
+    </section>
+    <section>
+        <div id="right1"></div>
+        <div id="right2"></div>
+        <div id="right3"></div>
+    </section>
+</main>
+</body>
+</html>

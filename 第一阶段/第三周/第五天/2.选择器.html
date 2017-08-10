@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>选择器</title>
+			<style>
+				select 
+				{
+					width: 150px;
+					
+					height: 200px;
+/*					resize 重新设置大小  
+					both 可以设置宽和高*/
+					resize: both;
+				}
+			</style>
+	</head>
+	<body>
+		LOL 英雄之提莫队长
+		<form action="">
+<!--		multiple 多选的 添加这个属性能够一次性
+            展示多个 而不是选择多个-->
+			<!--
+			select   选择
+			multiple 多选
+			-->
+			<select name="" id="" multiple>
+<!--			option 选项
+			    group  组-->
+				<!--selected 默认被选择-->
+				<optgroup label="英雄技能">
+					<option value="Q">致盲射击</option>
+					<option value="W">小莫快跑</option> 
+					<option value="E" selected>毒性射击</option> 
+					<option value="R">蘑菇陷阱</option>
+				</optgroup>
+				
+				<optgroup label="装备">
+					<option value="">狂徒</option>
+					<option value="">兰顿</option>
+					<option value="">钢铁烈阳</option>
+					<option value="">狂徒</option>
+					<option value="">兰顿</option>
+					<option value="">钢铁烈阳</option>
+				</optgroup>
+			</select>
+		</form>
+		
+<!--	field  田野 野外  set 设置
+		fieldset 选择器-->
+		<!--
+			<table>
+			<caption></caption>
+			<tr>
+				<td></td>
+			</tr>
+		</table>-->
+		<fieldset>
+<!--		legend  铭文 在此表示标题-->
+			<legend>今天中午吃什么？</legend>
+			<br>
+			<input type="radio" name="eat">
+			<label for="">米</label> 
+			
+			<input type="radio" name="eat">
+			<label for="">面</label> 
+			
+			<input type="radio" name="eat"> 
+			<label for="">其他</label>
+		</fieldset>
+		
+		<input type="button" value="登陆">
+		
+<!--		文本 arta 区域-->
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	</body>
+</html>

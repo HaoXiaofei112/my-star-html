@@ -1,0 +1,64 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3d</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            /*background-color:black;*/
+            /*border:2px solid red;*/
+        }
+        
+        main {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            transform-style: preserve-3d;
+            animation: zhuan 10s linear infinite;
+        }
+        
+        div {
+            width: 100%;
+            height: 100%;
+            background-size:100%;
+            position: absolute;
+        }
+        
+        #front {
+            background-image: url(1.jpg);
+            transform: translateZ(150px);
+        }
+        
+        #back {
+            background-image: url(2.jpg);
+            transform: translateZ(-150px);
+        }
+        
+        @keyframes zhuan {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="front"></div>
+        <div id="back"></div>
+    </main>
+</body>
+
+<ml>

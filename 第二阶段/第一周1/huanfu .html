@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      body{
+        margin: 0;
+    }
+    nav{
+        height: 50px;
+        background-color: black;
+
+    }
+    button{
+        width:30px;
+        height: 30px;
+        margin: 10px;
+        border:1px solid red;
+       
+    }
+    </style>
+</head>
+<body>
+    <nav onclock="myClick(event)">
+         <button onclick1() id="red" style="background-color:red"></button>
+         <button onclick1() id="yellow" style="background-color:yellow"></button>
+         <button onclick1() id="green" style="background-color:green"></button>
+         <button onclick1() id="blue" style="background-color:blue"></button>
+
+
+    </nav>
+    <script>
+    var button=document.querySelectorAll('button');
+    function myClick(event){
+        var hh= event.target;
+        if(hh.tagName =='BUTTON'){
+            var ID = qq.id;
+            var link = document.createEvent('link');
+            link.rel = 'stylesheet';
+            linl.href = ID + '.css';
+            document.head.appendChild(link);
+        }
+    }
+    </script>
+    
+</body>
+</html>

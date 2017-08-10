@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本条件语句</title>
+</head>
+<body>
+  <script>
+    //   == 逻辑等 表示判断是否相等
+    // = 赋值
+    // （） 里面是条件判断表达式 结果只能为真假
+      var zhangZhiDong = 22;
+      if(zhangZhiDong == 21){
+        //   alert 弹出框
+          alert('张之洞')
+
+      }
+      else{
+            alert('张之洞2')
+
+      }
+      var age = 10;
+    //   如果有单独的IF 存在 那他就是一个独立的if语句这个语句是否成立和执行和其他的if语句没有任何关系
+      if(age < 12)
+      {
+           alert('儿童');
+      }
+      if(age == 12){
+          alert('少年');
+      }
+      else{
+          alert('青年');
+      }
+    //   3. if 与 else.else if 同为互斥条件
+    if(age < 1){
+        alert('婴儿');
+    }
+    else  if (age < 12){
+            alert('儿童');
+
+    }
+      else  if (age < 18){
+            alert('青年');
+
+    }
+      else  if (age < 30){
+            alert('壮年');
+
+    }
+      else  if (age < 50){
+            alert('中年');
+
+    }
+      else  if (age < 80){
+            alert('老年');
+
+    }
+    else{
+        alert('寿星');
+    }
+    // 4.嵌套语句
+    if(age > 0){
+        if(age > 100){
+            alert('si');
+        }
+        else{
+            if(age < 20){
+                alert('未婚');
+            }
+            else{
+                alert('已婚');
+            }
+        }
+    }
+    else{
+        alert('未出生');
+
+    }
+    // 5.如果if else 后面的{}不写默认他们下面的第一句代码写在{}
+
+    if(age > 10)
+      alert('虚报年龄');  
+      alert('真实年龄10岁');
+    // ==逻辑运算符
+    // ==逻辑等 表示判断是否相等 （表达式里面全是==
+    // = 赋值 给变量赋值用=
+    // && and 全选
+    // || or 多选一
+    if( age > 18 && age < 26){
+        alert('青年');
+    }
+    if(age > 18 || age > 20 || age > 30){
+        alert('bvdhb')
+    }
+    // != ! 相反 不等于
+    if(age != 10){
+        alert('vc')
+    }
+    // ? 前面的是条件判断表达式 只能为真假
+    // ：前面是条件为真的时候的值
+    // ：后面是条件为假的时候的值
+    alert(age == 10 ? '是' : '否');
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,207 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>3D色子</title>
+			<style>
+				body 
+				{
+					height: 100%;
+					
+					display: flex;
+					
+					justify-content:center;
+					
+					align-items:center;
+					
+					background-color: black;
+					
+					perspective: 1000px;
+				}
+				main 
+				{
+					width: 300px;
+					
+					height: 300px;
+					
+					
+					
+					transform-style: preserve-3d;
+					
+					animation: zhuan 3s linear infinite;
+				}
+				
+				div 
+				{
+					width: 100%;
+					
+					height: 100%;
+					
+					position: absolute;
+					
+					background-color: white;
+					
+					border: 2px solid black;
+				}
+				#front 
+				{		
+					display: flex;
+					
+					justify-content:center;
+					
+					align-items:center;
+					
+					transform: translateZ(150px);
+				}
+				.point 
+				{
+					width: 50px;
+					
+					height: 50px;
+					
+					border-radius: 50%;
+					
+					background-color: black;
+					
+					margin: 17px;
+				}
+				
+				
+				#back
+				{
+					display: flex;
+					
+					flex-wrap:wrap;
+					
+					transform: translateZ(-150px);
+				}
+				.row
+				{
+					display: flex;
+					
+					justify-content:space-around;
+					
+					align-items:center;
+					
+					width: 100%;
+					
+				
+				}
+				
+				#left
+				{
+					display: flex;
+					
+					justify-content:space-around;
+					
+					align-items:center;
+					
+					transform: rotateX(90deg) translateZ(150px);
+				}
+				
+				#right 
+				{
+					display: flex;
+					
+					flex-wrap:wrap;
+					
+					transform: rotateX(90deg) translateZ(-150px);
+				}
+				
+				#top 
+				{
+					display: flex;
+					
+					justify-content:space-between;
+					
+					transform: rotateY(90deg) translateZ(150px);
+				}
+				
+				#top section:nth-child(2)
+				{
+					align-self:center;
+				}
+				#top section:nth-child(3)
+				{
+					align-self:flex-end;
+				}
+				
+				#bottom
+				{
+					transform: rotateY(90deg) translateZ(-150px);
+					
+					display: flex;
+					
+					flex-wrap:wrap;
+				}
+				
+				@keyframes zhuan 
+				{
+					0%
+					{
+						transform: rotateX(0deg) rotateY(0deg);
+					}
+					100%
+					{
+						transform: rotateX(360deg) rotateY(360deg);
+					}
+				}
+			</style>
+	</head>
+	<body>
+		<main>
+			<div id="front">
+				<section class="point"></section>
+			</div>
+			<div id="back">
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+			</div>
+			
+			<div id="left">
+				<section class="point"></section>
+				<section class="point"></section>
+			</div>
+			
+			<div id="right">
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+				<section class="row">
+					<section class="point"></section>
+				</section>
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+			</div>
+			
+			<div id="top">
+				<section class="point"></section>
+				<section class="point"></section>
+				<section class="point"></section>
+			</div>
+			
+			<div id="bottom">
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+				<section class="row">
+					<section class="point"></section>
+					<section class="point"></section>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本标签</title>
+    <style>
+    .strong{
+        font-weight: bold;
+    }
+    .small{
+        font-size: 32px;
+    }
+    .del{
+           /*删除线文本*/ 
+           text-decoration: line-through;
+        }
+    .ins{
+            /*设置下划线*/
+            text-decoration: underline;
+            /*none:去除*/
+        }
+    .em{
+            /*设置文本斜体效果*/
+           font-style: italic;
+           /*normal:字体正常*/
+        }
+    .q{
+            /*自定义符号*/
+            quotes:'<' '>';
+        }
+    </style>
+</head>
+<body>
+    <!--文本加粗-->
+    <span>普通文本标签:span</span><br>
+    <strong>文本加粗效果:strong,具有强调意义</strong><br>
+    <b>文本加粗效果:b,没有强调意义,值是单纯的实现了文本加粗效果</b><br>
+    <span class="strong ">文本加粗效果,用css设置</span><br>
+    <!--文本斜体-->
+    <em>文本斜体效果:em标签,具有强调 意义</em><br>    
+    <i>文本斜体效果:i,没有强调意义</i><br>
+      <span class="em">通过css样式设置文本斜体,只是添加斜体效果没有强调意义</span><br>
+    <!--下划线-->
+    <ins>文本下划线效果:ins标签,具有强调意义</ins><br>
+    <u>文本下划线效果:u标签,没有强调意义</u><br>
+     <span class="ins">下划线</span><br>
+    <!--删除线-->
+    <del>文本删除线效果:del,具有强调意义</del><br>
+    <s>文本删除线效果,s标签.没有强调意义</s><br>
+     <span class="del">删除线文本</span><br>
+  <!--小号字-->
+  <span class="small">第一个span</span><br>
+<span class="small"><small>small标签中文本的字号的大小要比原来的字号略小点</small></span><br>
+<!--上下标-->
+<span>正常文本<sup>上标sup标签</sup></span><br>
+<span>正常文本<sub>下标sub标签</sub></span><br>
+<!--引号标签-->
+<q> 引号标签</q><br>
+<q> 引号标签<q> 引号标签<q> 引号标签</q></q></q><br>
+<!--自定义符号-->
+<q class="q">自定义符号</q>
+</body>
+</html>
